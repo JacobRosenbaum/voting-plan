@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/booksDB"), { useNewUrlParser: true };
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/votingPlanDB"), { useNewUrlParser: true };
 
 
 app.listen(PORT, function() {
