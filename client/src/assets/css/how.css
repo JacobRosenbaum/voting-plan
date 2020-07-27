@@ -1,0 +1,29 @@
+h3{
+    text-align: center !important;
+    margin-bottom: 15px
+}
+li{
+    margin-bottom: 20px
+}
+.btn-primary{
+    text-align: center !important;
+    background-color: #004789
+}
+::placeholder{
+    color: #004789;
+    opacity: .6
+
+}
+input{
+    color: #004789 !important;
+    border: #004789 .5px solid 
+}
+.react-time-picker__inputGroup__amPm {
+    color: #004789 
+}
+.react-time-picker__wrapper{
+    border: #004789 .5px solid 
+}
+.react-time-picker__button svg {
+    color: #004789 !important
+}

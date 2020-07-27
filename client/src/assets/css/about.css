@@ -1,0 +1,13 @@
+.jumbotron{
+    opacity: .96;
+    background-color: white;
+    border: #EF3D55 2px solid; 
+    margin-top: 200px;
+    border-radius: 25px;
+    color:#004789
+    
+}
+.btn-primary{
+    text-align: center !important;
+    background-color: #004789
+}
