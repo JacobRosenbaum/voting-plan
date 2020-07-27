@@ -11,3 +11,17 @@
     text-align: center !important;
     background-color: #004789
 }
+#x:hover{
+cursor: pointer;
+zoom: 101%
+}
+
+#x{
+    position: relative;
+    left: 230px;
+    bottom: 17px;
+    font-size: 25px
+}
+a{
+    color: white !important
+}
