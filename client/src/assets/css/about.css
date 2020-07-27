@@ -13,15 +13,25 @@
 }
 #x:hover{
 cursor: pointer;
-zoom: 101%
+
 }
 
 #x{
     position: relative;
-    left: 230px;
+    left: 245px;
     bottom: 17px;
     font-size: 25px
 }
 a{
     color: white !important
+}
+#yes{
+    text-align: center; 
+    position: relative;
+    left: 200px
+}
+#no{
+    text-align: center; 
+    position: relative;
+    right: 200px
 }

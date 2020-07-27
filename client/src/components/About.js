@@ -46,6 +46,11 @@ function About () {
       function closeModal(){
         setIsOpen(false);
       }
+
+      function startPlan(){
+        showComponent(true); 
+        showButton(false)
+      }
      
     // _onButtonClickYes() {
     //     console.log("yes")
@@ -74,8 +79,8 @@ function About () {
                         }
                         {button ?
                             <div className="row">
-                                <div className="col-sm-6" style={{ textAlign: "center", position: "relative", left: "200px" }}>
-                                    <button class="btn btn-primary" onClick={showComponent}>yes</button>
+                                <div id = "yes" className="col-sm-6">
+                                    <button class="btn btn-primary" onClick={startPlan}>yes</button>
                                 </div>
                                 <Modal
                                     isOpen={modalIsOpen}
@@ -91,7 +96,7 @@ function About () {
                                      <a style ={{color: "white !important"}} href = "https://turbovote.org/" target = "_blank">Click here to register - then come on back to fill out your Voting Plan</a>
                                      </div>
                                 </Modal>
-                                <div className="col-sm-6" style={{ textAlign: "center", position: "relative", right: "200px" }}>
+                                <div id = "no" className="col-sm-6">
                                     <button class="btn btn-primary" onClick={openModal}>no</button>
                                 </div>
                             </div> : null
