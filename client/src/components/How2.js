@@ -4,9 +4,7 @@ import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 import Modal from 'react-modal';
 
-
-
-function How() {
+function How2 () {
 
     const customStyles = {
         content : {
@@ -379,7 +377,7 @@ function How() {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={personEarly4}
+                                            onClick={onPersonEarly4}
                                             style={{ marginRight: "5px" }}
                                         />
                                         walk
@@ -721,7 +719,7 @@ function How() {
                             </form>
                         </div> : null
                     }
-                    {personElection4 ?
+                    {personElection3 ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
                             <h3 style={{ marginTop: "30px" }}>
                                 do you need to take off work or secure childcare?
@@ -839,4 +837,4 @@ function How() {
         )
     }
 
-export default How;
+export default How2;
