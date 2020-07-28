@@ -1,174 +1,108 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../assets/css/how.css";
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
-import TimePicker from 'react-time-picker';
 import Modal from 'react-modal';
 
 
 
-class How extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showMail: false,
-            showPersonEarly: false,
-            showPersonElection: false,
-            showPersonElectionQ2: false,
-            showPersonElectionQ3: false,
-            showPersonElectionQ4: false,
-            showPersonElectionQ5: false,
-            showDropdown: true,
-            showLastMailQuestion: false,
-            showPersonEarlyQ2: false,
-            showPersonEarlyQ3: false,
-            showPersonEarlyQ5: false,
-            startDate: new Date(),
-            startDate2: new Date(),
-            showModal: false
-        };
+function How() {
 
-        
-        this._onMailClick = this._onMailClick.bind(this);
-        this._onPersonEarlyClick = this._onPersonEarlyClick.bind(this);
-        this._onPersonEarlyQ2 = this._onPersonEarlyQ2.bind(this);
-        this._onPersonEarlyQ3 = this._onPersonEarlyQ3.bind(this);
-        this._onPersonEarlyQ4 = this._onPersonEarlyQ4.bind(this);
-        this._onPersonEarlyQ5 = this._onPersonEarlyQ5.bind(this);
-        this._onPersonElectionClick = this._onPersonElectionClick.bind(this);
-        this._onPersonElectionQ2 = this._onPersonElectionQ2.bind(this);
-        this._onPersonElectionQ3 = this._onPersonElectionQ3.bind(this);
-        this._onPersonElectionQ4 = this._onPersonElectionQ4.bind(this);
-        this._onPersonElectionQ4 = this._onPersonElectionQ5.bind(this);
-        this._onLastMailQuestionClick = this._onLastMailQuestionClick.bind(this);
-        this.openModal = this.openModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
+    const customStyles = {
+        content : {
+          top                   : '50%',
+          left                  : '50%',
+          right                 : 'auto',
+          bottom                : 'auto',
+          marginRight           : '-50%',
+          transform             : 'translate(-50%, -50%)',
+          backgroundColor : '#004789', 
+          borderRadius: '15px', 
+          color: 'white', 
+          textAlign: 'center',
+        }
+      };
 
-    }
-    openModal() {
-        this.setState({
-            showModal: true
-        })
-    }
-    closeModal() {
-        this.setState({
-            showModal: false
-        })
-    }
+    const [mail, showMail] = useState(false);
+    const [personEarly, showPersonEarly] = useState(false);
+    const [personEarly2, showPersonEarly2] = useState(false);
+    const [personEarly3, showPersonEarly3] = useState(false);
+    const [personEarly4, showPersonEarly4] = useState(false);
+    const [personEarly5, showPersonEarly5] = useState(false);
+    const [personElection, showPersonElection] = useState(false);
+    const [personElection2, showPersonElection2] = useState(false);
+    const [personElection3, showPersonElection3] = useState(false);
+    const [personElection4, showPersonElection4] = useState(false);
+    const [personElection5, showPersonElection5] = useState(false);
+    const [finishButton, showFinishButton] = useState(false);
+    const [startDatePerson, setStartDatePerson] = useState(new Date());
+    const [modalIsOpen, setIsOpen] = useState(false);
 
-    _onPersonEarlyQ3() {
-        this.setState({
-            showPersonEarlyQ3: true
-        });
+    function openModal() {
+        setIsOpen(true);
     }
-
-    _onPersonEarlyQ2() {
-        this.setState({
-            showPersonEarlyQ2: true
-        });
+    function closeModal() {
+        setIsOpen(false);
     }
-
-    _onPersonElectionQ2() {
-        console.log("person election")
-        this.setState({
-            showPersonElectionQ2: true
-        });
+    function onFinishButton (){
+        showFinishButton(true)
     }
-
-    _onMailClick() {
-        console.log("mail")
-        this.setState({
-            showMail: true,
-            showPersonEarly: false,
-            showPersonElection: false,
-            showPersonElectionQ2: false,
-            showPersonElectionQ3: false,
-            showPersonElectionQ4: false,
-            showPersonElectionQ5: false,
-            showLastMailQuestion: false,
-            showPersonEarlyQ2: false,
-            showPersonEarlyQ3: false,
-            showPersonEarlyQ4: false,
-            showPersonEarlyQ5: false
-        });
+    function onMail() {
+        showMail(true);
+        showPersonEarly(false);
+        showPersonEarly2(false);
+        showPersonEarly3(false);
+        showPersonEarly4(false);
+        showPersonEarly5(false); 
+        showPersonElection(false);
+        showPersonElection2(false); 
+        showPersonElection3(false); 
+        showPersonElection4(false);
+        showPersonElection5(false)
     }
-    handleDateChange = date => {
-        this.setState({
-            startDate: date,
-            showPersonEarlyQ2: true
-        });
-    };
-    _onPersonEarlyClick() {
-        console.log("person early")
-        this.setState({
-            showMail: false,
-            showPersonEarly: true,
-            showPersonElection: false,
-            showLastMailQuestion: false,
-            showPersonElection: false,
-            showPersonElectionQ2: false,
-            showPersonElectionQ3: false,
-            showPersonElectionQ4: false,
-            showPersonElectionQ5: false,
-        });
+    function onPersonEarly() {
+        showPersonEarly(true);
+        showMail(false);
+        showPersonElection(false); 
+        showPersonElection2(false); 
+        showPersonElection3(false); 
+        showPersonElection4(false); 
+        showPersonElection5(false)
     }
-    _onPersonEarlyQ4() {
-        this.setState({
-            showPersonEarlyQ4: true
-        });
+    function onPersonEarly3() {
+        showPersonEarly3(true)
     }
-    _onPersonEarlyQ5() {
-        this.setState({
-            showPersonEarlyQ5: true
-        });
+    function onPersonEarly4() {
+        showPersonEarly4(true)
     }
-    _onPersonElectionClick() {
-        console.log("person election")
-        this.setState({
-            showMail: false,
-            showPersonEarly: false,
-            showPersonElection: true,
-            showLastMailQuestion: false,
-            showLastMailQuestion: false,
-            showPersonEarlyQ2: false,
-            showPersonEarlyQ3: false,
-            showPersonEarlyQ4: false,
-            showPersonEarlyQ5: false
-
-        });
+    function onPersonEarly5() {
+        showPersonEarly5(true)
     }
-    _onPersonElectionQ2() {
-        console.log("person election")
-        this.setState({
-            showPersonElectionQ2: true
-        });
+    function onPersonElection() {
+        showPersonElection(true);
+        showMail(false);
+        showPersonEarly(false);
+        showPersonEarly2(false); 
+        showPersonEarly3(false); 
+        showPersonEarly4(false);
+        showPersonEarly5(false)
     }
-    _onPersonElectionQ3() {
-        console.log("person election")
-        this.setState({
-            showPersonElectionQ3: true
-        });
+    function onPersonElection2 () {
+        showPersonElection2(true)
     }
-    _onPersonElectionQ4() {
-        console.log("person election")
-        this.setState({
-            showPersonElectionQ4: true
-        });
+    function onPersonElection3 () {
+        showPersonElection3(true)
     }
-    _onPersonElectionQ5() {
-        console.log("person election")
-        this.setState({
-            showPersonElectionQ5: true
-        });
+    function onPersonElection4() {
+        showPersonElection4(true)
     }
-    _onLastMailQuestionClick() {
-        console.log("last question")
-        this.setState({
-            showLastMailQuestion: true
-        });
+    function onPersonElection5() {
+        showPersonElection5(true)
     }
-
-    render() {
+    function handleDateChangePerson(date){
+            setStartDatePerson(date); 
+            showPersonEarly2(true)
+    }
         return (
             <div>
                 <div style={{ marginBottom: "30px" }}>
@@ -182,7 +116,7 @@ class How extends React.Component {
                                     type="radio"
                                     name="react-tips"
                                     value="mail"
-                                    onClick={this._onMailClick}
+                                    onClick={onMail}
                                     style={{ marginRight: "5px" }}
                                 />
                                 by mail
@@ -194,7 +128,7 @@ class How extends React.Component {
                                     type="radio"
                                     name="react-tips"
                                     value="mail"
-                                    onClick={this._onPersonEarlyClick}
+                                    onClick={onPersonEarly}
                                     style={{ marginRight: "5px" }}
                                 />
                                 in person, early
@@ -206,22 +140,21 @@ class How extends React.Component {
                                     type="radio"
                                     name="react-tips"
                                     value="mail"
-                                    onClick={this._onPersonElectionClick}
+                                    onClick={onPersonElection}
                                     style={{ marginRight: "5px" }}
                                 />
                                 in person, on election day
                             </label>
                         </div>
                     </form>
-
                 </div>
                 <div>
-                    {this.state.showMail ?
+                    {mail ?
                         <div style={{ marginBottom: "30px", borderTop: "#EF3D55 1px solid" }}>
                             <form>
                                 <h3 style={{ marginTop: "30px" }}>
                                     when will you fill in and mail back your ballot?
-                        </h3>
+                                </h3>
                                 <div className="form-check">
                                     <label style={{ textAlign: "left !important" }}>
                                         <input
@@ -229,7 +162,7 @@ class How extends React.Component {
                                             name="react-tips"
                                             value="mail"
                                             style={{ marginRight: "5px" }}
-                                            onClick={this._onLastMailQuestionClick}
+                                            onClick={onFinishButton}
                                         />
                                         the minute it arrives in the mail (can’t wait!)
                             </label>
@@ -241,10 +174,10 @@ class How extends React.Component {
                                             name="react-tips"
                                             value="mail"
                                             style={{ marginRight: "5px" }}
-                                            onClick={this._onLastMailQuestionClick}
+                                            onClick={onFinishButton}
                                         />
                                         before I go to sleep the night it arrives in the mail
-                            </label>
+                                    </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -253,14 +186,13 @@ class How extends React.Component {
                                             name="react-tips"
                                             value="mail"
                                             style={{ marginRight: "5px" }}
-                                            onClick={this._onLastMailQuestionClick}
+                                            onClick={onFinishButton}
                                         />
                                         the weekend after I receive my ballot
-                            </label>
+                                    </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
-
                                         <input
                                             type="radio"
                                             name="react-tips"
@@ -271,54 +203,36 @@ class How extends React.Component {
                                         <input
                                             type="input"
                                             style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
-                                            onKeyUp={this._onLastMailQuestionClick}
+                                            onClick={onFinishButton}
                                         />
                                     </label>
                                 </div>
-                                
                             </form>
-                            <div style={{ textAlign: "center", marginTop: "50px" }}>
+                            { finishButton ?
+                                <div style={{ textAlign: "center", marginTop: "10px" }}>
                                     <button
                                         class="btn btn-primary"
-                                        type="submit"
-                                        onClick = {this.openModal}
+                                        onClick={openModal}
                                     >
                                         i'm finished
                                     </button>
-                                </div>
-                            {this.state.showModal ? 
-                                    <Modal
-                                    isOpen={this.state.showModal}
-                                    // onAfterOpen={afterOpenModal}
-                                    // onRequestClose={closeModal}
-                                    style= {{
-                                       
-                                            top: '50%',
-                                            left: '50%',
-                                            right: 'auto',
-                                            bottom: 'auto',
-                                            marginRight: '-50%',
-                                            transform: 'translate(-50%, -50%)',
-                                            backgroundColor: '#004789',
-                                            borderRadius: '15px',
-                                            color: 'white',
-                                            textAlign: 'center',
-                    }}
-                                    
-                                    // contentLabel="Example Modal"
-                                >
-                                    {/* <i id = "x" class="fa fa-times" onClick={this.closeModal}></i> */}
-                                    <div style ={{ marginBottom: "50px"}}>
-                                    <h3>No problem!</h3>
-                                     <div style ={{color: "white !important"}}><a style ={{color: "white !important", textDecoration: "underline !important"}} href = "https://turbovote.org/" target = "_blank">Click here</a> to register - then come on back to fill out your Voting Plan</div>
-                                     </div>
-                                </Modal> : null
-                    }
+                                </div> : null}
                         </div>
-                        
                         : null
                     }
-                    
+                        <Modal
+                            isOpen={modalIsOpen}
+                            // onAfterOpen={afterOpenModal}
+                            onRequestClose={closeModal}
+                            style={customStyles}
+                            contentLabel="Example Modal"
+                        >
+                            <i id = "x" class="fa fa-times" onClick={closeModal}></i>
+                            <div style ={{ marginBottom: "50px"}}>
+                            <h3>No problem!</h3>
+                            <div style ={{color: "white !important"}}><a style ={{color: "white !important", textDecoration: "underline !important"}} href = "https://turbovote.org/" target = "_blank">Click here</a> to register - then come on back to fill out your Voting Plan</div>
+                            </div>
+                        </Modal> 
                     {/* {this.state.showLastMailQuestion ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
                             <h3 style={{ marginTop: "30px", marginBottom: "30px" }}>
@@ -379,26 +293,23 @@ class How extends React.Component {
 
                         </div> : null
                     } */}
-                    {this.state.showPersonEarly ?
-
+                    {personEarly ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
-
                             <h3 style={{ marginTop: "30px" }}>
                                 what day will you go to the polls?
-                         </h3>
+                            </h3>
                             <div style={{ marginBottom: "40px" }}>
                                 <DatePicker
-                                    selected={this.state.startDate}
-                                    onChange={this.handleDateChange}
+                                    selected={startDatePerson}
+                                    onChange={handleDateChangePerson}
                                 />
                             </div>
                         </div> : null
                     }
-                    {this.state.showPersonEarlyQ2 ?
+                    {personEarly2 ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
-
                             <h3 style={{ marginTop: "30px" }}>
-                                what time will you go to the polls on {this.state.startDate.toString().slice(0, 15)}?
+                                what time will you go to the polls on {startDatePerson.toString().slice(0, 15)}?
                                 </h3>
                             <div className="form-check" >
                                 <label>
@@ -406,7 +317,7 @@ class How extends React.Component {
                                         type="radio"
                                         name="react-tips"
                                         value="mail"
-                                        onClick={this._onPersonEarlyQ3}
+                                        onClick={personEarly3}
                                         style={{ marginRight: "5px" }}
                                     />
                                     before work
@@ -418,7 +329,7 @@ class How extends React.Component {
                                         type="radio"
                                         name="react-tips"
                                         value="mail"
-                                        onClick={this._onPersonEarlyQ3}
+                                        onClick={onPersonEarly3}
                                         style={{ marginRight: "5px" }}
                                     />
                                     during lunch
@@ -430,7 +341,7 @@ class How extends React.Component {
                                         type="radio"
                                         name="react-tips"
                                         value="mail"
-                                        onClick={this._onPersonEarlyQ3}
+                                        onClick={onPersonEarly3}
                                         style={{ marginRight: "5px" }}
                                     />
                                     after work
@@ -449,17 +360,15 @@ class How extends React.Component {
                                         <input
                                         type="input"
                                         style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
-                                        onKeyUp={this._onPersonEarlyQ3}
-
+                                        onClick={onPersonEarly3}
                                     />
                                 </label>
                             </div>
 
                         </div> : null
                     }
-                    {this.state.showPersonEarlyQ3 ?
+                    {personEarly3 ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
-
                             <form>
                                 <h3 style={{ marginTop: "30px" }}>
                                     how will you get to the polls?
@@ -470,11 +379,11 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonEarlyQ4}
+                                            onClick={personEarly4}
                                             style={{ marginRight: "5px" }}
                                         />
                                         walk
-                            </label>
+                                    </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -482,11 +391,11 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonEarlyQ4}
+                                            onClick={onPersonEarly4}
                                             style={{ marginRight: "5px" }}
                                         />
                                         bus
-                            </label>
+                                    </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -494,11 +403,11 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonEarlyQ4}
+                                            onClick={onPersonEarly4}
                                             style={{ marginRight: "5px" }}
                                         />
                                         subway
-                            </label>
+                                    </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -506,11 +415,11 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonEarlyQ4}
+                                            onClick={onPersonEarly4}
                                             style={{ marginRight: "5px" }}
                                         />
                                         drive
-                            </label>
+                                    </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -518,20 +427,19 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonEarlyQ4}
+                                            onClick={onPersonEarly4}
                                             style={{ marginRight: "5px" }}
                                         />
                                         bike
-                            </label>
+                                    </label>
                                 </div>
-
                                 <div className="form-check">
                                     <label>
                                         <input
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonEarlyQ4}
+                                            onClick={onPersonEarly4}
                                             style={{ marginRight: "5px" }}
                                         />
                                         carpool
@@ -543,7 +451,7 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonEarlyQ4}
+                                            onClick={onPersonEarly4}
                                             style={{ marginRight: "5px" }}
                                         />
                                         Lyft/Uber
@@ -551,7 +459,6 @@ class How extends React.Component {
                                 </div>
                                 <div className="form-check">
                                     <label>
-
                                         <input
                                             type="radio"
                                             name="react-tips"
@@ -562,32 +469,28 @@ class How extends React.Component {
                                         <input
                                             type="input"
                                             style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
-                                            onKeyUp={this._onPersonEarlyQ4}
-
+                                            onKeyUp={onPersonEarly4}
                                         />
-                                    </label>
+                                        </label>
                                 </div>
                             </form>
                         </div> : null
-
                     }
-                    {this.state.showPersonEarlyQ4 ?
+                    {personEarly4 ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
                             <h3 style={{ marginTop: "30px" }}>
                                 who else can you bring with you to vote?
-                        </h3>
+                            </h3>
                             <form style={{ marginBottom: "30px" }}>
                                 <input
                                     type="input"
                                     style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
-                                    onKeyUp={this._onPersonEarlyQ5}
-
+                                    onKeyUp={onPersonEarly5}
                                 />
                             </form>
-
                         </div> : null
                     }
-                    {this.state.showPersonEarlyQ5 ?
+                    {personEarly5 ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
                             <h3 style={{ marginTop: "30px", marginBottom: "30px" }}>
                                 hey that was easy! who else should make a plan to vote right now?
@@ -647,11 +550,11 @@ class How extends React.Component {
                         </div> : null
 
                     }
-                    {this.state.showPersonElection ?
+                    {personElection ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
 
                             <h3 style={{ marginTop: "30px" }}>
-                                what time will you go to the polls on election day? {this.state.startDate.toString().slice(0, 15)}?
+                                what time will you go to the polls on election day?
                             </h3>
                             <div className="form-check">
                                 <label>
@@ -659,7 +562,7 @@ class How extends React.Component {
                                         type="radio"
                                         name="react-tips"
                                         value="mail"
-                                        onClick={this._onPersonElectionQ2}
+                                        onClick={onPersonElection2}
                                         style={{ marginRight: "5px" }}
                                     />
                                     before work
@@ -671,7 +574,7 @@ class How extends React.Component {
                                         type="radio"
                                         name="react-tips"
                                         value="mail"
-                                        onClick={this._onPersonElectionQ2}
+                                        onClick={onPersonElection2}
                                         style={{ marginRight: "5px" }}
                                     />
                                     during lunch
@@ -683,7 +586,7 @@ class How extends React.Component {
                                         type="radio"
                                         name="react-tips"
                                         value="mail"
-                                        onClick={this._onPersonElectionQ2}
+                                        onClick={onPersonElection2}
                                         style={{ marginRight: "5px" }}
                                     />
                                     after work
@@ -691,7 +594,6 @@ class How extends React.Component {
                             </div>
                             <div className="form-check">
                                 <label>
-
                                     <input
                                         type="radio"
                                         name="react-tips"
@@ -702,32 +604,30 @@ class How extends React.Component {
                                     <input
                                         type="input"
                                         style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
-                                        onKeyUp={this._onPersonElectionQ2}
-
+                                        onKeyUp={onPersonElection2}
                                     />
                                 </label>
                             </div>
-
                         </div> : null
                     }
-                    {this.state.showPersonElectionQ2 ?
+                    {personElection2 ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
 
                             <form>
                                 <h3 style={{ marginTop: "30px" }}>
                                     how will you get to the polls?
-                        </h3>
+                                </h3>
                                 <div className="form-check">
                                     <label style={{ textAlign: "left !important" }}>
                                         <input
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonElectionQ3}
+                                            onClick={onPersonElection3}
                                             style={{ marginRight: "5px" }}
                                         />
                                         walk
-                    </label>
+                                    </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -735,11 +635,11 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonElectionQ3}
+                                            onClick={onPersonElection3}
                                             style={{ marginRight: "5px" }}
                                         />
                                         bus
-                    </label>
+                                     </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -747,11 +647,11 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonElectionQ3}
+                                            onClick={onPersonElection3}
                                             style={{ marginRight: "5px" }}
                                         />
                                         subway
-                    </label>
+                                    </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -759,11 +659,11 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonElectionQ3}
+                                            onClick={onPersonElection3}
                                             style={{ marginRight: "5px" }}
                                         />
                                         drive
-                    </label>
+                                    </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -771,24 +671,23 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonElectionQ3}
+                                            onClick={onPersonElection3}
                                             style={{ marginRight: "5px" }}
                                         />
                                         bike
-                    </label>
+                                    </label>
                                 </div>
-
                                 <div className="form-check">
                                     <label>
                                         <input
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonElectionQ3}
+                                            onClick={onPersonElection3}
                                             style={{ marginRight: "5px" }}
                                         />
                                         carpool
-                    </label>
+                                     </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -796,11 +695,11 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonElectionQ3}
+                                            onClick={onPersonElection3}
                                             style={{ marginRight: "5px" }}
                                         />
                                         Lyft/Uber
-                    </label>
+                                    </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -812,23 +711,21 @@ class How extends React.Component {
                                             style={{ marginRight: "5px" }}
                                         />
                                         other (please specify)
-                                <input
+                                        <input
                                             type="input"
                                             style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
-                                            onKeyUp={this._onPersonElectionQ3}
-
+                                            onKeyUp={onPersonElection3}
                                         />
                                     </label>
                                 </div>
                             </form>
                         </div> : null
-
                     }
-                    {this.state.showPersonElectionQ3 ?
+                    {personElection4 ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
                             <h3 style={{ marginTop: "30px" }}>
                                 do you need to take off work or secure childcare?
-                        </h3>
+                            </h3>
                             <form style={{ marginBottom: "30px" }}>
                                 <div className="form-check">
                                     <label>
@@ -836,11 +733,11 @@ class How extends React.Component {
                                             type="radio"
                                             name="react-tips"
                                             value="mail"
-                                            onClick={this._onPersonElectionQ4}
+                                            onClick={onPersonElection4}
                                             style={{ marginRight: "5px" }}
                                         />
                                         no
-                    </label>
+                                    </label>
                                 </div>
                                 <div className="form-check">
                                     <label>
@@ -852,35 +749,32 @@ class How extends React.Component {
                                             style={{ marginRight: "5px" }}
                                         />
                                         yes (please specify)
-                                <input
+                                         <input
                                             type="input"
                                             style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
-                                            onKeyUp={this._onPersonElectionQ4}
-
+                                            onKeyUp={onPersonElection4}
                                         />
                                     </label>
                                 </div>
                             </form>
-
                         </div> : null
                     }
-                    {this.state.showPersonElectionQ4 ?
+                    {personElection4 ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
                             <h3 style={{ marginTop: "30px" }}>
                                 who else can you bring with you to vote?
-                        </h3>
+                            </h3>
                             <form style={{ marginBottom: "30px" }}>
                                 <input
                                     type="input"
                                     style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
-                                    onKeyUp={this._onPersonElectionQ5}
-
+                                    onKeyUp={onPersonElection5}
                                 />
                             </form>
 
                         </div> : null
                     }
-                    {this.state.showPersonElectionQ5 ?
+                    {personElection5 ?
                         <div style={{ borderTop: "#EF3D55 1px solid" }}>
                             <h3 style={{ marginTop: "30px", marginBottom: "30px" }}>
                                 hey that was easy! who else should make a plan to vote right now?
@@ -944,6 +838,5 @@ class How extends React.Component {
             </div>
         )
     }
-}
 
 export default How;

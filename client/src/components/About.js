@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import "../assets/css/about.css";
-import How from "../components/How";
+import How2 from "../components/How2";
 import VotePlan from "../components/VotePlan";
 import Modal from 'react-modal';
 
 function About () {
-
-    var subtitle;
     const customStyles = {
         content : {
           top                   : '50%',
@@ -25,20 +23,7 @@ function About () {
     const [modalIsOpen,setIsOpen] = useState(false);
     const [component, showComponent] = useState(false); 
     const [button, showButton] = useState(true); 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         showComponent: false,
-    //         showButton: true,
-    //         showModalYes: false,
-    //         showModalNo: false,
-    //         close: false
-    //     };
-    //     this._onButtonClickYes = this._onButtonClickYes.bind(this);
-    //     this._onButtonClickNo = this._onButtonClickNo.bind(this);
-    //     this.closeModal = this.closeModal.bind(this)
-
-    // }
+  
     function openModal() {
         setIsOpen(true);
       }
@@ -52,30 +37,12 @@ function About () {
         showButton(false)
       }
      
-    // _onButtonClickYes() {
-    //     console.log("yes")
-    //     this.setState({
-    //         showButton: false,
-    //         showModalYes: true
-    //     });
-
-    // }
-    
-    // _onButtonClickNo() {
-    //     console.log("no")
-    //     this.setState({
-    //         showButton: false,
-    //         showModalNo: true
-    //     });
-
-    // }
-
         return (
             <div class="container">
                 <div class="jumbotron w3-animate-opacity">
                     <div>
                         {component ?
-                            <How /> : <VotePlan />
+                            <How2 /> : <VotePlan />
                         }
                         {button ?
                             <div className="row">

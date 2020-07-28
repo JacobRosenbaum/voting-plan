@@ -13,7 +13,7 @@ function VotePlan() {
             </div> */}
 
             <h5>
-                Let's do this. To get started, we have one simple question - are you registered to vote?
+                let's do this. to get started, we have one simple question - are you registered to vote?
             </h5>
 
         </div>
