@@ -72,15 +72,17 @@ function About () {
 
         return (
             <div class="container">
-                <div class="jumbotron">
+                <div class="jumbotron w3-animate-opacity">
                     <div>
                         {component ?
                             <How /> : <VotePlan />
                         }
                         {button ?
                             <div className="row">
-                                <div id = "yes" className="col-sm-6">
-                                    <button class="btn btn-primary" onClick={startPlan}>yes</button>
+                                <div className="col-sm-12" style = {{textAlign: "center"}}>
+                                    <button id = "yes" class="btn btn-primary" onClick={startPlan}>yes</button>
+                                
+                                    <button id = "no" class="btn btn-primary" onClick={openModal}>no</button>
                                 </div>
                                 <Modal
                                     isOpen={modalIsOpen}
@@ -93,12 +95,10 @@ function About () {
                                     {/* <div>No problem! </div> */}
                                     <div style ={{ marginBottom: "50px"}}>
                                     <h3>No problem!</h3>
-                                     <a style ={{color: "white !important"}} href = "https://turbovote.org/" target = "_blank">Click here to register - then come on back to fill out your Voting Plan</a>
+                                     <div style ={{color: "white !important"}}><a style ={{color: "white !important", textDecoration: "underline !important"}} href = "https://turbovote.org/" target = "_blank">Click here</a> to register - then come on back to fill out your Voting Plan</div>
                                      </div>
                                 </Modal>
-                                <div id = "no" className="col-sm-6">
-                                    <button class="btn btn-primary" onClick={openModal}>no</button>
-                                </div>
+                                
                             </div> : null
                         }
                     </div>

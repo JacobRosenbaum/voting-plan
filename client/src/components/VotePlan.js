@@ -2,7 +2,7 @@ import React from 'react';
 
 function VotePlan() {
     return (
-        <div id="begin" style={{ marginBottom: "50px", textAlign: "center" }}>
+        <div className="w3-animate-opacity" id="begin" style={{ marginBottom: "50px", textAlign: "center" }}>
             <h1 style = {{letterSpacing: "2px"}}>
                 VOTING PLAN 
             </h1>

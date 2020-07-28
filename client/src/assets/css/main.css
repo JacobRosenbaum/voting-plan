@@ -1,4 +1,5 @@
 body{
     background-image: url('../images/vote.jpg');
-    background-size: cover
+    background-size: cover;
+    font-family: 'Questrial', sans-serif;
 }

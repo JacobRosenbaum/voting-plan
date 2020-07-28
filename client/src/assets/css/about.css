@@ -18,20 +18,23 @@ cursor: pointer;
 
 #x{
     position: relative;
-    left: 245px;
+    left: 240px;
     bottom: 17px;
     font-size: 25px
 }
 a{
-    color: white !important
+    color: white !important; 
+    text-decoration: underline !important
 }
+
 #yes{
     text-align: center; 
-    position: relative;
-    left: 200px
+    margin-right: 25px
+    
 }
 #no{
     text-align: center; 
     position: relative;
-    right: 200px
-}
+    margin-left: 25px
+    
+} 
