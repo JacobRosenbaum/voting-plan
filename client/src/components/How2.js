@@ -114,13 +114,15 @@ function How2() {
                         </h3>
                     <div className="form-check">
                         <label style={{ textAlign: "left !important" }}>
-                            <input
+                            <a href = "">
+                                <input
                                 type="radio"
                                 name="react-tips"
                                 value="mail"
                                 onClick={onMail}
                                 style={{ marginRight: "5px" }}
-                            />
+                                />
+                            </a>
                             by mail
                             </label>
                     </div>
@@ -153,7 +155,7 @@ function How2() {
             <div>
                 {mail ?
                     <div style={{ marginBottom: "30px", borderTop: "#EF3D55 1px solid" }}>
-                        <form>
+                        <form id = "whenWillYou">
                             <h3 style={{ marginTop: "30px" }}>
                                 when will you fill in and mail back your ballot?
                                 </h3>
@@ -349,7 +351,7 @@ function How2() {
                                     type="radio"
                                     name="react-tips"
                                     value="mail"
-                                    onClick={personEarly3}
+                                    onClick={onPersonEarly3}
                                     style={{ marginRight: "5px" }}
                                 />
                                 before work
@@ -517,71 +519,122 @@ function How2() {
                             <input
                                 type="input"
                                 style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
-                                onKeyUp={onPersonEarly5}
+                                onKeyUp={onFinishButton}
                             />
                         </form>
-                    </div> : null
-                }
-                {personEarly5 ?
-                    <div style={{ borderTop: "#EF3D55 1px solid" }}>
-                        <h3 style={{ marginTop: "30px", marginBottom: "30px" }}>
-                            hey that was easy! who else should make a plan to vote right now?
-                            </h3>
-                        <form>
-                            <ol>
-                                <li>
-                                    <input
-                                        type="input"
-                                        style={{ width: "300px", border: "1px solid #004789" }}
-                                        placeholder="email address"
-                                    >
-                                    </input>
-                                </li>
-                                <li>
-                                    <input
-                                        type="input"
-                                        style={{ width: "300px", border: "1px solid #004789" }}
-                                        placeholder="email address"
-                                    >
-                                    </input>
-                                </li>
-                                <li>
-                                    <input
-                                        type="input"
-                                        style={{ width: "300px", border: "1px solid #004789" }}
-                                        placeholder="email address"
-                                    >
-                                    </input>
-                                </li>
-                                <li>
-                                    <input
-                                        type="input"
-                                        style={{ width: "300px", border: "1px solid #004789" }}
-                                        placeholder="email address"
-                                    >
-                                    </input>
-                                </li>
-                                <li>
-                                    <input
-                                        type="input"
-                                        style={{ width: "300px", border: "1px solid #004789" }}
-                                        placeholder="email address"
-                                    >
-                                    </input>
-                                </li>
-                            </ol>
-                            <div style={{ textAlign: "center" }}>
+                        {finishButton ?
+                            <div style={{ textAlign: "center", marginTop: "10px" }}>
                                 <button
                                     class="btn btn-primary"
-                                    type="submit"
+                                    onClick={openModal}
                                 >
                                     i'm finished
-                                     </button>
-                            </div>
-                        </form>
+                                    </button>
+                            </div> : null}
                     </div> : null
-
                 }
+                <Modal
+                    isOpen={modalIsOpen}
+                    // onAfterOpen={afterOpenModal}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="Modal"
+                >
+                    <i id="close" class="fa fa-times" onClick={closeModal}></i>
+                    <div>
+                        <div>
+                            <h4 style ={{marginBottom: "30px"}}>
+                                awesome! you're almost done
+                                <div style={{ marginTop: "3px" }}>
+                                    we just need to your name and email address so we can send over your plan
+                                </div>
+                            </h4>
+                            <form style={{ textAlign: "left" }}>
+                                <ul>
+                                    <li style={{ listStyleType: "none" }}>
+                                        <input
+                                            type="input"
+                                            style={{ width: "300px", border: "1px solid #004789" }}
+                                            placeholder="name"
+                                        >
+                                        </input>
+                                    </li>
+                                    <li style={{ listStyleType: "none" }}>
+                                        <input
+                                            type="input"
+                                            style={{ width: "300px", border: "1px solid #004789" }}
+                                            placeholder="email address"
+                                            onKeyUp={onEmailFriends}
+                                        >
+                                        </input>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        {emailFriends ?
+                            <div>
+                                <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
+                                    hey that was easy! who else should make a plan to vote right now?
+                                </h4>
+                                <form style={{ textAlign: "left" }}>
+                                    <ol>
+                                        <li>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789" }}
+                                                placeholder="name"
+                                            >
+                                            </input>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
+                                                placeholder="email address"
+                                            >
+                                            </input>
+                                        </li>
+                                        <li>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789" }}
+                                                placeholder="name"
+                                            >
+                                            </input>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
+                                                placeholder="email address"
+                                            >
+                                            </input>
+                                        </li>
+                                        <li>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789" }}
+                                                placeholder="name"
+                                            >
+                                            </input>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
+                                                placeholder="email address"
+                                            >
+                                            </input>
+                                        </li>
+                                    </ol>
+                                    <div style={{ textAlign: "center" }}>
+                                        <button
+                                            class="btn btn-primary mailButton"
+                                            type="submit"
+                                        >
+                                            i'm finished
+                                    </button>
+                                    </div>
+                                </form>
+                            </div> : null
+                        }
+
+                    </div>
+                </Modal>
                 {personElection ?
                     <div style={{ borderTop: "#EF3D55 1px solid" }}>
 
@@ -797,75 +850,126 @@ function How2() {
                             who else can you bring with you to vote?
                             </h3>
                         <form style={{ marginBottom: "30px" }}>
-                            <input
+                        <input
                                 type="input"
                                 style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
-                                onKeyUp={onPersonElection5}
+                                onKeyUp={onFinishButton}
                             />
                         </form>
-
-                    </div> : null
-                }
-                {personElection5 ?
-                    <div style={{ borderTop: "#EF3D55 1px solid" }}>
-                        <h3 style={{ marginTop: "30px", marginBottom: "30px" }}>
-                            hey that was easy! who else should make a plan to vote right now?
-                            </h3>
-                        <form>
-                            <ol>
-                                <li>
-                                    <input
-                                        type="input"
-                                        style={{ width: "300px", border: "1px solid #004789" }}
-                                        placeholder="email address"
-                                    >
-                                    </input>
-                                </li>
-                                <li>
-                                    <input
-                                        type="input"
-                                        style={{ width: "300px", border: "1px solid #004789" }}
-                                        placeholder="email address"
-                                    >
-                                    </input>
-                                </li>
-                                <li>
-                                    <input
-                                        type="input"
-                                        style={{ width: "300px", border: "1px solid #004789" }}
-                                        placeholder="email address"
-                                    >
-                                    </input>
-                                </li>
-                                <li>
-                                    <input
-                                        type="input"
-                                        style={{ width: "300px", border: "1px solid #004789" }}
-                                        placeholder="email address"
-                                    >
-                                    </input>
-                                </li>
-                                <li>
-                                    <input
-                                        type="input"
-                                        style={{ width: "300px", border: "1px solid #004789" }}
-                                        placeholder="email address"
-                                    >
-                                    </input>
-                                </li>
-                            </ol>
-                            <div style={{ textAlign: "center" }}>
+                        {finishButton ?
+                            <div style={{ textAlign: "center", marginTop: "10px" }}>
                                 <button
                                     class="btn btn-primary"
-                                    type="submit"
+                                    onClick={openModal}
                                 >
                                     i'm finished
-                                     </button>
-                            </div>
-                        </form>
+                                    </button>
+                            </div> : null}
                     </div> : null
-
                 }
+                <Modal
+                    isOpen={modalIsOpen}
+                    // onAfterOpen={afterOpenModal}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="Modal"
+                >
+                    <i id="close" class="fa fa-times" onClick={closeModal}></i>
+                    <div>
+                        <div>
+                            <h4 style ={{marginBottom: "30px"}}>
+                                awesome! you're almost done
+                                <div style={{ marginTop: "3px" }}>
+                                    we just need to your name and email address so we can send over your plan
+                                </div>
+                            </h4>
+                            <form style={{ textAlign: "left" }}>
+                                <ul>
+                                    <li style={{ listStyleType: "none" }}>
+                                        <input
+                                            type="input"
+                                            style={{ width: "300px", border: "1px solid #004789" }}
+                                            placeholder="name"
+                                        >
+                                        </input>
+                                    </li>
+                                    <li style={{ listStyleType: "none" }}>
+                                        <input
+                                            type="input"
+                                            style={{ width: "300px", border: "1px solid #004789" }}
+                                            placeholder="email address"
+                                            onKeyUp={onEmailFriends}
+                                        >
+                                        </input>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        {emailFriends ?
+                            <div>
+                                <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
+                                    hey that was easy! who else should make a plan to vote right now?
+                                </h4>
+                                <form style={{ textAlign: "left" }}>
+                                    <ol>
+                                        <li>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789" }}
+                                                placeholder="name"
+                                            >
+                                            </input>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
+                                                placeholder="email address"
+                                            >
+                                            </input>
+                                        </li>
+                                        <li>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789" }}
+                                                placeholder="name"
+                                            >
+                                            </input>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
+                                                placeholder="email address"
+                                            >
+                                            </input>
+                                        </li>
+                                        <li>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789" }}
+                                                placeholder="name"
+                                            >
+                                            </input>
+                                            <input
+                                                type="input"
+                                                style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
+                                                placeholder="email address"
+                                            >
+                                            </input>
+                                        </li>
+                                    </ol>
+                                    <div style={{ textAlign: "center" }}>
+                                        <button
+                                            class="btn btn-primary mailButton"
+                                            type="submit"
+                                        >
+                                            i'm finished
+                                    </button>
+                                    </div>
+                                </form>
+                            </div> : null
+                        }
+
+                    </div>
+                </Modal>
+                
             </div>
         </div>
     )
