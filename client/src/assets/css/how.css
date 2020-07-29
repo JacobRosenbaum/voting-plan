@@ -1,24 +1,28 @@
-h3{
+h3 {
     text-align: center !important;
     margin-bottom: 15px
 }
-li{
+
+li {
     margin-bottom: 20px
 }
-.btn-primary{
+
+.btn-primary {
     text-align: center !important;
     background-color: #004789
 }
-::placeholder{
+
+::placeholder {
     color: #004789;
     opacity: .6
+}
 
-}
-input{
+input {
     color: #004789 !important;
-    border: #004789 .5px solid 
+    border: #004789 .5px solid
 }
-.react-time-picker__inputGroup__amPm {
+
+/* .react-time-picker__inputGroup__amPm {
     color: #004789 
 }
 .react-time-picker__wrapper{
@@ -26,4 +30,19 @@ input{
 }
 .react-time-picker__button svg {
     color: #004789 !important
+} */
+#close:hover {
+    cursor: pointer;
+
+}
+
+#close {
+    position: relative;
+    left: 405px;
+    bottom: 15px;
+    font-size: 25px
+}
+.mailButton{
+    background-color: white !important;
+    color: #004789
 }
