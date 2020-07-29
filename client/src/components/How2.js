@@ -312,7 +312,6 @@ function How2() {
                             </div>
                         </form>
                         </div> : null
-
                         }
                         
                     </div>
