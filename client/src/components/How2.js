@@ -202,7 +202,7 @@ function How2() {
                                         value="mail"
                                         style={{ marginRight: "5px" }}
                                         onClick={onFinishButton}
-                                        onChange={e => { setMailBallotWhen("the minute it arrives in the mail (can’t wait!"); console.log(mailBallotWhen) }}
+                                        onChange={e => { setMailBallotWhen("the minute it arrives in the mail (can’t wait!)"); console.log(mailBallotWhen) }}
 
                                     />
                                     the minute it arrives in the mail (can’t wait!)
@@ -215,7 +215,7 @@ function How2() {
                                         name="react-tips"
                                         value="mail"
                                         style={{ marginRight: "5px" }}
-                                        onClick={handleMailSubmit}
+                                        onClick={onFinishButton}
                                         onChange={e => { setMailBallotWhen("before I go to sleep the night it arrives in the mail"); console.log(mailBallotWhen) }}
 
                                     />
@@ -256,7 +256,7 @@ function How2() {
                             </div>
                         </form>
                         {finishButton ?
-                            <div style={{ textAlign: "center", marginTop: "10px" }}>
+                            <div onClick={handleMailSubmit} style={{ textAlign: "center", marginTop: "10px" }}>
                                 <button
                                     class="btn btn-primary"
                                     onClick={openModal}
@@ -312,7 +312,7 @@ function How2() {
                                 <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
                                     hey that was easy! who else should make a plan to vote right now?
                                 </h4>
-                                <form style={{ textAlign: "left" }}>
+                                <form onSubmit = {handleMailSubmit} style={{ textAlign: "left" }}>
                                     <ol>
                                         <li>
                                             <input
@@ -361,7 +361,6 @@ function How2() {
                                         <button
                                             class="btn btn-primary mailButton"
                                             type="submit"
-                                            onClick={handleMailSubmit}
                                         >
                                             i'm finished
                                     </button>

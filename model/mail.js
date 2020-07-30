@@ -15,4 +15,4 @@ const MailSchema = new Schema({
 
 const Mail = mongoose.model('votingPlanDB', MailSchema);
 
-module.exports = MailSchema;
+module.exports = Mail;
