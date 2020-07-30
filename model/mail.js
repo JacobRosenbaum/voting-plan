@@ -9,10 +9,10 @@ const MailSchema = new Schema({
     type: String,
     require: "Please type in your email address"
   },
-  ballotCast: String, 
-  fillAndMailBack: String,
+  castBallotHowMail: String, 
+  mailBallotWhen: String,
 })
 
 const Mail = mongoose.model('votingPlanDB', MailSchema);
 
-module.exports = Mail;
+module.exports = MailSchema;

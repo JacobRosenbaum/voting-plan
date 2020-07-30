@@ -3,6 +3,9 @@ import "../assets/css/how.css";
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 import Modal from 'react-modal';
+import API from "../utils/API";
+
+Modal.setAppElement(document.getElementById('root'));
 
 function How2() {
 
@@ -36,6 +39,23 @@ function How2() {
     const [startDatePerson, setStartDatePerson] = useState(new Date());
     const [modalIsOpen, setIsOpen] = useState(false);
     const [emailFriends, showEmailFriends] = useState(false)
+    const [nameMail, setNameMail] = useState();
+    const [emailMail, setEmailMail] = useState();
+    const [castBallotHowMail, setCastBallotHowMail] = useState();
+    const [mailBallotWhen, setMailBallotWhen] = useState();
+
+    function handleMailSubmit() {
+        console.log(nameMail, emailMail, castBallotHowMail, mailBallotWhen);
+
+        API.emailMail({ nameMail, emailMail, castBallotHowMail, mailBallotWhen });
+
+        API.saveMailUser({
+            nameMail: nameMail,
+            emailMail: emailMail,
+            castBallotHowMail: castBallotHowMail,
+            mailBallotWhen: mailBallotWhen,
+        });
+    }
 
     function openModal() {
         setIsOpen(true);
@@ -60,7 +80,8 @@ function How2() {
         showPersonElection2(false);
         showPersonElection3(false);
         showPersonElection4(false);
-        showPersonElection5(false)
+        showPersonElection5(false);
+
     }
     function onPersonEarly() {
         showPersonEarly(true);
@@ -114,15 +135,29 @@ function How2() {
                         </h3>
                     <div className="form-check">
                         <label style={{ textAlign: "left !important" }}>
-                            <a href = "">
                                 <input
-                                type="radio"
-                                name="react-tips"
-                                value="mail"
-                                onClick={onMail}
-                                style={{ marginRight: "5px" }}
+                                    type="radio"
+                                    name="react-tips"
+                                    value= "by mail"
+                                    // onChange={onMail}
+                                    style={{ marginRight: "5px" }}
+                                    onClick={e => {
+                                        setCastBallotHowMail(e.target.value);
+                                        (console.log(castBallotHowMail));
+                                        showMail(true);
+                                        showPersonEarly(false);
+                                        showPersonEarly2(false);
+                                        showPersonEarly3(false);
+                                        showPersonEarly4(false);
+                                        showPersonEarly5(false);
+                                        showPersonElection(false);
+                                        showPersonElection2(false);
+                                        showPersonElection3(false);
+                                        showPersonElection4(false);
+                                        showPersonElection5(false);
+                                        ;
+                                    }}
                                 />
-                            </a>
                             by mail
                             </label>
                     </div>
@@ -155,7 +190,7 @@ function How2() {
             <div>
                 {mail ?
                     <div style={{ marginBottom: "30px", borderTop: "#EF3D55 1px solid" }}>
-                        <form id = "whenWillYou">
+                        <form id="whenWillYou">
                             <h3 style={{ marginTop: "30px" }}>
                                 when will you fill in and mail back your ballot?
                                 </h3>
@@ -167,6 +202,8 @@ function How2() {
                                         value="mail"
                                         style={{ marginRight: "5px" }}
                                         onClick={onFinishButton}
+                                        onChange={e => { setMailBallotWhen("the minute it arrives in the mail (can’t wait!"); console.log(mailBallotWhen) }}
+
                                     />
                                     the minute it arrives in the mail (can’t wait!)
                             </label>
@@ -178,7 +215,9 @@ function How2() {
                                         name="react-tips"
                                         value="mail"
                                         style={{ marginRight: "5px" }}
-                                        onClick={onFinishButton}
+                                        onClick={handleMailSubmit}
+                                        onChange={e => { setMailBallotWhen("before I go to sleep the night it arrives in the mail"); console.log(mailBallotWhen) }}
+
                                     />
                                     before I go to sleep the night it arrives in the mail
                                     </label>
@@ -190,7 +229,9 @@ function How2() {
                                         name="react-tips"
                                         value="mail"
                                         style={{ marginRight: "5px" }}
-                                        onClick={onFinishButton}
+                                        onChange={onFinishButton}
+                                        onClick={e => { setMailBallotWhen("the weekend after I receive my ballot"); console.log(mailBallotWhen) }}
+
                                     />
                                     the weekend after I receive my ballot
                                     </label>
@@ -208,6 +249,8 @@ function How2() {
                                         type="input"
                                         style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
                                         onClick={onFinishButton}
+                                        onChange={e => { setMailBallotWhen(e.target.value); console.log(e.target.value) }}
+
                                     />
                                 </label>
                             </div>
@@ -234,7 +277,7 @@ function How2() {
                     <i id="close" class="fa fa-times" onClick={closeModal}></i>
                     <div>
                         <div>
-                            <h4 style ={{marginBottom: "30px"}}>
+                            <h4 style={{ marginBottom: "30px" }}>
                                 awesome! you're almost done
                                 <div style={{ marginTop: "3px" }}>
                                     we just need to your name and email address so we can send over your plan
@@ -247,6 +290,7 @@ function How2() {
                                             type="input"
                                             style={{ width: "300px", border: "1px solid #004789" }}
                                             placeholder="name"
+                                            onChange={e => { setNameMail(e.target.value); console.log(e.target.value) }}
                                         >
                                         </input>
                                     </li>
@@ -256,6 +300,7 @@ function How2() {
                                             style={{ width: "300px", border: "1px solid #004789" }}
                                             placeholder="email address"
                                             onKeyUp={onEmailFriends}
+                                            onChange={e => { setEmailMail(e.target.value); console.log(e.target.value) }}
                                         >
                                         </input>
                                     </li>
@@ -316,6 +361,7 @@ function How2() {
                                         <button
                                             class="btn btn-primary mailButton"
                                             type="submit"
+                                            onClick={handleMailSubmit}
                                         >
                                             i'm finished
                                     </button>
@@ -543,7 +589,7 @@ function How2() {
                     <i id="close" class="fa fa-times" onClick={closeModal}></i>
                     <div>
                         <div>
-                            <h4 style ={{marginBottom: "30px"}}>
+                            <h4 style={{ marginBottom: "30px" }}>
                                 awesome! you're almost done
                                 <div style={{ marginTop: "3px" }}>
                                     we just need to your name and email address so we can send over your plan
@@ -850,7 +896,7 @@ function How2() {
                             who else can you bring with you to vote?
                             </h3>
                         <form style={{ marginBottom: "30px" }}>
-                        <input
+                            <input
                                 type="input"
                                 style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
                                 onKeyUp={onFinishButton}
@@ -877,7 +923,7 @@ function How2() {
                     <i id="close" class="fa fa-times" onClick={closeModal}></i>
                     <div>
                         <div>
-                            <h4 style ={{marginBottom: "30px"}}>
+                            <h4 style={{ marginBottom: "30px" }}>
                                 awesome! you're almost done
                                 <div style={{ marginTop: "3px" }}>
                                     we just need to your name and email address so we can send over your plan
@@ -969,7 +1015,7 @@ function How2() {
 
                     </div>
                 </Modal>
-                
+
             </div>
         </div>
     )
