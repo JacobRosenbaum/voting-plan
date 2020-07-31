@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const MailSchema = new Schema({
-  name: {
+  nameMail: {
       type: String,
       require: "Please type in your name"
   },
-  email: {
+  emailMail: {
     type: String,
     require: "Please type in your email address"
   },
