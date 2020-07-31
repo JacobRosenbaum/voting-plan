@@ -35,7 +35,9 @@ function How2() {
     const [personElection3, showPersonElection3] = useState(false);
     const [personElection4, showPersonElection4] = useState(false);
     const [personElection5, showPersonElection5] = useState(false);
-    const [finishButton, showFinishButton] = useState(false);
+    const [finishButtonMail, showFinishButtonMail] = useState(false);
+    const [finishButtonEarly, showFinishButtonEarly] = useState(false);
+    const [finishButtonElection, showFinishButtonElection] = useState(false);
     const [startDatePerson, setStartDatePerson] = useState(new Date());
     const [modalIsOpen, setIsOpen] = useState(false);
     const [emailFriends, showEmailFriends] = useState(false)
@@ -63,8 +65,14 @@ function How2() {
     function closeModal() {
         setIsOpen(false);
     }
-    function onFinishButton() {
-        showFinishButton(true)
+    function onFinishButtonMail() {
+        showFinishButtonMail(true)
+    }
+    function onFinishButtonEarly() {
+        showFinishButtonEarly(true)
+    }
+    function onFinishButtonElection() {
+        showFinishButtonElection(true)
     }
     function onEmailFriends() {
         showEmailFriends(true)
@@ -143,7 +151,6 @@ function How2() {
                                     style={{ marginRight: "5px" }}
                                     onClick={e => {
                                         setCastBallotHowMail(e.target.value);
-                                        (console.log(castBallotHowMail));
                                         showMail(true);
                                         showPersonEarly(false);
                                         showPersonEarly2(false);
@@ -201,8 +208,8 @@ function How2() {
                                         name="react-tips"
                                         value="mail"
                                         style={{ marginRight: "5px" }}
-                                        onClick={onFinishButton}
-                                        onChange={e => { setMailBallotWhen("the minute it arrives in the mail (can’t wait!)"); console.log(mailBallotWhen) }}
+                                        onClick={onFinishButtonMail}
+                                        onChange={e => { setMailBallotWhen("the minute it arrives in the mail (can’t wait!)")}}
 
                                     />
                                     the minute it arrives in the mail (can’t wait!)
@@ -215,8 +222,8 @@ function How2() {
                                         name="react-tips"
                                         value="mail"
                                         style={{ marginRight: "5px" }}
-                                        onClick={onFinishButton}
-                                        onChange={e => { setMailBallotWhen("before I go to sleep the night it arrives in the mail"); console.log(mailBallotWhen) }}
+                                        onClick={onFinishButtonMail}
+                                        onChange={e => { setMailBallotWhen("before I go to sleep the night it arrives in the mail") }}
 
                                     />
                                     before I go to sleep the night it arrives in the mail
@@ -227,10 +234,10 @@ function How2() {
                                     <input
                                         type="radio"
                                         name="react-tips"
-                                        value="mail"
+                                       
                                         style={{ marginRight: "5px" }}
-                                        onChange={onFinishButton}
-                                        onClick={e => { setMailBallotWhen("the weekend after I receive my ballot"); console.log(mailBallotWhen) }}
+                                        onChange={onFinishButtonMail}
+                                        onClick={e => { setMailBallotWhen("the weekend after I receive my ballot") }}
 
                                     />
                                     the weekend after I receive my ballot
@@ -248,14 +255,14 @@ function How2() {
                                         <input
                                         type="input"
                                         style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
-                                        onClick={onFinishButton}
+                                        onClick={onFinishButtonMail}
                                         onChange={e => { setMailBallotWhen(e.target.value); console.log(e.target.value) }}
 
                                     />
                                 </label>
                             </div>
                         </form>
-                        {finishButton ?
+                        {finishButtonMail ?
                             <div onClick={handleMailSubmit} style={{ textAlign: "center", marginTop: "10px" }}>
                                 <button
                                     class="btn btn-primary"
@@ -366,7 +373,7 @@ function How2() {
                                     </button>
                                     </div>
                                 </form>
-                            </div> : null
+                            </div> :<div> </div>
                         }
 
                     </div>
@@ -564,10 +571,10 @@ function How2() {
                             <input
                                 type="input"
                                 style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
-                                onKeyUp={onFinishButton}
+                                onKeyUp={onFinishButtonEarly}
                             />
                         </form>
-                        {finishButton ?
+                        {finishButtonEarly ?
                             <div style={{ textAlign: "center", marginTop: "10px" }}>
                                 <button
                                     class="btn btn-primary"
@@ -898,10 +905,10 @@ function How2() {
                             <input
                                 type="input"
                                 style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
-                                onKeyUp={onFinishButton}
+                                onKeyUp={onFinishButtonElection}
                             />
                         </form>
-                        {finishButton ?
+                        {finishButtonElection ?
                             <div style={{ textAlign: "center", marginTop: "10px" }}>
                                 <button
                                     class="btn btn-primary"
