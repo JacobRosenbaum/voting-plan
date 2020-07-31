@@ -39,7 +39,9 @@ function How2() {
     const [finishButtonEarly, showFinishButtonEarly] = useState(false);
     const [finishButtonElection, showFinishButtonElection] = useState(false);
     const [startDatePerson, setStartDatePerson] = useState(new Date());
-    const [modalIsOpen, setIsOpen] = useState(false);
+    const [modalMailIsOpen, setMailIsOpen] = useState(false);
+    const [modalEarlyIsOpen, setEarlyIsOpen] = useState(false);
+    const [modalElectionIsOpen, setElectionIsOpen] = useState(false);
     const [emailFriends, showEmailFriends] = useState(false)
     const [nameMail, setNameMail] = useState();
     const [emailMail, setEmailMail] = useState();
@@ -49,21 +51,33 @@ function How2() {
     function handleMailSubmit() {
         console.log(nameMail, emailMail, castBallotHowMail, mailBallotWhen);
 
-        API.emailMail({ nameMail, emailMail, castBallotHowMail, mailBallotWhen });
+        API.emailMail({ nameMail, emailMail, castBallotHowMail, mailBallotWhen }).catch(err => console.log(err));
 
         API.saveMailUser({
             nameMail: nameMail,
             emailMail: emailMail,
             castBallotHowMail: castBallotHowMail,
             mailBallotWhen: mailBallotWhen,
-        });
+        }).catch(err => console.log(err));;
     }
 
-    function openModal() {
-        setIsOpen(true);
+    function openMailModal() {
+        setMailIsOpen(true);
     }
-    function closeModal() {
-        setIsOpen(false);
+    function closeMailModal() {
+        setMailIsOpen(false);
+    }
+    function openEarlyModal() {
+        setEarlyIsOpen(true);
+    }
+    function closeEarlyModal() {
+        setEarlyIsOpen(false);
+    }
+    function openElectionModal() {
+        setElectionIsOpen(true);
+    }
+    function closeElectionModal() {
+        setElectionIsOpen(false);
     }
     function onFinishButtonMail() {
         showFinishButtonMail(true)
@@ -135,7 +149,7 @@ function How2() {
         showPersonEarly2(true)
     }
     return (
-        <div>
+        <div class = 'container'>
             <div style={{ marginBottom: "30px" }}>
                 <form>
                     <h3>
@@ -263,10 +277,10 @@ function How2() {
                             </div>
                         </form>
                         {finishButtonMail ?
-                            <div onClick={handleMailSubmit} style={{ textAlign: "center", marginTop: "10px" }}>
+                            <div  style={{ textAlign: "center", marginTop: "10px" }}>
                                 <button
                                     class="btn btn-primary"
-                                    onClick={openModal}
+                                    onClick={openMailModal}
                                 >
                                     i'm finished
                                     </button>
@@ -275,13 +289,13 @@ function How2() {
                     : null
                 }
                 <Modal
-                    isOpen={modalIsOpen}
+                    isOpen={modalMailIsOpen}
                     // onAfterOpen={afterOpenModal}
-                    onRequestClose={closeModal}
+                    onRequestClose={closeMailModal}
                     style={customStyles}
                     contentLabel="Modal"
                 >
-                    <i id="close" class="fa fa-times" onClick={closeModal}></i>
+                    <i id="close" class="fa fa-times" onClick={closeMailModal}></i>
                     <div>
                         <div>
                             <h4 style={{ marginBottom: "30px" }}>
@@ -368,6 +382,7 @@ function How2() {
                                         <button
                                             class="btn btn-primary mailButton"
                                             type="submit"
+                                            onClick={handleMailSubmit}
                                         >
                                             i'm finished
                                     </button>
@@ -578,7 +593,7 @@ function How2() {
                             <div style={{ textAlign: "center", marginTop: "10px" }}>
                                 <button
                                     class="btn btn-primary"
-                                    onClick={openModal}
+                                    onClick={openEarlyModal}
                                 >
                                     i'm finished
                                     </button>
@@ -586,13 +601,13 @@ function How2() {
                     </div> : null
                 }
                 <Modal
-                    isOpen={modalIsOpen}
+                    isOpen={modalEarlyIsOpen}
                     // onAfterOpen={afterOpenModal}
-                    onRequestClose={closeModal}
+                    onRequestClose={closeEarlyModal}
                     style={customStyles}
                     contentLabel="Modal"
                 >
-                    <i id="close" class="fa fa-times" onClick={closeModal}></i>
+                    <i id="closeEarly" class="fa fa-times" onClick={closeEarlyModal}></i>
                     <div>
                         <div>
                             <h4 style={{ marginBottom: "30px" }}>
@@ -912,7 +927,7 @@ function How2() {
                             <div style={{ textAlign: "center", marginTop: "10px" }}>
                                 <button
                                     class="btn btn-primary"
-                                    onClick={openModal}
+                                    onClick={openElectionModal}
                                 >
                                     i'm finished
                                     </button>
@@ -920,13 +935,13 @@ function How2() {
                     </div> : null
                 }
                 <Modal
-                    isOpen={modalIsOpen}
+                    isOpen={modalElectionIsOpen}
                     // onAfterOpen={afterOpenModal}
-                    onRequestClose={closeModal}
+                    onRequestClose={closeEarlyModal}
                     style={customStyles}
                     contentLabel="Modal"
                 >
-                    <i id="close" class="fa fa-times" onClick={closeModal}></i>
+                    <i id="closeElection" class="fa fa-times" onClick={closeElectionModal}></i>
                     <div>
                         <div>
                             <h4 style={{ marginBottom: "30px" }}>
