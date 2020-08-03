@@ -333,7 +333,7 @@ function How2() {
                                 <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
                                     hey that was easy! who else should make a plan to vote right now?
                                 </h4>
-                                <form onSubmit = {handleMailSubmit} style={{ textAlign: "left" }}>
+                                <form style={{ textAlign: "left" }}>
                                     <ol>
                                         <li>
                                             <input
