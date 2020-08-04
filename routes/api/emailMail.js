@@ -16,8 +16,8 @@ router.route("/")
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'jacobrosenbaum95@gmail.com',
-        pass: 'Squidward11$'
+        user: 'letsdosomething2020@gmail.com',
+        pass: 'L3tsd0this!2020'
       }
     });
 
@@ -38,10 +38,14 @@ router.route("/")
 function emailOptions(name, email, castBallotHowMail, mailBallotWhen) {
   console.log("from email options " + name)
   let emailOptions = {}
-  emailOptions.from = 'jacobrosenbaum95@gmail.com';
+  emailOptions.from = 'letsdosomething2020@gmail.com';
   emailOptions.to = email;
-  emailOptions.subject = 'VOTE PLAN';
-  emailOptions.html = `<p> Hello ${name}! </p> <p> You will cast you ballot by ${castBallotHowMail}, and you will do it by ${mailBallotWhen}`;
+  emailOptions.subject = 'VOTE PLAN TEST';
+  emailOptions.html = `<p> Hello ${name}! </p> <p style = "border-top: red 2px solid"> You will cast you ballot ${castBallotHowMail}, and you will do it ${mailBallotWhen}!`;
+  emailOptions.attachments = [{
+    filename: "voting plan", 
+    content: "voting plan"
+  }]
   return emailOptions
 };
 
