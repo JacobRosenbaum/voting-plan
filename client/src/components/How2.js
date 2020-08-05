@@ -47,11 +47,19 @@ function How2() {
     const [emailMail, setEmailMail] = useState();
     const [castBallotHowMail, setCastBallotHowMail] = useState();
     const [mailBallotWhen, setMailBallotWhen] = useState();
+    const [mailFriendName1, setMailFriendName1] = useState();
+    const [mailFriendName2, setMailFriendName2] = useState();
+    const [mailFriendName3, setMailFriendName3] = useState();
+    const [mailFriendEmail1, setMailFriendEmail1] = useState();
+    const [mailFriendEmail2, setMailFriendEmail2] = useState();
+    const [mailFriendEmail3, setMailFriendEmail3] = useState();
 
     function handleMailSubmit() {
         console.log(nameMail, emailMail, castBallotHowMail, mailBallotWhen);
 
         API.emailMail({ nameMail, emailMail, castBallotHowMail, mailBallotWhen }).catch(err => console.log(err));
+        
+        API.mailFriend1({mailFriendName1, mailFriendEmail1});
 
         API.saveMailUser({
             nameMail: nameMail,
@@ -340,12 +348,16 @@ function How2() {
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789" }}
                                                 placeholder="name"
+                                                onChange={e => { setMailFriendName1(e.target.value); console.log(e.target.value) }}
+
                                             >
                                             </input>
                                             <input
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
                                                 placeholder="email address"
+                                                onChange={e => { setMailFriendEmail1(e.target.value); console.log(e.target.value) }}
+
                                             >
                                             </input>
                                         </li>
@@ -354,12 +366,16 @@ function How2() {
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789" }}
                                                 placeholder="name"
+                                                onChange={e => { setMailFriendName2(e.target.value); console.log(e.target.value) }}
+
                                             >
                                             </input>
                                             <input
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
                                                 placeholder="email address"
+                                                onChange={e => { setMailFriendEmail2(e.target.value); console.log(e.target.value) }}
+
                                             >
                                             </input>
                                         </li>
@@ -368,12 +384,16 @@ function How2() {
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789" }}
                                                 placeholder="name"
+                                                onChange={e => { setMailFriendName3(e.target.value); console.log(e.target.value) }}
+
                                             >
                                             </input>
                                             <input
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
                                                 placeholder="email address"
+                                                onChange={e => { setMailFriendEmail3(e.target.value); console.log(e.target.value) }}
+
                                             >
                                             </input>
                                         </li>
