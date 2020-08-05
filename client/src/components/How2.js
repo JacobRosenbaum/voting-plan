@@ -59,7 +59,11 @@ function How2() {
 
         API.emailMail({ nameMail, emailMail, castBallotHowMail, mailBallotWhen }).catch(err => console.log(err));
         
-        API.mailFriend1({mailFriendName1, mailFriendEmail1});
+        if (mailFriendEmail1){
+
+            API.mailFriend1({mailFriendName1, mailFriendEmail1})
+            
+        };
 
         API.saveMailUser({
             nameMail: nameMail,
