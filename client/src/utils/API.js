@@ -27,7 +27,7 @@ export default {
     },
     saveMailUser: function (userData) {
         console.log("saved by mail user", userData)
-        return axios.post("api/vote/", userData)
+        return axios.post("api/mail_user/", userData)
     },
     saveEarlyUser: function (userData) {
         console.log("saved by early user")

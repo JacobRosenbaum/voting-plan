@@ -64,6 +64,16 @@ function How2() {
             API.mailFriend1({mailFriendName1, mailFriendEmail1})
             
         };
+        if (mailFriendEmail2){
+
+            API.mailFriend2({mailFriendName2, mailFriendEmail2})
+            
+        };
+        if (mailFriendEmail3){
+
+            API.mailFriend3({mailFriendName3, mailFriendEmail3})
+            
+        };
 
         API.saveMailUser({
             nameMail: nameMail,
