@@ -3,15 +3,22 @@ const nodemailer = require('nodemailer');
 
 router.route("/")
   .post((req, res) => {
-    const name = req.body.nameMail;
-    const email = req.body.emailMail;
-    const castBallotHowMail = req.body.castBallotHowMail;
-    const mailBallotWhen = req.body.mailBallotWhen;
+
+    const name = req.body.nameEarly;
+    const email = req.body.emailEarly;
+    const castBallotHowEarly = req.body.castBallotHowEarly;
+    const whatDay = req.body.whatDay;
+    const whatTime = req.body.whatTime;
+    const getToPolls = req.body.getToPolls;
+    const bringWith = req.body.bringWith;
 
     console.log(name)
     console.log(email);
-    console.log(castBallotHowMail);
-    console.log(mailBallotWhen);
+    console.log(castBallotHowEarly);
+    console.log(whatDay);
+    console.log(whatTime);
+    console.log(getToPolls);
+    console.log(bringWith);
 
     var transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -21,7 +28,7 @@ router.route("/")
       }
     });
 
-    const userOptions = emailOptions(name, email, castBallotHowMail, mailBallotWhen)
+    const userOptions = emailOptions(name, email,castBallotHowEarly, whatDay, whatTime, getToPolls, bringWith)
 
     transporter.sendMail(userOptions, function (error, info) {
 
@@ -35,13 +42,13 @@ router.route("/")
     res.end();
   });
 
-function emailOptions(name, email, castBallotHowMail, mailBallotWhen) {
+function emailOptions(name, email,castBallotHowEarly, whatDay, whatTime, getToPolls, bringWith) {
   console.log("from email options " + name)
   let emailOptions = {}
   emailOptions.from = 'letsdosomething2020@gmail.com';
   emailOptions.to = email;
   emailOptions.subject = 'VOTE PLAN TEST';
-  emailOptions.html = `<p> Hello ${name}! </p> <p style = "border-top: red 2px solid"> You will cast your ballot ${castBallotHowMail}, and you will do it ${mailBallotWhen}!`;
+  emailOptions.html = `<p> Hello ${name}! </p> <p style = "border-top: red 2px solid"> You will cast your ballot ${castBallotHowEarly}, and you will do it ${whatDay}!`;
   emailOptions.attachments = [{
     filename: "voting plan", 
     content: "voting plan"

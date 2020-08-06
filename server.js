@@ -19,7 +19,13 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/votingPlanDB"), { useNewUrlParser: true };
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/votePlan", 
+{
+useNewUrlParser: true ,
+useFindAndModify: false,
+useUnifiedTopology: true,
+}
+).then(() => console.log('Database connected successfully'));
 
 app.use((err, req, res, next) => {
   console.log(err);

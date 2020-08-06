@@ -1,3 +1,5 @@
 module.exports = {
-    Mail: require('./mail')
+    Mail: require('./mail'),
+    Early: require('./early'),
+    Election: require('./election')
   };

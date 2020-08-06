@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const voteController = require("../../controller/voteController");
+const mailController = require("../../controller/mailController");
 
 
 router.route("/")
-  .post(voteController.create)
+  .post(mailController.create)
 
 module.exports = router;

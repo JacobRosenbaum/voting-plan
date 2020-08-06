@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import "../assets/css/how.css";
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 import Modal from 'react-modal';
 import API from "../utils/API";
+import Export from "./Export"
+
 
 Modal.setAppElement(document.getElementById('root'));
 
 function How2() {
+
 
     const customStyles = {
         content: {
@@ -53,26 +56,51 @@ function How2() {
     const [mailFriendEmail1, setMailFriendEmail1] = useState();
     const [mailFriendEmail2, setMailFriendEmail2] = useState();
     const [mailFriendEmail3, setMailFriendEmail3] = useState();
+    const [earlyFriendName1, setEarlyFriendName1] = useState();
+    const [earlyFriendName2, setEarlyFriendName2] = useState();
+    const [earlyFriendName3, setEarlyFriendName3] = useState();
+    const [earlyFriendEmail1, setEarlyFriendEmail1] = useState();
+    const [earlyFriendEmail2, setEarlyFriendEmail2] = useState();
+    const [earlyFriendEmail3, setEarlyFriendEmail3] = useState();
+    const [nameEarly, setNameEarly] = useState();
+    const [emailEarly, setEmailEarly] = useState();
+    const [castBallotHowEarly, setCastBallotHowEarly] = useState();
+    const [whatDay, setWhatDay] = useState();
+    const [whatTime, setWhatTime] = useState();
+    const [getToPolls, setGetToPolls] = useState();
+    const [bringWith, setBringWith] = useState();
+    const [nameElection, setNameElection] = useState();
+    const [emailElection, setEmailElection] = useState();
+    const [castBallotHowElection, setCastBallotHowElection] = useState();
+    const [whatTimeElection, setWhatTimeElection] = useState();
+    const [getToPollsElection, setGetToPollsElection] = useState();
+    const [takeOffWork, setTakeOffWork] = useState();
+    const [bringWithElection, setBringWithElection] = useState();
+    const [electionFriendName1, setElectionFriendName1] = useState();
+    const [electionFriendName2, setElectionFriendName2] = useState();
+    const [electionFriendEmail1, setElectionFriendEmail1] = useState();
+    const [electionFriendEmail2, setElectionFriendEmail2] = useState();
+
 
     function handleMailSubmit() {
         console.log(nameMail, emailMail, castBallotHowMail, mailBallotWhen);
 
         API.emailMail({ nameMail, emailMail, castBallotHowMail, mailBallotWhen }).catch(err => console.log(err));
-        
-        if (mailFriendEmail1){
 
-            API.mailFriend1({mailFriendName1, mailFriendEmail1})
-            
+        if (mailFriendEmail1) {
+
+            API.mailFriend1({ mailFriendName1, mailFriendEmail1 })
+
         };
-        if (mailFriendEmail2){
+        if (mailFriendEmail2) {
 
-            API.mailFriend2({mailFriendName2, mailFriendEmail2})
-            
+            API.mailFriend2({ mailFriendName2, mailFriendEmail2 })
+
         };
-        if (mailFriendEmail3){
+        if (mailFriendEmail3) {
 
-            API.mailFriend3({mailFriendName3, mailFriendEmail3})
-            
+            API.mailFriend3({ mailFriendName3, mailFriendEmail3 })
+
         };
 
         API.saveMailUser({
@@ -80,6 +108,65 @@ function How2() {
             emailMail: emailMail,
             castBallotHowMail: castBallotHowMail,
             mailBallotWhen: mailBallotWhen,
+        }).catch(err => console.log(err));;
+    }
+
+    function handleEarlySubmit() {
+        console.log(nameEarly, emailEarly, castBallotHowEarly, whatDay, whatTime, getToPolls, bringWith)
+
+        API.emailEarly({ nameEarly, emailEarly, castBallotHowEarly, whatDay, whatTime, getToPolls, bringWith }).catch(err => console.log(err));
+
+        if (earlyFriendEmail1) {
+
+            API.earlyFriend1({ earlyFriendName1, earlyFriendEmail1 })
+
+        };
+        if (earlyFriendEmail2) {
+
+            API.earlyFriend2({ earlyFriendName2, earlyFriendEmail2 })
+
+        };
+        if (earlyFriendEmail3) {
+
+            API.earlyFriend3({ earlyFriendName3, earlyFriendEmail3 })
+
+        };
+
+        API.saveEarlyUser({
+            nameEarly: nameEarly,
+            emailEarly: emailEarly,
+            castBallotHowEarly: castBallotHowEarly,
+            whatDay: whatDay,
+            whatTime: whatTime,
+            getToPolls: getToPolls,
+            bringWith: bringWith
+        }).catch(err => console.log(err));;
+    }
+
+    function handleElectionSubmit() {
+        console.log(nameElection, emailElection, castBallotHowElection, whatTimeElection, getToPollsElection, bringWithElection, takeOffWork)
+
+        API.emailElection({ nameElection, emailElection, castBallotHowElection, whatTimeElection, getToPollsElection, bringWithElection, takeOffWork }).catch(err => console.log(err));
+
+        if (electionFriendEmail1) {
+
+            API.electionFriend1({ electionFriendName1, electionFriendEmail1 })
+
+        };
+        if (electionFriendEmail2) {
+
+            API.electionFriend2({ electionFriendName2, electionFriendEmail2 })
+
+        };
+
+        API.saveElectionUser({
+            nameElection: nameElection,
+            emailElection: emailElection,
+            castBallotHowElection: castBallotHowElection,
+            whatTimeElection: whatTimeElection,
+            getToPollsElection: getToPollsElection,
+            bringWithElection: bringWithElection,
+            takeOffWork: takeOffWork
         }).catch(err => console.log(err));;
     }
 
@@ -134,10 +221,11 @@ function How2() {
         showPersonElection2(false);
         showPersonElection3(false);
         showPersonElection4(false);
-        showPersonElection5(false)
+        showPersonElection5(false);
+
     }
     function onPersonEarly3() {
-        showPersonEarly3(true)
+        showPersonEarly3(true);
     }
     function onPersonEarly4() {
         showPersonEarly4(true)
@@ -168,39 +256,42 @@ function How2() {
     }
     function handleDateChangePerson(date) {
         setStartDatePerson(date);
-        showPersonEarly2(true)
+        showPersonEarly2(true);
+        setWhatDay(startDatePerson.toString().slice(0, 15));
+
     }
     return (
-        <div class = 'container'>
+        <div class='container'>
             <div style={{ marginBottom: "30px" }}>
                 <form>
                     <h3>
-                        how do you plan to cast you ballot?
+                        how do you plan to cast your ballot?
                         </h3>
+
                     <div className="form-check">
                         <label style={{ textAlign: "left !important" }}>
-                                <input
-                                    type="radio"
-                                    name="react-tips"
-                                    value= "by mail"
-                                    // onChange={onMail}
-                                    style={{ marginRight: "5px" }}
-                                    onClick={e => {
-                                        setCastBallotHowMail(e.target.value);
-                                        showMail(true);
-                                        showPersonEarly(false);
-                                        showPersonEarly2(false);
-                                        showPersonEarly3(false);
-                                        showPersonEarly4(false);
-                                        showPersonEarly5(false);
-                                        showPersonElection(false);
-                                        showPersonElection2(false);
-                                        showPersonElection3(false);
-                                        showPersonElection4(false);
-                                        showPersonElection5(false);
-                                        ;
-                                    }}
-                                />
+                            <input
+                                type="radio"
+                                name="react-tips"
+                                value="by mail"
+                                // onChange={onMail}
+                                style={{ marginRight: "5px" }}
+                                onClick={e => {
+                                    setCastBallotHowMail(e.target.value);
+                                    showMail(true);
+                                    showPersonEarly(false);
+                                    showPersonEarly2(false);
+                                    showPersonEarly3(false);
+                                    showPersonEarly4(false);
+                                    showPersonEarly5(false);
+                                    showPersonElection(false);
+                                    showPersonElection2(false);
+                                    showPersonElection3(false);
+                                    showPersonElection4(false);
+                                    showPersonElection5(false);
+                                    ;
+                                }}
+                            />
                             by mail
                             </label>
                     </div>
@@ -212,6 +303,11 @@ function How2() {
                                 value="mail"
                                 onClick={onPersonEarly}
                                 style={{ marginRight: "5px" }}
+                                onChange={e => {
+                                    setCastBallotHowEarly("in person, early")
+                                }
+
+                                }
                             />
                             in person, early
                             </label>
@@ -224,6 +320,10 @@ function How2() {
                                 value="mail"
                                 onClick={onPersonElection}
                                 style={{ marginRight: "5px" }}
+                                onChange={e => {
+                                    setCastBallotHowElection("in person, on election day")
+                                }
+                                }
                             />
                             in person, on election day
                             </label>
@@ -245,7 +345,7 @@ function How2() {
                                         value="mail"
                                         style={{ marginRight: "5px" }}
                                         onClick={onFinishButtonMail}
-                                        onChange={e => { setMailBallotWhen("the minute it arrives in the mail (can’t wait!)")}}
+                                        onChange={e => { setMailBallotWhen("the minute it arrives in the mail (can’t wait!)") }}
 
                                     />
                                     the minute it arrives in the mail (can’t wait!)
@@ -270,7 +370,6 @@ function How2() {
                                     <input
                                         type="radio"
                                         name="react-tips"
-                                       
                                         style={{ marginRight: "5px" }}
                                         onChange={onFinishButtonMail}
                                         onClick={e => { setMailBallotWhen("the weekend after I receive my ballot") }}
@@ -299,7 +398,7 @@ function How2() {
                             </div>
                         </form>
                         {finishButtonMail ?
-                            <div  style={{ textAlign: "center", marginTop: "10px" }}>
+                            <div style={{ textAlign: "center", marginTop: "10px" }}>
                                 <button
                                     class="btn btn-primary"
                                     onClick={openMailModal}
@@ -416,13 +515,13 @@ function How2() {
                                         <button
                                             class="btn btn-primary mailButton"
                                             type="submit"
-                                            
+
                                         >
                                             i'm finished
                                     </button>
                                     </div>
                                 </form>
-                            </div> :<div> </div>
+                            </div> : <div> </div>
                         }
 
                     </div>
@@ -454,6 +553,8 @@ function How2() {
                                     value="mail"
                                     onClick={onPersonEarly3}
                                     style={{ marginRight: "5px" }}
+                                    onChange={e => { setWhatTime("before work"); }}
+
                                 />
                                 before work
                             </label>
@@ -466,6 +567,8 @@ function How2() {
                                     value="mail"
                                     onClick={onPersonEarly3}
                                     style={{ marginRight: "5px" }}
+                                    onChange={e => { setWhatTime("during lunch"); }}
+
                                 />
                                 during lunch
                             </label>
@@ -478,6 +581,8 @@ function How2() {
                                     value="mail"
                                     onClick={onPersonEarly3}
                                     style={{ marginRight: "5px" }}
+                                    onChange={e => { setWhatTime("after work"); }}
+
                                 />
                                 after work
                             </label>
@@ -496,6 +601,8 @@ function How2() {
                                     type="input"
                                     style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
                                     onClick={onPersonEarly3}
+                                    onChange={e => { setWhatTime(e.target.value); }}
+
                                 />
                             </label>
                         </div>
@@ -516,6 +623,7 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonEarly4}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPolls("walk"); }}
                                     />
                                     walk
                                     </label>
@@ -528,6 +636,8 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonEarly4}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPolls("bus"); }}
+
                                     />
                                     bus
                                     </label>
@@ -540,6 +650,7 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonEarly4}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPolls("subway"); }}
                                     />
                                     subway
                                     </label>
@@ -552,6 +663,8 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonEarly4}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPolls("drive"); }}
+
                                     />
                                     drive
                                     </label>
@@ -564,6 +677,7 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonEarly4}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPolls("bike"); }}
                                     />
                                     bike
                                     </label>
@@ -576,6 +690,8 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonEarly4}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPolls("carpool"); }}
+
                                     />
                                     carpool
                             </label>
@@ -588,6 +704,8 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonEarly4}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPolls("Lyft/Uber"); }}
+
                                     />
                                     Lyft/Uber
                             </label>
@@ -605,6 +723,8 @@ function How2() {
                                         type="input"
                                         style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
                                         onKeyUp={onPersonEarly4}
+                                        onChange={e => { setGetToPolls(e.target.value); }}
+
                                     />
                                 </label>
                             </div>
@@ -621,6 +741,7 @@ function How2() {
                                 type="input"
                                 style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
                                 onKeyUp={onFinishButtonEarly}
+                                onChange={e => { setBringWith(e.target.value); console.log(e.target.value) }}
                             />
                         </form>
                         {finishButtonEarly ?
@@ -657,6 +778,8 @@ function How2() {
                                             type="input"
                                             style={{ width: "300px", border: "1px solid #004789" }}
                                             placeholder="name"
+                                            onChange={e => { setNameEarly(e.target.value); }}
+
                                         >
                                         </input>
                                     </li>
@@ -666,6 +789,8 @@ function How2() {
                                             style={{ width: "300px", border: "1px solid #004789" }}
                                             placeholder="email address"
                                             onKeyUp={onEmailFriends}
+                                            onChange={e => { setEmailEarly(e.target.value); }}
+
                                         >
                                         </input>
                                     </li>
@@ -677,19 +802,23 @@ function How2() {
                                 <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
                                     hey that was easy! who else should make a plan to vote right now?
                                 </h4>
-                                <form style={{ textAlign: "left" }}>
+                                <form onSubmit={handleEarlySubmit} style={{ textAlign: "left" }}>
                                     <ol>
                                         <li>
                                             <input
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789" }}
                                                 placeholder="name"
+                                                onChange={e => { setEarlyFriendName1(e.target.value); }}
+
                                             >
                                             </input>
                                             <input
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
                                                 placeholder="email address"
+                                                onChange={e => { setEarlyFriendEmail1(e.target.value); }}
+
                                             >
                                             </input>
                                         </li>
@@ -698,12 +827,16 @@ function How2() {
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789" }}
                                                 placeholder="name"
+                                                onChange={e => { setEarlyFriendName2(e.target.value); }}
+
                                             >
                                             </input>
                                             <input
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
                                                 placeholder="email address"
+                                                onChange={e => { setEarlyFriendEmail2(e.target.value); }}
+
                                             >
                                             </input>
                                         </li>
@@ -712,12 +845,16 @@ function How2() {
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789" }}
                                                 placeholder="name"
+                                                onChange={e => { setEarlyFriendName3(e.target.value); }}
+
                                             >
                                             </input>
                                             <input
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
                                                 placeholder="email address"
+                                                onChange={e => { setEarlyFriendEmail3(e.target.value); }}
+
                                             >
                                             </input>
                                         </li>
@@ -750,6 +887,7 @@ function How2() {
                                     value="mail"
                                     onClick={onPersonElection2}
                                     style={{ marginRight: "5px" }}
+                                    onChange={e => { setWhatTimeElection("before work"); }}
                                 />
                                 before work
                         </label>
@@ -762,6 +900,7 @@ function How2() {
                                     value="mail"
                                     onClick={onPersonElection2}
                                     style={{ marginRight: "5px" }}
+                                    onChange={e => { setWhatTimeElection("during lunch"); }}
                                 />
                                 during lunch
                         </label>
@@ -774,6 +913,7 @@ function How2() {
                                     value="mail"
                                     onClick={onPersonElection2}
                                     style={{ marginRight: "5px" }}
+                                    onChange={e => { setWhatTimeElection("after work"); }}
                                 />
                                 after work
                         </label>
@@ -791,6 +931,7 @@ function How2() {
                                     type="input"
                                     style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
                                     onKeyUp={onPersonElection2}
+                                    onChange={e => { setWhatTimeElection(e.target.value); console.log(e.target.value); }}
                                 />
                             </label>
                         </div>
@@ -811,6 +952,8 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonElection3}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPollsElection("walk"); }}
+
                                     />
                                     walk
                                     </label>
@@ -823,6 +966,8 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonElection3}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPollsElection("bus"); }}
+
                                     />
                                     bus
                                      </label>
@@ -835,6 +980,8 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonElection3}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPollsElection("subway"); }}
+
                                     />
                                     subway
                                     </label>
@@ -847,6 +994,8 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonElection3}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPollsElection("drive"); }}
+
                                     />
                                     drive
                                     </label>
@@ -859,6 +1008,8 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonElection3}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPollsElection("bike"); }}
+
                                     />
                                     bike
                                     </label>
@@ -871,6 +1022,8 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonElection3}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPollsElection("carpool"); }}
+
                                     />
                                     carpool
                                      </label>
@@ -883,6 +1036,8 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonElection3}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPollsElection("Lyft/Uber"); }}
+
                                     />
                                     Lyft/Uber
                                     </label>
@@ -901,6 +1056,8 @@ function How2() {
                                         type="input"
                                         style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
                                         onKeyUp={onPersonElection3}
+                                        onChange={e => { setGetToPollsElection(e.target.value); console.log(e.target.value); }}
+
                                     />
                                 </label>
                             </div>
@@ -921,6 +1078,7 @@ function How2() {
                                         value="mail"
                                         onClick={onPersonElection4}
                                         style={{ marginRight: "5px" }}
+                                        onChange={e => { setTakeOffWork("no"); }}
                                     />
                                     no
                                     </label>
@@ -939,6 +1097,8 @@ function How2() {
                                         type="input"
                                         style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
                                         onKeyUp={onPersonElection4}
+                                        onChange={e => { setGetToPollsElection(e.target.value); console.log(e.target.value) }}
+
                                     />
                                 </label>
                             </div>
@@ -955,6 +1115,7 @@ function How2() {
                                 type="input"
                                 style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
                                 onKeyUp={onFinishButtonElection}
+                                onChange={e => { setBringWithElection(e.target.value); console.log(e.target.value) }}
                             />
                         </form>
                         {finishButtonElection ?
@@ -991,6 +1152,8 @@ function How2() {
                                             type="input"
                                             style={{ width: "300px", border: "1px solid #004789" }}
                                             placeholder="name"
+                                            onChange={e => { setNameElection(e.target.value); console.log(e.target.value); }}
+
                                         >
                                         </input>
                                     </li>
@@ -1000,6 +1163,8 @@ function How2() {
                                             style={{ width: "300px", border: "1px solid #004789" }}
                                             placeholder="email address"
                                             onKeyUp={onEmailFriends}
+                                            onChange={e => { setEmailElection(e.target.value); console.log(e.target.value); }}
+
                                         >
                                         </input>
                                     </li>
@@ -1011,19 +1176,23 @@ function How2() {
                                 <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
                                     hey that was easy! who else should make a plan to vote right now?
                                 </h4>
-                                <form style={{ textAlign: "left" }}>
+                                <form onSubmit={handleElectionSubmit} style={{ textAlign: "left" }}>
                                     <ol>
                                         <li>
                                             <input
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789" }}
                                                 placeholder="name"
+                                                onChange={e => { setElectionFriendName1(e.target.value); console.log(e.target.value); }}
+
                                             >
                                             </input>
                                             <input
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
                                                 placeholder="email address"
+                                                onChange={e => { setElectionFriendEmail1(e.target.value); console.log(e.target.value); }}
+
                                             >
                                             </input>
                                         </li>
@@ -1032,26 +1201,16 @@ function How2() {
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789" }}
                                                 placeholder="name"
+                                                onChange={e => { setElectionFriendName2(e.target.value); console.log(e.target.value); }}
+
                                             >
                                             </input>
                                             <input
                                                 type="input"
                                                 style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
                                                 placeholder="email address"
-                                            >
-                                            </input>
-                                        </li>
-                                        <li>
-                                            <input
-                                                type="input"
-                                                style={{ width: "300px", border: "1px solid #004789" }}
-                                                placeholder="name"
-                                            >
-                                            </input>
-                                            <input
-                                                type="input"
-                                                style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
-                                                placeholder="email address"
+                                                onChange={e => { setElectionFriendEmail2(e.target.value); console.log(e.target.value); }}
+
                                             >
                                             </input>
                                         </li>

@@ -42,6 +42,28 @@ input {
     bottom: 15px;
     font-size: 25px
 }
+#closeElection:hover {
+    cursor: pointer;
+
+}
+
+#closeElection {
+    position: relative;
+    left: 405px;
+    bottom: 15px;
+    font-size: 25px
+}
+#closeEarly:hover {
+    cursor: pointer;
+
+}
+
+#closeEarly {
+    position: relative;
+    left: 405px;
+    bottom: 15px;
+    font-size: 25px
+}
 .mailButton{
     background-color: white !important;
     color: #004789
