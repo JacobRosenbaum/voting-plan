@@ -3,8 +3,8 @@ const nodemailer = require('nodemailer');
 
 router.route("/")
   .post((req, res) => {
-    const name = req.body.mailFriendName3;
-    const email = req.body.mailFriendEmail3;
+    const name = req.body.electionFriendName1;
+    const email = req.body.electionFriendEmail1;
  
     console.log(name)
     console.log(email);
@@ -32,7 +32,7 @@ router.route("/")
   });
 
 function emailOptions(name, email) {
-  console.log("from email options " + name + email)
+  console.log("from election email options friend 1")
   let emailOptions = {}
   emailOptions.from = 'letsdosomething2020@gmail.com';
   emailOptions.to = email;

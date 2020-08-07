@@ -32,7 +32,7 @@ router.route("/")
   });
 
 function emailOptions(name, email) {
-  console.log("from email options " + name)
+  console.log("from mail email options friend 1")
   let emailOptions = {}
   emailOptions.from = 'letsdosomething2020@gmail.com';
   emailOptions.to = email;

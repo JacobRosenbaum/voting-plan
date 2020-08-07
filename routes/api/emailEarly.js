@@ -43,7 +43,7 @@ router.route("/")
   });
 
 function emailOptions(name, email,castBallotHowEarly, whatDay, whatTime, getToPolls, bringWith) {
-  console.log("from email options " + name)
+  console.log("from early email options")
   let emailOptions = {}
   emailOptions.from = 'letsdosomething2020@gmail.com';
   emailOptions.to = email;

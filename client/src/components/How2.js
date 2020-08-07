@@ -52,16 +52,12 @@ function How2() {
     const [mailBallotWhen, setMailBallotWhen] = useState();
     const [mailFriendName1, setMailFriendName1] = useState();
     const [mailFriendName2, setMailFriendName2] = useState();
-    const [mailFriendName3, setMailFriendName3] = useState();
     const [mailFriendEmail1, setMailFriendEmail1] = useState();
     const [mailFriendEmail2, setMailFriendEmail2] = useState();
-    const [mailFriendEmail3, setMailFriendEmail3] = useState();
     const [earlyFriendName1, setEarlyFriendName1] = useState();
     const [earlyFriendName2, setEarlyFriendName2] = useState();
-    const [earlyFriendName3, setEarlyFriendName3] = useState();
     const [earlyFriendEmail1, setEarlyFriendEmail1] = useState();
     const [earlyFriendEmail2, setEarlyFriendEmail2] = useState();
-    const [earlyFriendEmail3, setEarlyFriendEmail3] = useState();
     const [nameEarly, setNameEarly] = useState();
     const [emailEarly, setEmailEarly] = useState();
     const [castBallotHowEarly, setCastBallotHowEarly] = useState();
@@ -97,11 +93,6 @@ function How2() {
             API.mailFriend2({ mailFriendName2, mailFriendEmail2 })
 
         };
-        if (mailFriendEmail3) {
-
-            API.mailFriend3({ mailFriendName3, mailFriendEmail3 })
-
-        };
 
         API.saveMailUser({
             nameMail: nameMail,
@@ -126,12 +117,7 @@ function How2() {
             API.earlyFriend2({ earlyFriendName2, earlyFriendEmail2 })
 
         };
-        if (earlyFriendEmail3) {
-
-            API.earlyFriend3({ earlyFriendName3, earlyFriendEmail3 })
-
-        };
-
+    
         API.saveEarlyUser({
             nameEarly: nameEarly,
             emailEarly: emailEarly,
@@ -492,24 +478,6 @@ function How2() {
                                             >
                                             </input>
                                         </li>
-                                        <li>
-                                            <input
-                                                type="input"
-                                                style={{ width: "300px", border: "1px solid #004789" }}
-                                                placeholder="name"
-                                                onChange={e => { setMailFriendName3(e.target.value); console.log(e.target.value) }}
-
-                                            >
-                                            </input>
-                                            <input
-                                                type="input"
-                                                style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
-                                                placeholder="email address"
-                                                onChange={e => { setMailFriendEmail3(e.target.value); console.log(e.target.value) }}
-
-                                            >
-                                            </input>
-                                        </li>
                                     </ol>
                                     <div style={{ textAlign: "center" }}>
                                         <button
@@ -836,24 +804,6 @@ function How2() {
                                                 style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
                                                 placeholder="email address"
                                                 onChange={e => { setEarlyFriendEmail2(e.target.value); }}
-
-                                            >
-                                            </input>
-                                        </li>
-                                        <li>
-                                            <input
-                                                type="input"
-                                                style={{ width: "300px", border: "1px solid #004789" }}
-                                                placeholder="name"
-                                                onChange={e => { setEarlyFriendName3(e.target.value); }}
-
-                                            >
-                                            </input>
-                                            <input
-                                                type="input"
-                                                style={{ width: "300px", border: "1px solid #004789", marginLeft: "13px" }}
-                                                placeholder="email address"
-                                                onChange={e => { setEarlyFriendEmail3(e.target.value); }}
 
                                             >
                                             </input>

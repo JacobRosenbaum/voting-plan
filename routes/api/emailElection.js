@@ -7,7 +7,7 @@ router.route("/")
     const name = req.body.nameElection;
     const email = req.body.emailElection;
     const castBallotHowElection = req.body.castBallotHowElection;
-    const whatTime = req.body.hatTimeElection;
+    const whatTime = req.body.whatTimeElection;
     const getToPolls = req.body.getToPollsElection;
     const bringWith = req.body.bringWithElection;
     const takeOffWork = req.body.takeOffWork;
@@ -43,7 +43,7 @@ router.route("/")
   });
 
 function emailOptions(name, email,castBallotHowElection, whatTime, getToPolls, bringWith) {
-  console.log("from email options " + name)
+  console.log("from election email options")
   let emailOptions = {}
   emailOptions.from = 'letsdosomething2020@gmail.com';
   emailOptions.to = email;
