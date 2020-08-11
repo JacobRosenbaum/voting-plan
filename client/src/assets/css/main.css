@@ -14,3 +14,17 @@ body{
 #alternate:hover{
     cursor: pointer;
 }
+
+#oneSticker {
+    width: 265px;
+    position: absolute;
+    bottom: 480px;
+    left: 120px
+}
+
+#twoStickers {
+    width: 380px;
+    position: absolute;
+    left: 1250px;
+    bottom: 80px
+}

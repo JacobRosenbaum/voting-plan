@@ -18,9 +18,6 @@ function Main() {
                     }}
                         src={alternate}
                     />
-
-                   
-
                 }  </div> :
                 <div>
             <About />

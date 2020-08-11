@@ -2,11 +2,11 @@
     width: 900px
 }
 #voteRegister{
-    width: 900px
+    width: 750px
 }
 #voteDiv{
     position: relative;
-     bottom:  100px 
+     bottom:  150px 
 }
 
 #funVote{
@@ -30,7 +30,7 @@
     cursor: pointer;
     zoom: 100.1%
 }
-#oneSticker {
+/* #oneSticker {
     width: 250px;
     position: absolute;
     bottom: 480px;
@@ -42,4 +42,29 @@
     position: absolute;
     left: 1200px;
     bottom: 80px
+} */
+#yes{
+width: 300px;
+margin-left: 150px
+}
+#no{
+    width: 300px;
+    margin-right: 150px
+
+}
+#maybe{
+    width:450px;
+  margin-top: 30px
+}
+#yes:hover{
+    cursor: pointer;
+    zoom: 100.1%
+}
+#no:hover{
+    cursor: pointer;
+    zoom: 100.1%
+}
+#maybe:hover{
+    cursor: pointer;
+    zoom: 100.%
 }

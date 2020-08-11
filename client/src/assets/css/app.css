@@ -9,21 +9,6 @@ footer {
     padding: 12px
 }
 
-#oneSticker {
-    width: 250px;
-    position: absolute;
-    bottom: 480px;
-    left: 100px
-}
-
-#twoStickers {
-    width: 375px;
-    position: absolute;
-    left: 1200px;
-    bottom: 80px
-}
-
-
 /* #oneSticker {
     width: 250px;
     position: relative;

@@ -54,8 +54,6 @@ function About() {
     return (
         <div class="container">
             <div class="jumbotron w3-animate-opacity">
-                
-
                 <div>
                     {makePlanPicture ? <VotePlan /> : null
 

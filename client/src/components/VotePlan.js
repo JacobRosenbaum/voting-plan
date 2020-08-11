@@ -4,7 +4,10 @@ import letsGoButton from "../assets/images/letsGoButton.png";
 import "../assets/css/votePlan.css";
 import Modal from 'react-modal';
 import How3 from "../components/How2";
-import voteRegister from "../assets/images/voteRegister.png"
+import voteRegister from "../assets/images/voteRegister.png";
+import yes from "../assets/images/yes.png";
+import iDontKnow from "../assets/images/iDontKnow.png";
+import notYet from "../assets/images/notYet.png"
 
 
 function VotePlan() {
@@ -47,33 +50,40 @@ function VotePlan() {
     function startPlan() {
         showComponent(true);
         showButton(false);
-        
+
     }
     return (
         <div className="w3-animate-opacity" id="begin"  >
             {vote ?
-            <div style = {{textAlign:'center'}}>
-                <h5 id='funVote' style={{ marginBottom: '30px', color: "black ! important" }}>
-                    VOTING IS FUN. VOTING IS COOL. EVERYONE IS DOING IT. MAKE SURE YOU DO IT, TOO! <br />A GREAT WAY TO MAKE IT HAPPEN IS BY <b> MAKING A VOTING PLAN. </b> <br />  THIS SUPER SIMPLE TOOL WILL HELP YOU MAKE YOUR VOTING PLAN IN LESS THAN 3 MINUTES. IN?
+                <div style={{ textAlign: 'center' }}>
+                    <h5 id='funVote' style={{ marginBottom: '30px', color: "black ! important" }}>
+                        VOTING IS FUN. VOTING IS COOL. EVERYONE IS DOING IT. MAKE SURE YOU DO IT, TOO! <br />A GREAT WAY TO MAKE IT HAPPEN IS BY <b> MAKING A VOTING PLAN. </b> <br />  THIS SUPER SIMPLE TOOL WILL HELP YOU MAKE YOUR VOTING PLAN IN LESS THAN 3 MINUTES. IN?
                 </h5>
-                <img id="votePicture" src={VotePicture} />
-                <img onClick={() => {
-                    showVote(false)
-                    showButton(true)
-                }} id="letsGoButton" src={letsGoButton} />
-            </div> : null}
+                    <img id="votePicture" src={VotePicture} />
+                    <img onClick={() => {
+                        showVote(false)
+                        showButton(true)
+                    }} id="letsGoButton" src={letsGoButton} />
+                </div> : null}
             {button ?
-                <div id="simple" style = {{textAlign: 'center'}}>
-                    <div id = "voteDiv">
-                    <img style={{ marginBottom: '50px' }} src = {voteRegister} id = "voteRegister"
-                            />
-                    <div className="row">
-                        <div className="col-sm-12" >
-                            <button id="yes" class="btn btn-primary" onClick={startPlan}>yes</button>
-                            <button id="maybe" class="btn btn-primary" onClick={openMaybeModal} >i'm not sure</button>
-                            <button id="no" class="btn btn-primary" onClick={openVoteModal}>no</button>
+                <div id="simple" style={{ textAlign: 'center' }}>
+                    <div id="voteDiv">
+                        <img style={{ marginBottom: '50px' }} src={voteRegister} id="voteRegister"
+                        />
+                        <div className="row">
+                            <div className="col-sm-6" >
+                                <img id="yes" src={yes} onClick={startPlan} />
+
+                            </div>
+                            <div className="col-sm-6" >
+                                <img id="no" src={notYet} onClick={openVoteModal} />
+                            </div>
+                            </div>
+                        <div className="row">
+                            <div className="col-sm-12" >
+                                <img id="maybe" src={iDontKnow} onClick={openMaybeModal} />
+                            </div>
                         </div>
-                    </div>
                     </div>
                     <Modal
                         isOpen={voteModalIsOpen}
