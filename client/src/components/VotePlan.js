@@ -31,7 +31,7 @@ function VotePlan() {
             color: 'white',
             textAlign: 'center',
             border: '5px #EF3D55 solid',
-            fontFamily: "Gotham Pro",
+            fontFamily: '"Gotham Pro", sans-serif'
         }
     };
 

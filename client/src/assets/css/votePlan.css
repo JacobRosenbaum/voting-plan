@@ -1,21 +1,23 @@
 #votePicture {
     width: 900px
 }
-#voteRegister{
+
+#voteRegister {
     width: 775px
 }
-#voteDiv{
+
+#voteDiv {
     position: relative;
-     bottom:  150px 
+    bottom: 150px
 }
 
-#funVote{
+#funVote {
     color: black !important;
     font-size: 18px;
     font-family: "Gotham", sans-serif
 }
 
-#begin{
+#begin {
     position: relative;
 }
 
@@ -43,28 +45,32 @@
     left: 1200px;
     bottom: 80px
 } */
-#yes{
-width: 300px;
-margin-left: 160px
+#yes {
+    width: 300px;
+    margin-left: 160px
 }
-#no{
+
+#no {
     width: 300px;
     margin-right: 160px
+}
 
+#maybe {
+    width: 450px;
+    margin-top: 30px
 }
-#maybe{
-    width:450px;
-  margin-top: 30px
-}
-#yes:hover{
+
+#yes:hover {
     cursor: pointer;
     zoom: 100.1%
 }
-#no:hover{
+
+#no:hover {
     cursor: pointer;
     zoom: 100.1%
 }
-#maybe:hover{
+
+#maybe:hover {
     cursor: pointer;
     zoom: 100.%
 }
@@ -98,46 +104,50 @@ margin-left: 160px
 
 }
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 
-    #votePicture{
+    #votePicture {
         width: 300px
     }
-    #letsGoButton{
+
+    #letsGoButton {
         width: 200px
     }
-    #funVote{
+
+    #funVote {
         font-size: .9rem
     }
-    #voteRegister{
+
+    #voteRegister {
         width: 300px;
         position: relative;
         top: 100px
     }
-    #yes{
+
+    #yes {
         width: 130px;
         position: relative;
         top: 100px;
-        right: 150px
-      
+        right: 150px;
+        z-index: 2000
     }
-    #no{
+
+    #no {
         width: 130px;
         position: relative;
         top: 68.2px;
-        left: 150px
-
-       
+        left: 150px;
+        z-index: 2000
     }
-    #maybe{
+
+    #maybe {
         width: 200px;
         position: relative;
-        top: 60px
+        top: 60px;
+        z-index: 2000
     }
-    .container{
+
+    .container {
         top: 20px
     }
 
