@@ -6,7 +6,18 @@ footer {
     background-color: #004789;
     color: #EF3D55;
     text-align: center;
-    padding: 12px
+    padding: 12px;
+    text-decoration-color: #004789 !important
+}
+
+i{
+    text-decoration: none !important;
+    color: #EF3D55;
+    /* margin-left: 30px */
+}
+
+i:hover{
+    cursor: pointer;
 }
 
 /* #oneSticker {
@@ -25,3 +36,7 @@ footer {
     bottom: 200px
    
 } */
+
+#lets{
+    width: 100px
+}

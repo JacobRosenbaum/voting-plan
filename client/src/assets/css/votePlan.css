@@ -84,19 +84,16 @@
     position: relative;
     left: 240px;
     bottom: 17px;
-    font-size: 25px
-}
-
-#x:hover {
-    cursor: pointer;
-
+    font-size: 25px;
+    color: white !important
 }
 
 #maybeButton {
     position: relative;
     left: 210px;
     bottom: 17px;
-    font-size: 25px
+    font-size: 25px;
+    color: white !important
 }
 
 #maybeButton:hover {
@@ -149,6 +146,12 @@
 
     .container {
         top: 20px
+    }
+    #x{
+        left: 140px
+    }
+    #maybeButton{
+        left: 140px
     }
 
 }

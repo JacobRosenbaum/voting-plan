@@ -20,9 +20,10 @@ function MainPlan() {
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#004789',
-            borderRadius: '15px',
             color: 'white',
             textAlign: 'center',
+            border: '5px #EF3D55 solid',
+            fontFamily: '"Gotham Medium", sans-serif'
         }
     };
 
@@ -176,7 +177,6 @@ function MainPlan() {
     function onFinishButtonMail() {
         showFinishButtonMail(true);
         // showMail(false);
-        console.log('dont show mail')
     }
     function onFinishButtonEarly() {
         showFinishButtonEarly(true)
@@ -209,6 +209,7 @@ function MainPlan() {
         showPersonElection3(false);
         showPersonElection4(false);
         showPersonElection5(false);
+        showBallotPlan(false)
 
     }
     function onPersonEarly3() {
@@ -325,11 +326,11 @@ function MainPlan() {
                     <div >
                         <form id="whenWillYou">
                             <h3>
-                            {/* <i onClick = {() => {
+                             <i id = "arrowMail" onClick = {() => {
                                    showBallotPlan(true);
                                    showMail(false)
                                 }
-                                } style = {{cursor: 'pointer', position: 'relative', right: '160px'}} class="fa fa-arrow-left"></i> */}
+                                }  className="fa fa-arrow-left back"></i> 
                                 when will you fill in and mail back your ballot?
                                 </h3>
                             <div style = {{marginTop: '30px'}} className="form-check">
@@ -505,11 +506,16 @@ function MainPlan() {
                 </Modal>
 
                 {personEarly ?
-                    <div style={{ borderTop: "#EF3D55 1px solid" }}>
-                        <h3 style={{ marginTop: "30px" }}>
+                    <div>
+                        <h3 >
+                        <i id = "arrowPerson1" onClick = {() => {
+                                   showBallotPlan(true);
+                                   showPersonEarly(false)
+                                }
+                                }  className="fa fa-arrow-left back"></i> 
                             what day will you go to the polls?
                             </h3>
-                        <div style={{ marginBottom: "40px" }}>
+                        <div style = {{marginTop: "30px"}}>
                             <DatePicker
                                 selected={startDatePerson}
                                 onChange={handleDateChangePerson}

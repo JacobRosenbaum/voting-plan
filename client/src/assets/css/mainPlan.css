@@ -42,9 +42,10 @@ input[type="radio"] {
 
 #close {
     position: relative;
-    left: 405px;
+    left: 460px;
     bottom: 15px;
-    font-size: 25px
+    font-size: 25px;
+    color: white !important
 }
 #closeElection:hover {
     cursor: pointer;
@@ -53,9 +54,10 @@ input[type="radio"] {
 
 #closeElection {
     position: relative;
-    left: 405px;
+    left: 470px;
     bottom: 15px;
-    font-size: 25px
+    font-size: 25px;
+    color: white !important
 }
 #closeEarly:hover {
     cursor: pointer;
@@ -64,27 +66,31 @@ input[type="radio"] {
 
 #closeEarly {
     position: relative;
-    left: 405px;
+    left: 450px;
     bottom: 15px;
-    font-size: 25px
+    font-size: 25px;
+    color: white !important
 }
 .mailButton{
     background-color: white !important;
     color: #004789
 }
 .fa-arrow-left{
-
+    position: relative;
+     right: 130px; 
+    z-index: 50900;
     font-size: 25px
 }
-.arrow:hover {
-
+.fa-arrow-left:hover{
     cursor: pointer;
+}
+#arrowPerson1{
+    right: 200px !important
 }
 
 /* .jumbotronX{
     margin-top: 220px !important
 } */
-
 
 label{
     text-align: left !important
@@ -99,10 +105,9 @@ label{
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
-input[type="input"] {
+    input[type="input"] {
     width: 250px !important;
     margin-top: 10px
-
 }
 h3{
     font-size: 1.5rem
