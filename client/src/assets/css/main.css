@@ -2,7 +2,7 @@ body{
     /* background-image: url('../images/vote.jpg');
     background-size: cover; */
     /* font-family: 'Questrial', sans-serif; */
-    font-family: 'Gotham Light'
+    font-family: 'Gotham Light', sans-serif
 }
 
 #alternate{
