@@ -1,76 +1,78 @@
 import React, { useState } from 'react';
 import "../assets/css/about.css";
-import How2 from "../components/How2";
+import How3 from "../components/How2";
 import VotePlan from "../components/VotePlan";
 import Modal from 'react-modal';
+import letsGoButton from "../assets/images/letsGoButton.png";
+import alternate from "../assets/images/alternate.png"
 
-function About () {
+function About() {
     const customStyles = {
-        content : {
-          top                   : '50%',
-          left                  : '50%',
-          right                 : 'auto',
-          bottom                : 'auto',
-          marginRight           : '-50%',
-          transform             : 'translate(-50%, -50%)',
-          backgroundColor : '#004789', 
-          borderRadius: '15px', 
-          color: 'white', 
-          textAlign: 'center',
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            backgroundColor: '#004789',
+            borderRadius: '15px',
+            color: 'white',
+            textAlign: 'center',
         }
-      };
+    };
 
-    const [modalIsOpen,setIsOpen] = useState(false);
-    const [component, showComponent] = useState(false); 
-    const [button, showButton] = useState(true); 
-  
-    function openModal() {
-        setIsOpen(true);
-      }
-     
-      function closeModal(){
-        setIsOpen(false);
-      }
+    const [voteModalIsOpen, setVoteIsOpen] = useState(false);
+    const [maybeModalIsOpen, setMaybeIsOpen] = useState(false);
+    const [component, showComponent] = useState(false);
+    const [button, showButton] = useState(false);
+    const [letsGo, showLetsGo] = useState(false);
+    const [makePlanPicture, showMakePlanPicture] = useState(true);
+    const [voteSticker, showVoteSticker] = useState(true);
 
-      function startPlan(){
-        showComponent(true); 
+
+    function openVoteModal() {
+        setVoteIsOpen(true);
+    }
+
+    function closeVoteModal() {
+        setVoteIsOpen(false);
+    }
+    function openMaybeModal() {
+        setMaybeIsOpen(true);
+    }
+
+    function closeMaybeModal() {
+        setMaybeIsOpen(false);
+    }
+
+    function startPlan() {
+        showComponent(true);
         showButton(false)
-      }
-     
-        return (
-            <div class="container">
-                <div class="jumbotron w3-animate-opacity">
-                    <div>
-                        {component ?
-                            <How2 /> : <VotePlan />
-                        }
-                        {button ?
-                            <div className="row">
-                                <div className="col-sm-12" style = {{textAlign: "center"}}>
-                                    <button id = "yes" class="btn btn-primary" onClick={startPlan}>yes</button>
-                                
-                                    <button id = "no" class="btn btn-primary" onClick={openModal}>no</button>
-                                </div>
-                                <Modal
-                                    isOpen={modalIsOpen}
-                                    // onAfterOpen={afterOpenModal}
-                                    onRequestClose={closeModal}
-                                    style={customStyles}
-                                    contentLabel="Example Modal"
-                                >
-                                    <i id = "x" class="fa fa-times" onClick={closeModal}></i>
-                                    {/* <div>No problem! </div> */}
-                                    <div style ={{ marginBottom: "50px"}}>
-                                    <h3>No problem!</h3>
-                                     <div style ={{color: "white !important"}}><a style ={{color: "white !important", textDecoration: "underline !important"}} href = "https://turbovote.org/" target = "_blank">Click here</a> to register - then come on back to fill out your Voting Plan</div>
-                                     </div>
-                                </Modal>
-                                
-                            </div> : null
-                        }
-                    </div>
+    }
+
+    return (
+        <div class="container">
+            <div class="jumbotron w3-animate-opacity">
+                
+
+                <div>
+                    {makePlanPicture ? <VotePlan /> : null
+
+                    }
+                    {component ?
+                        <How3 /> : null
+                    }
+                    {letsGo ? <img onClick={() => {
+                        showLetsGo(false);
+                        // showPreScreen(true);
+                        showMakePlanPicture(false);
+                        showButton(true)
+                    }} id="letsGoButton" src={letsGoButton} /> : null
+                    }
                 </div>
             </div>
-        )
+        </div>
+    )
 }
 export default About;

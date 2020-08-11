@@ -1,0 +1,45 @@
+#votePicture {
+    width: 900px
+}
+#voteRegister{
+    width: 900px
+}
+#voteDiv{
+    position: relative;
+     bottom:  100px 
+}
+
+#funVote{
+    color: black !important;
+    font-size: 18px;
+    font-family: 'Gotham'
+}
+
+#begin{
+    position: relative;
+}
+
+#letsGoButton {
+    width: 350px;
+    /* position: relative;
+    left: 350px */
+    margin-top: 30px
+}
+
+#letsGoButton:hover {
+    cursor: pointer;
+    zoom: 100.1%
+}
+#oneSticker {
+    width: 250px;
+    position: absolute;
+    bottom: 480px;
+    left: 200px
+}
+
+#twoStickers {
+    width: 375px;
+    position: absolute;
+    left: 1200px;
+    bottom: 80px
+}

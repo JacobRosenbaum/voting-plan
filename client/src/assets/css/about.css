@@ -1,40 +1,84 @@
-.jumbotron{
+.jumbotron {
     opacity: .96;
     background-color: white;
-    border: #EF3D55 2px solid; 
-    margin-top: 200px;
+    /* border: #EF3D55 2px solid;  */
+    margin-top: 100px;
     border-radius: 25px;
-    color:#004789
+    color: #004789;
     
 }
-.btn-primary{
+
+.btn-primary {
     text-align: center !important;
     background-color: #004789
 }
-#x:hover{
-cursor: pointer;
+
+#x:hover {
+    cursor: pointer;
 
 }
 
-#x{
+#x {
     position: relative;
-    left: 240px;
+    left: 270px;
     bottom: 17px;
     font-size: 25px
 }
-a{
-    color: white !important; 
+
+#x:hover {
+    cursor: pointer;
+
+}
+
+#maybeButton {
+    position: relative;
+    left: 270px;
+    bottom: 17px;
+    font-size: 25px
+}
+
+#maybeButton:hover {
+    cursor: pointer;
+
+}
+
+
+a {
+    color: white !important;
     text-decoration: underline !important
 }
 
-#yes{
-    text-align: center; 
+#yes {
+    text-align: center;
     margin-right: 25px
-    
 }
-#no{
-    text-align: center; 
+
+#no {
+    text-align: center;
     position: relative;
     margin-left: 25px
-    
-} 
+}
+
+#letsGoButton {
+    width: 350px;
+    /* position: relative;
+    left: 350px */
+}
+
+#letsGoButton:hover {
+    cursor: pointer;
+    zoom: 100.1%
+}
+#simple{
+margin-top: 100px !important
+}
+
+#alternate{
+    height: 330px;
+    position: relative;
+    left: 20px
+  
+}
+#alternate:hover{
+    cursor: pointer;
+}

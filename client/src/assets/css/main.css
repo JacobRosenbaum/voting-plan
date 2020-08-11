@@ -1,5 +1,16 @@
 body{
-    background-image: url('../images/vote.jpg');
-    background-size: cover;
-    font-family: 'Questrial', sans-serif;
+    /* background-image: url('../images/vote.jpg');
+    background-size: cover; */
+    /* font-family: 'Questrial', sans-serif; */
+    font-family: 'Gotham Light'
+}
+
+#alternate{
+    height: 330px;
+    position: relative;
+    top: 100px !important
+  
+}
+#alternate:hover{
+    cursor: pointer;
 }

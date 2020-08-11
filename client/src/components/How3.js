@@ -9,8 +9,7 @@ import Export from "./Export"
 
 Modal.setAppElement(document.getElementById('root'));
 
-function How2() {
-
+function How3() {
 
     const customStyles = {
         content: {
@@ -76,7 +75,7 @@ function How2() {
     const [electionFriendName2, setElectionFriendName2] = useState();
     const [electionFriendEmail1, setElectionFriendEmail1] = useState();
     const [electionFriendEmail2, setElectionFriendEmail2] = useState();
-
+    const [ballotPlan, showBallotPlan] = useState(false);
 
     function handleMailSubmit() {
         console.log(nameMail, emailMail, castBallotHowMail, mailBallotWhen);
@@ -175,7 +174,9 @@ function How2() {
         setElectionIsOpen(false);
     }
     function onFinishButtonMail() {
-        showFinishButtonMail(true)
+        showFinishButtonMail(false);
+        showMail(false);
+        console.log('dont show mail')
     }
     function onFinishButtonEarly() {
         showFinishButtonEarly(true)
@@ -248,7 +249,8 @@ function How2() {
     }
     return (
         <div class='container'>
-            <div style={{ marginBottom: "30px" }}>
+            {ballotPlan ?
+            <div className = "jumbotronX" style={{ marginBottom: "30px" }}>
                 <form>
                     <h3>
                     {/* <i class="fa fa-arrow-left"></i> */}
@@ -276,6 +278,7 @@ function How2() {
                                     showPersonElection3(false);
                                     showPersonElection4(false);
                                     showPersonElection5(false);
+                                    showBallotPlan(false)
                                     ;
                                 }}
                             />
@@ -316,7 +319,7 @@ function How2() {
                             </label>
                     </div>
                 </form>
-            </div>
+            </div> : <div> Hi</div>}
             <div>
                 {mail ?
                     <div style={{ marginBottom: "30px", borderTop: "#EF3D55 1px solid" }}>
@@ -1186,4 +1189,4 @@ function How2() {
     )
 }
 
-export default How2;
+export default How3;

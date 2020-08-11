@@ -21,6 +21,10 @@ input {
     color: #004789 !important;
     border: #004789 .5px solid
 }
+input[type="radio"] {
+    cursor: pointer;
+
+}
 
 /* .react-time-picker__inputGroup__amPm {
     color: #004789 
@@ -67,4 +71,26 @@ input {
 .mailButton{
     background-color: white !important;
     color: #004789
+}
+.fa-arrow-left{
+
+    font-size: 25px
+}
+.arrow:hover {
+
+    cursor: pointer;
+}
+
+.jumbotronX{
+    margin-top: 220px !important
+}
+
+
+label{
+    text-align: left !important
+}
+
+.container{
+    position: relative;
+    top: 50px
 }
