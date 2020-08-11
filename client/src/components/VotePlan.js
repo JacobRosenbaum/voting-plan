@@ -3,7 +3,8 @@ import VotePicture from "../assets/images/votePlanText.png";
 import letsGoButton from "../assets/images/letsGoButton.png";
 import "../assets/css/votePlan.css";
 import Modal from 'react-modal';
-import How3 from "../components/How2";
+// import How3 from "../components/How2";
+import MainPlan from "../components/MainPlan.js"
 import voteRegister from "../assets/images/voteRegister.png";
 import yes from "../assets/images/yes.png";
 import iDontKnow from "../assets/images/iDontKnow.png";
@@ -118,7 +119,7 @@ function VotePlan() {
                 </div> : null
             }
             {component ?
-                <How3 /> : null
+                <MainPlan /> : null
             }
 
         </div>

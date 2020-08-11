@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import "../assets/css/how.css";
+import "../assets/css/mainPlan.css";
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 import Modal from 'react-modal';
@@ -9,7 +9,7 @@ import Export from "./Export"
 
 Modal.setAppElement(document.getElementById('root'));
 
-function How3() {
+function MainPlan() {
 
     const customStyles = {
         content: {
@@ -75,7 +75,7 @@ function How3() {
     const [electionFriendName2, setElectionFriendName2] = useState();
     const [electionFriendEmail1, setElectionFriendEmail1] = useState();
     const [electionFriendEmail2, setElectionFriendEmail2] = useState();
-    const [ballotPlan, showBallotPlan] = useState(false);
+    const [ballotPlan, showBallotPlan] = useState(true);
 
     function handleMailSubmit() {
         console.log(nameMail, emailMail, castBallotHowMail, mailBallotWhen);
@@ -254,7 +254,7 @@ function How3() {
                 <form>
                     <h3>
                     {/* <i class="fa fa-arrow-left"></i> */}
-                        how do you plan to cast your ballot?
+                        how do you plan to cast your ballot? 
                         </h3>
 
                     <div className="form-check">
@@ -319,15 +319,21 @@ function How3() {
                             </label>
                     </div>
                 </form>
-            </div> : <div> Hi</div>}
+            </div> : null }
             <div>
                 {mail ?
-                    <div style={{ marginBottom: "30px", borderTop: "#EF3D55 1px solid" }}>
+                    <div >
+        
                         <form id="whenWillYou">
-                            <h3 style={{ marginTop: "30px" }}>
+                            <h3>
+                            <i onClick = {() => {
+                                   showBallotPlan(true);
+                                   showMail(false)
+                                }
+                                } style = {{cursor: 'pointer', position: 'relative', right: '160px'}} class="fa fa-arrow-left"></i>
                                 when will you fill in and mail back your ballot?
                                 </h3>
-                            <div className="form-check">
+                            <div style = {{marginTop: '30px'}} className="form-check">
                                 <label style={{ textAlign: "left !important" }}>
                                     <input
                                         type="radio"
@@ -1189,4 +1195,4 @@ function How3() {
     )
 }
 
-export default How3;
+export default MainPlan;

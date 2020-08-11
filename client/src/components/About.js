@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "../assets/css/about.css";
-import How3 from "../components/How2";
+import MainPlan from "./MainPlan";
 import VotePlan from "../components/VotePlan";
 import Modal from 'react-modal';
 import letsGoButton from "../assets/images/letsGoButton.png";
@@ -58,9 +58,9 @@ function About() {
                     {makePlanPicture ? <VotePlan /> : null
 
                     }
-                    {component ?
-                        <How3 /> : null
-                    }
+                    {/* {component ?
+                        <MainPlan /> : null
+                    } */}
                     {letsGo ? <img onClick={() => {
                         showLetsGo(false);
                         // showPreScreen(true);

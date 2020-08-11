@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import "../assets/css/how.css";
+// import "../assets/css/how.css";
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 import Modal from 'react-modal';
@@ -252,7 +252,7 @@ function How2() {
                 <form>
                     <h3>
                     {/* <i class="fa fa-arrow-left"></i> */}
-                        how do you plan to cast your ballot?
+                        how do you plan to cast your ballot? how2
                         </h3>
 
                     <div className="form-check">

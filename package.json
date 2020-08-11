@@ -34,6 +34,7 @@
     "react-component-export-image": "^0.1.6",
     "react-dom": "^16.13.1",
     "react-modal": "^3.11.2",
+    "react-scroll": "^1.8.1",
     "serve": "^11.3.2"
   },
   "devDependencies": {

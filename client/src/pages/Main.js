@@ -18,7 +18,7 @@ function Main() {
                     }}
                         src={alternate}
                     />
-                }  </div> :
+                 </div> :
                 <div>
             <About />
             <img id="oneSticker" src={oneSticker} />
