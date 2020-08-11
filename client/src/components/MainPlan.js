@@ -174,8 +174,8 @@ function MainPlan() {
         setElectionIsOpen(false);
     }
     function onFinishButtonMail() {
-        showFinishButtonMail(false);
-        showMail(false);
+        showFinishButtonMail(true);
+        // showMail(false);
         console.log('dont show mail')
     }
     function onFinishButtonEarly() {
@@ -323,14 +323,13 @@ function MainPlan() {
             <div>
                 {mail ?
                     <div >
-        
                         <form id="whenWillYou">
                             <h3>
-                            <i onClick = {() => {
+                            {/* <i onClick = {() => {
                                    showBallotPlan(true);
                                    showMail(false)
                                 }
-                                } style = {{cursor: 'pointer', position: 'relative', right: '160px'}} class="fa fa-arrow-left"></i>
+                                } style = {{cursor: 'pointer', position: 'relative', right: '160px'}} class="fa fa-arrow-left"></i> */}
                                 when will you fill in and mail back your ballot?
                                 </h3>
                             <div style = {{marginTop: '30px'}} className="form-check">

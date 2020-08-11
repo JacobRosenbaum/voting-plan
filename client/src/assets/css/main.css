@@ -36,17 +36,17 @@ body{
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) {
     #oneSticker {
-        width: 130px;
+        width: 100px;
         position: absolute;
-        top: 20px;
+        top: 10px;
         left: 10px
     }
     
     #twoStickers {
-        width: 200px;
+        width: 150px;
         position: absolute;
-        bottom: 100px;
-        left: 180px
+        bottom: 70px;
+        left: 220px
     }
     #alternate{
         height: 280px;
