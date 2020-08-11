@@ -2,7 +2,7 @@
     width: 900px
 }
 #voteRegister{
-    width: 750px
+    width: 775px
 }
 #voteDiv{
     position: relative;
@@ -19,17 +19,17 @@
     position: relative;
 }
 
-#letsGoButton {
+/* #letsGoButton {
     width: 350px;
     /* position: relative;
-    left: 350px */
+    left: 350px 
     margin-top: 30px
 }
 
 #letsGoButton:hover {
     cursor: pointer;
     zoom: 100.1%
-}
+} */
 /* #oneSticker {
     width: 250px;
     position: absolute;
@@ -45,11 +45,11 @@
 } */
 #yes{
 width: 300px;
-margin-left: 150px
+margin-left: 160px
 }
 #no{
     width: 300px;
-    margin-right: 150px
+    margin-right: 160px
 
 }
 #maybe{
@@ -67,4 +67,33 @@ margin-left: 150px
 #maybe:hover{
     cursor: pointer;
     zoom: 100.%
+}
+
+#x:hover {
+    cursor: pointer;
+
+}
+
+#x {
+    position: relative;
+    left: 240px;
+    bottom: 17px;
+    font-size: 25px
+}
+
+#x:hover {
+    cursor: pointer;
+
+}
+
+#maybeButton {
+    position: relative;
+    left: 210px;
+    bottom: 17px;
+    font-size: 25px
+}
+
+#maybeButton:hover {
+    cursor: pointer;
+
 }

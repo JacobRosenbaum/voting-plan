@@ -13,6 +13,7 @@ body{
 }
 #alternate:hover{
     cursor: pointer;
+    zoom: 101.1%
 }
 
 #oneSticker {

@@ -13,34 +13,7 @@
     background-color: #004789
 }
 
-#x:hover {
-    cursor: pointer;
 
-}
-
-#x {
-    position: relative;
-    left: 270px;
-    bottom: 17px;
-    font-size: 25px
-}
-
-#x:hover {
-    cursor: pointer;
-
-}
-
-#maybeButton {
-    position: relative;
-    left: 270px;
-    bottom: 17px;
-    font-size: 25px
-}
-
-#maybeButton:hover {
-    cursor: pointer;
-
-}
 
 
 a {
@@ -63,11 +36,12 @@ a {
     width: 350px;
     /* position: relative;
     left: 350px */
+    margin-top: 30px
 }
 
 #letsGoButton:hover {
     cursor: pointer;
-    zoom: 100.2%
+    zoom: 100.3%
 }
 #simple{
 margin-top: 100px !important

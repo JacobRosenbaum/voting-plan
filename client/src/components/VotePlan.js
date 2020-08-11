@@ -27,9 +27,10 @@ function VotePlan() {
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#004789',
-            borderRadius: '15px',
             color: 'white',
             textAlign: 'center',
+            border: '5px #EF3D55 solid',
+            fontFamily: "Gotham Pro",
         }
     };
 
@@ -95,8 +96,8 @@ function VotePlan() {
                         <i id="x" class="fa fa-times" onClick={closeVoteModal}></i>
                         {/* <div>No problem! </div> */}
                         <div style={{ marginBottom: "50px" }}>
-                            <h3>No problem!</h3>
-                            <div style={{ color: "white !important" }}><a style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/register-to-vote/" target="_blank">Click here</a> to register - then come on back to fill out your Voting Plan</div>
+                            <h3>NO PROBLEM!</h3>
+                            <div style={{ color: "white !important" }}><a style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/register-to-vote/" target="_blank">CLICK HERE</a> TO GET REGISTERED - THEN COME ON BACK!</div>
                         </div>
                     </Modal>
                     <Modal
@@ -109,8 +110,8 @@ function VotePlan() {
                         <i id="maybeButton" class="fa fa-times" onClick={closeMaybeModal}></i>
                         {/* <div>No problem! </div> */}
                         <div style={{ marginBottom: "50px" }}>
-                            <h3>No problem!</h3>
-                            <div style={{ color: "white !important" }}><a style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/am-i-registered-to-vote/" target="_blank">Click here</a> to find out - then come on back to fill out your Voting Plan</div>
+                            <h3>NO PROBLEM!</h3>
+                            <div style={{ color: "white !important" }}><a style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/am-i-registered-to-vote/" target="_blank">CLICK HERE </a> TO FIND OUT - THEN COME ON BACK!</div>
                         </div>
                     </Modal>
 
