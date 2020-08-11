@@ -97,3 +97,45 @@ margin-left: 160px
     cursor: pointer;
 
 }
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    #votePicture{
+        width: 300px
+    }
+    #letsGoButton{
+        width: 200px
+    }
+    #funVote{
+        font-size: .9rem
+    }
+    #voteRegister{
+        width: 300px;
+        position: relative;
+        top: 100px
+    }
+    #yes{
+        width: 130px;
+        position: relative;
+        top: 100px;
+        right: 150px
+      
+    }
+    #no{
+        width: 130px;
+        position: relative;
+        top: 68.2px;
+        left: 150px
+
+       
+    }
+    #maybe{
+        width: 200px;
+        position: relative;
+        top: 60px
+    }
+
+}
