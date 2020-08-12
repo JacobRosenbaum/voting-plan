@@ -16,10 +16,10 @@ function App() {
             <img id = "twoStickers" src={twoStickers}/> */}
             </div>
             <footer >
-                <b>Let's DO Something ©    <a> <i class="fa fa-instagram "></i></a>
-                    <a > <i class="fa fa-facebook "></i></a>
-                    <a ><i class="fa fa-twitter "></i></a>
-                </b>
+                <b>Let's DO Something ©    <a> <i class="fa fa-instagram foot"></i></a>
+                    <a > <i class="fa fa-facebook foot"></i></a>
+                    <a ><i class="fa fa-twitter foot"></i></a>
+                    </b>
                 {/* <img id = "lets" src = {letsDoSomething} /> */}
 
 

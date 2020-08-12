@@ -7,11 +7,11 @@ footer {
     color: #EF3D55;
     text-align: center;
     padding: 12px;
-    text-decoration-color: #004789 !important
+    text-decoration: none!important
 }
 
 i{
-    text-decoration: none !important;
+    /* text-decoration: none !important; */
     color: #EF3D55;
     /* margin-left: 30px */
 }
@@ -39,4 +39,9 @@ i:hover{
 
 #lets{
     width: 100px
+}
+
+.foot{
+    margin-left: 20px !important;
+    text-decoration-color: #004789 !important
 }

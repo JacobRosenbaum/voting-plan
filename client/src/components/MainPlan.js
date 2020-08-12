@@ -4,12 +4,16 @@ import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 import Modal from 'react-modal';
 import API from "../utils/API";
-import Export from "./Export"
+import Export from "./Export";
+// import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 
 
 Modal.setAppElement(document.getElementById('root'));
 
 function MainPlan() {
+
+    // const { width, height } = useWindowSize()
 
     const customStyles = {
         content: {
@@ -77,8 +81,13 @@ function MainPlan() {
     const [electionFriendEmail1, setElectionFriendEmail1] = useState();
     const [electionFriendEmail2, setElectionFriendEmail2] = useState();
     const [ballotPlan, showBallotPlan] = useState(true);
+    const [confetti, showConfetti] = useState(false)
 
     function handleMailSubmit() {
+
+        showConfetti(true);
+        console.log('confetti');
+
         console.log(nameMail, emailMail, castBallotHowMail, mailBallotWhen);
 
         API.emailMail({ nameMail, emailMail, castBallotHowMail, mailBallotWhen }).catch(err => console.log(err));
@@ -99,7 +108,8 @@ function MainPlan() {
             emailMail: emailMail,
             castBallotHowMail: castBallotHowMail,
             mailBallotWhen: mailBallotWhen,
-        }).catch(err => console.log(err));;
+        }).catch(err => console.log(err));
+        
     }
 
     function handleEarlySubmit() {
@@ -450,7 +460,7 @@ function MainPlan() {
                                 <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
                                     hey that was easy! who else should make a plan to vote right now?
                                 </h4>
-                                <form onSubmit={handleMailSubmit} style={{ textAlign: "left" }}>
+                                <form  style={{ textAlign: "left" }}>
                                     <ol>
                                         <li>
                                             <input
@@ -492,18 +502,27 @@ function MainPlan() {
                                     <div style={{ textAlign: "center" }}>
                                         <button
                                             class="btn btn-primary mailButton"
-                                            type="submit"
-
+                                            onClick={handleMailSubmit}
                                         >
                                             i'm finished
                                     </button>
                                     </div>
                                 </form>
-                            </div> : <div> </div>
+                            </div> : null
                         }
 
                     </div>
                 </Modal>
+                {confetti ? 
+                <div>
+                    hello
+                 <Confetti
+                 width= '1200px'
+                height= '500px'
+               /> 
+               </div> : null
+
+                }
 
                 {personEarly ?
                     <div>
