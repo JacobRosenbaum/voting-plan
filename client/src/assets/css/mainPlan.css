@@ -127,7 +127,7 @@ label {
     }
 
     h3 {
-        font-size: 1.5rem
+        font-size: 1rem
     }
 
     #arrowMail {
@@ -149,17 +149,28 @@ label {
     #arrowPerson4 {
         right: 40px !important
     }
+
     #arrowElection {
         right: 30px !important
     }
+
     #arrowElection2 {
         right: 30px !important
     }
+
     #arrowElection3 {
         right: 30px !important
     }
+
     #arrowElection4 {
         right: 30px !important
     }
 
+    .form-check {
+        font-size: 1rem
+    }
+
+    #begin {
+        top: -40px
+    }
 }
