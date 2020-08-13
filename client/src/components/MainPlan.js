@@ -29,7 +29,8 @@ function MainPlan() {
             color: 'white',
             textAlign: 'center',
             border: '5px #EF3D55 solid',
-            fontFamily: '"Gotham Medium", sans-serif'
+            fontFamily: '"Gotham Medium", sans-serif',
+            zIndex: 32462983469238469238469238462398
         }
     };
 

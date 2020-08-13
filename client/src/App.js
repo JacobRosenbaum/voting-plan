@@ -16,9 +16,9 @@ function App() {
             <img id = "twoStickers" src={twoStickers}/> */}
             </div>
             <footer >
-                <b>Let's DO Something ©    <a> <i class="fa fa-instagram foot"></i></a>
-                    <a > <i class="fa fa-facebook foot"></i></a>
-                    <a ><i class="fa fa-twitter foot"></i></a>
+                <b>Let's DO Something ©    <a href = "https://www.instagram.com/ldsomething/" target = "_blank"> <i class="fa fa-instagram foot"></i></a>
+                    <a href = "https://www.facebook.com/LDSomething" target = "_blank"> <i class="fa fa-facebook foot"></i></a>
+                    <a href = "https://twitter.com/LDoSomething" target = "_blank"><i class="fa fa-twitter foot"></i></a>
                     </b>
                 {/* <img id = "lets" src = {letsDoSomething} /> */}
 

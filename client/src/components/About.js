@@ -55,9 +55,9 @@ function About() {
 
     return (
         <div>
-        <div class="container">
+        <div class="container" >
             <div class="jumbotron w3-animate-opacity">
-                <div>
+                <div style = {{zIndex: 24}}>
                     {makePlanPicture ? <VotePlan /> : null
 
                     }
@@ -75,8 +75,10 @@ function About() {
             </div>
             
         </div>
+        <div style = {{zIndex: 2}}>
         <img id="oneSticker" src={oneSticker} />
         <img id="twoStickers" src={twoStickers} />
+        </div>
         </div>
     )
 }
