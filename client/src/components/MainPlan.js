@@ -746,7 +746,22 @@ function MainPlan() {
                             </div>
                             </div>
                             <div className = 'row'>
-                            <div className="form-check col-sm-6">
+                            <div className="form-check col-lg-6">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="react-tips"
+                                        value="mail"
+                                        onClick={onPersonEarly4}
+                                        onk
+                                        style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPolls("Lyft/Uber"); }}
+
+                                    />
+                                    Lyft/Uber
+                            </label>
+                            </div>
+                            <div className="form-check col-lg-6">
                                 <label>
                                     <input
                                         type="radio"
@@ -768,21 +783,6 @@ function MainPlan() {
 
                                     />
                                 </label>
-                            </div>
-                            <div className="form-check col-sm-6">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="react-tips"
-                                        value="mail"
-                                        onClick={onPersonEarly4}
-                                        onk
-                                        style={{ marginRight: "5px" }}
-                                        onChange={e => { setGetToPolls("Lyft/Uber"); }}
-
-                                    />
-                                    Lyft/Uber
-                            </label>
                             </div>
                             </div>
                         </form>

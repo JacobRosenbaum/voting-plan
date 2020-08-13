@@ -104,11 +104,14 @@
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
 
     #votePicture {
-        width: 300px
+        width: 300px;
+        text-align: center
     }
 
     #letsGoButton {
-        width: 200px
+        width: 200px;
+        position: relative;
+    right: 35px;
     }
 
     #funVote {
@@ -148,10 +151,12 @@
         top: 20px
     }
     #x{
-        left: 140px
+        left: 160px;
+        z-index: 302393230;
     }
     #maybeButton{
-        left: 140px
+        left: 160px;
+        z-index: 302393230;
     }
 
 }

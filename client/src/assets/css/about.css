@@ -6,8 +6,8 @@
     border-radius: 25px;
     color: #004789;
     z-index: 200;
-   
-    
+
+
 }
 
 .btn-primary {
@@ -43,8 +43,9 @@ a {
     cursor: pointer;
     zoom: 100.3%
 }
-#simple{
-margin-top: 100px !important
+
+#simple {
+    margin-top: 100px !important
 }
 
 #oneSticker {
@@ -62,3 +63,18 @@ margin-top: 100px !important
     bottom: 80px;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    #oneSticker {
+        width: 100px;
+        position: absolute;
+        top: 10px;
+        left: 10px
+    }
+
+    #twoStickers {
+        width: 150px;
+        position: absolute;
+        bottom: 70px;
+        left: 220px
+    }
+}

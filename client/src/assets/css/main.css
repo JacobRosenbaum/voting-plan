@@ -17,7 +17,7 @@ body{
     zoom: 100.3%
 }
 
-#oneSticker {
+/* #oneSticker {
     width: 265px;
     position: absolute;
     bottom: 510px;
@@ -31,14 +31,14 @@ body{
     position: absolute;
     left: 1250px;
     bottom: 80px;
-    z-index: 100
-}
+    z-index: 100 
+}*/
 
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) {
-    #oneSticker {
+    /* #oneSticker {
         width: 100px;
         position: absolute;
         top: 10px;
@@ -50,7 +50,7 @@ body{
         position: absolute;
         bottom: 70px;
         left: 220px
-    }
+    } */
     #alternate{
         height: 280px;
         position: relative;

@@ -21,6 +21,7 @@ input {
     color: #004789 !important;
     border: #004789 .5px solid
 }
+
 input[type="radio"] {
     cursor: pointer;
 
@@ -47,6 +48,7 @@ input[type="radio"] {
     font-size: 25px;
     color: white !important
 }
+
 #closeElection:hover {
     cursor: pointer;
 
@@ -59,6 +61,7 @@ input[type="radio"] {
     font-size: 25px;
     color: white !important
 }
+
 #closeEarly:hover {
     cursor: pointer;
 
@@ -71,29 +74,36 @@ input[type="radio"] {
     font-size: 25px;
     color: white !important
 }
-.mailButton{
+
+.mailButton {
     background-color: white !important;
     color: #004789
 }
-.fa-arrow-left{
+
+.fa-arrow-left {
     position: relative;
-     right: 140px; 
+    right: 140px;
     z-index: 50900;
     font-size: 25px
 }
-.fa-arrow-left:hover{
+
+.fa-arrow-left:hover {
     cursor: pointer;
 }
-#arrowPerson1{
+
+#arrowPerson1 {
     right: 200px !important
 }
-#arrowPerson2{
+
+#arrowPerson2 {
     right: 70px !important
 }
-#arrowElection{
+
+#arrowElection {
     right: 70px !important
 }
-i{
+
+i {
     z-index: 45030320
 }
 
@@ -101,24 +111,55 @@ i{
     margin-top: 220px !important
 } */
 
-label{
+label {
     text-align: left !important
 }
 
-.container{
+.container {
     position: relative;
     top: 50px
 }
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     input[type="input"] {
-    width: 250px !important;
-    margin-top: 10px
+        width: 250px !important;
+        margin-top: 10px
+    }
+
+    h3 {
+        font-size: 1.5rem
+    }
+
+    #arrowMail {
+        right: 30px
+    }
+
+    #arrowPerson1 {
+        right: 30px !important
+    }
+
+    #arrowPerson2 {
+        right: 30px !important
+    }
+
+    #arrowPerson3 {
+        right: 30px !important
+    }
+
+    #arrowPerson4 {
+        right: 40px !important
+    }
+    #arrowElection {
+        right: 30px !important
+    }
+    #arrowElection2 {
+        right: 30px !important
+    }
+    #arrowElection3 {
+        right: 30px !important
+    }
+    #arrowElection4 {
+        right: 30px !important
+    }
+
 }
-h3{
-    font-size: 1.5rem
-}
-  }
