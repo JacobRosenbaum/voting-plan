@@ -42,7 +42,7 @@ input[type="radio"] {
 
 #close {
     position: relative;
-    left: 460px;
+    left: 405px;
     bottom: 15px;
     font-size: 25px;
     color: white !important
@@ -54,7 +54,7 @@ input[type="radio"] {
 
 #closeElection {
     position: relative;
-    left: 470px;
+    left: 405px;
     bottom: 15px;
     font-size: 25px;
     color: white !important
@@ -66,7 +66,7 @@ input[type="radio"] {
 
 #closeEarly {
     position: relative;
-    left: 450px;
+    left: 405px;
     bottom: 15px;
     font-size: 25px;
     color: white !important
@@ -77,7 +77,7 @@ input[type="radio"] {
 }
 .fa-arrow-left{
     position: relative;
-     right: 130px; 
+     right: 140px; 
     z-index: 50900;
     font-size: 25px
 }
@@ -86,6 +86,15 @@ input[type="radio"] {
 }
 #arrowPerson1{
     right: 200px !important
+}
+#arrowPerson2{
+    right: 70px !important
+}
+#arrowElection{
+    right: 70px !important
+}
+i{
+    z-index: 45030320
 }
 
 /* .jumbotronX{

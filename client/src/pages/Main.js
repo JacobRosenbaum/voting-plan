@@ -21,8 +21,9 @@ function Main() {
                  </div> :
                 <div>
             <About />
-            <img id="oneSticker" src={oneSticker} />
-            <img id="twoStickers" src={twoStickers} />
+            {/* <img id="oneSticker" src={oneSticker} />
+            <img id="twoStickers" src={twoStickers} /> */}
+            
             </div>
             }
         </div>

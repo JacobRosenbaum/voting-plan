@@ -4,7 +4,9 @@ import MainPlan from "./MainPlan";
 import VotePlan from "../components/VotePlan";
 import Modal from 'react-modal';
 import letsGoButton from "../assets/images/letsGoButton.png";
-import alternate from "../assets/images/alternate.png"
+import alternate from "../assets/images/alternate.png";
+import oneSticker from "../assets/images/oneSticker.png";
+import twoStickers from "../assets/images/twoStickers.png"; 
 
 function About() {
     const customStyles = {
@@ -52,6 +54,7 @@ function About() {
     }
 
     return (
+        <div>
         <div class="container">
             <div class="jumbotron w3-animate-opacity">
                 <div>
@@ -70,6 +73,10 @@ function About() {
                     }
                 </div>
             </div>
+            
+        </div>
+        <img id="oneSticker" src={oneSticker} />
+        <img id="twoStickers" src={twoStickers} />
         </div>
     )
 }

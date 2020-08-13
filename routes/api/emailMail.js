@@ -41,7 +41,21 @@ function emailOptions(name, email, castBallotHowMail, mailBallotWhen) {
   emailOptions.from = 'letsdosomething2020@gmail.com';
   emailOptions.to = email;
   emailOptions.subject = 'VOTE PLAN TEST';
-  emailOptions.html = `<p> Hello ${name}! </p> <p style = "border-top: red 2px solid"> You will cast your ballot ${castBallotHowMail}, and you will do it ${mailBallotWhen}!`;
+  emailOptions.html = `<p> Hello ${name}! </p> <p style = "border-top: red 2px solid"> You will cast your ballot ${castBallotHowMail}, and you will do it ${mailBallotWhen}!
+  <br>
+  <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23votingplan%20%23govote%20%23letsDOsomething&url=https://voting-plan.herokuapp.com">Tweet</a>
+
+</a>
+<br>
+<div 
+class="fb-share-button" 
+data-href="https://voting-plan.herokuapp.com"
+ data-layout="button" 
+ data-size="large"
+ >
+ <a target="_blank"
+  href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvoting-plan.herokuapp.com%2F&amp;src=sdkpreparse"
+   class="fb-xfbml-parse-ignore">Share on FB</a></div></div>`;
   emailOptions.attachments = [{
     filename: "voting plan", 
     content: "voting plan"

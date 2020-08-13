@@ -5,6 +5,8 @@
     margin-top: 100px;
     border-radius: 25px;
     color: #004789;
+    z-index: 200;
+   
     
 }
 
@@ -43,5 +45,20 @@ a {
 }
 #simple{
 margin-top: 100px !important
+}
+
+#oneSticker {
+    width: 265px;
+    position: absolute;
+    bottom: 510px;
+    left: 100px;
+    z-index: 100;
+}
+
+#twoStickers {
+    width: 380px;
+    position: absolute;
+    left: 1250px;
+    bottom: 80px;
 }
 

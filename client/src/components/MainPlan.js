@@ -14,6 +14,8 @@ Modal.setAppElement(document.getElementById('root'));
 function MainPlan() {
 
     // const { width, height } = useWindowSize()
+    var typingTimer;                //timer identifier
+    var doneTypingInterval = 3500;  //time in ms (5 seconds)
 
     const customStyles = {
         content: {
@@ -36,12 +38,10 @@ function MainPlan() {
     const [personEarly2, showPersonEarly2] = useState(false);
     const [personEarly3, showPersonEarly3] = useState(false);
     const [personEarly4, showPersonEarly4] = useState(false);
-    const [personEarly5, showPersonEarly5] = useState(false);
     const [personElection, showPersonElection] = useState(false);
     const [personElection2, showPersonElection2] = useState(false);
     const [personElection3, showPersonElection3] = useState(false);
     const [personElection4, showPersonElection4] = useState(false);
-    const [personElection5, showPersonElection5] = useState(false);
     const [finishButtonMail, showFinishButtonMail] = useState(false);
     const [finishButtonEarly, showFinishButtonEarly] = useState(false);
     const [finishButtonElection, showFinishButtonElection] = useState(false);
@@ -85,8 +85,7 @@ function MainPlan() {
 
     function handleMailSubmit() {
 
-        showConfetti(true);
-        console.log('confetti');
+       
 
         console.log(nameMail, emailMail, castBallotHowMail, mailBallotWhen);
 
@@ -203,12 +202,10 @@ function MainPlan() {
         showPersonEarly2(false);
         showPersonEarly3(false);
         showPersonEarly4(false);
-        showPersonEarly5(false);
         showPersonElection(false);
         showPersonElection2(false);
         showPersonElection3(false);
         showPersonElection4(false);
-        showPersonElection5(false);
 
     }
     function onPersonEarly() {
@@ -218,19 +215,44 @@ function MainPlan() {
         showPersonElection2(false);
         showPersonElection3(false);
         showPersonElection4(false);
-        showPersonElection5(false);
         showBallotPlan(false)
 
     }
     function onPersonEarly3() {
         showPersonEarly3(true);
+        showPersonEarly2(false)
+
     }
     function onPersonEarly4() {
-        showPersonEarly4(true)
+        showPersonEarly4(true);
+        showPersonEarly3(false)
     }
-    function onPersonEarly5() {
-        showPersonEarly5(true)
+   
+    // function doneTypingMailBallotWhen(){
+    //     showFinishButtonMail(true);
+
+    // }
+    function doneTypingWhatTime(){
+        showPersonEarly3(true);
+        showPersonEarly2(false)
     }
+    function doneTypingGetToPolls(){
+        showPersonEarly4(true);
+        showPersonEarly3(false)
+    }
+    function doneTypingWhatTimeElection(){
+        showPersonElection2(true);
+        showPersonElection(false);
+    }
+    function doneTypingGetToPollsElection(){
+        showPersonElection3(true);
+        showPersonElection2(false)
+    }
+    function doneTypingTakeOffWork(){
+        showPersonElection4(true);
+        showPersonElection3(false)
+    }
+
     function onPersonElection() {
         showPersonElection(true);
         showMail(false);
@@ -238,34 +260,37 @@ function MainPlan() {
         showPersonEarly2(false);
         showPersonEarly3(false);
         showPersonEarly4(false);
-        showPersonEarly5(false)
+        showBallotPlan(false)
     }
     function onPersonElection2() {
-        showPersonElection2(true)
+        showPersonElection2(true);
+        showPersonElection(false);
+
     }
     function onPersonElection3() {
-        showPersonElection3(true)
+        showPersonElection3(true);
+        showPersonElection2(false)
     }
     function onPersonElection4() {
-        showPersonElection4(true)
+        showPersonElection4(true);
+        showPersonElection3(false)
     }
-    function onPersonElection5() {
-        showPersonElection5(true)
-    }
+   
     function handleDateChangePerson(date) {
         setStartDatePerson(date);
         showPersonEarly2(true);
         setWhatDay(startDatePerson.toString().slice(0, 15));
+        showPersonEarly(false)
 
     }
     return (
-        <div class='container'>
+        <div class='container' >
             {ballotPlan ?
             <div className = "jumbotronX" style={{ marginBottom: "30px" }}>
                 <form>
-                    <h3>
+                    <h3 style = {{fontFamily: '"Gotham", sans-serif', color: 'black'}}>
                     {/* <i class="fa fa-arrow-left"></i> */}
-                        how do you plan to cast your ballot? 
+                      HOW DO YOU PLAN TO CAST YOUR BALLOT?
                         </h3>
 
                     <div className="form-check">
@@ -283,12 +308,10 @@ function MainPlan() {
                                     showPersonEarly2(false);
                                     showPersonEarly3(false);
                                     showPersonEarly4(false);
-                                    showPersonEarly5(false);
                                     showPersonElection(false);
                                     showPersonElection2(false);
                                     showPersonElection3(false);
                                     showPersonElection4(false);
-                                    showPersonElection5(false);
                                     showBallotPlan(false)
                                     ;
                                 }}
@@ -396,7 +419,7 @@ function MainPlan() {
                                         <input
                                         type="input"
                                         style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
-                                        onClick={onFinishButtonMail}
+                                        onKeyUp=  {onFinishButtonMail}
                                         onChange={e => { setMailBallotWhen(e.target.value); console.log(e.target.value) }}
 
                                     />
@@ -460,7 +483,7 @@ function MainPlan() {
                                 <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
                                     hey that was easy! who else should make a plan to vote right now?
                                 </h4>
-                                <form  style={{ textAlign: "left" }}>
+                                <form onSubmit={handleMailSubmit} style={{ textAlign: "left" }}>
                                     <ol>
                                         <li>
                                             <input
@@ -502,7 +525,13 @@ function MainPlan() {
                                     <div style={{ textAlign: "center" }}>
                                         <button
                                             class="btn btn-primary mailButton"
-                                            onClick={handleMailSubmit}
+                                            type = 'submit'
+                                            onClick={() => {
+                                                setTimeout(() => 
+                                                setMailIsOpen(false),
+                                                showConfetti(true),
+                                                console.log('confetti'), 1000);
+                                             }}
                                         >
                                             i'm finished
                                     </button>
@@ -516,10 +545,7 @@ function MainPlan() {
                 {confetti ? 
                 <div>
                     hello
-                 <Confetti
-                 width= '1200px'
-                height= '500px'
-               /> 
+               
                </div> : null
 
                 }
@@ -543,11 +569,16 @@ function MainPlan() {
                     </div> : null
                 }
                 {personEarly2 ?
-                    <div style={{ borderTop: "#EF3D55 1px solid" }}>
-                        <h3 style={{ marginTop: "30px" }}>
+                    <div >
+                        <h3 >
+                        <i id = "arrowPerson2" onClick = {() => {
+                                 showPersonEarly2(false)
+                                   showPersonEarly(true)
+                                }
+                                }  className="fa fa-arrow-left back"></i> 
                             what time will you go to the polls on {startDatePerson.toString().slice(0, 15)}?
                                 </h3>
-                        <div className="form-check" >
+                        <div style = {{marginTop: "30px"}}className="form-check" >
                             <label>
                                 <input
                                     type="radio"
@@ -602,7 +633,12 @@ function MainPlan() {
                                         <input
                                     type="input"
                                     style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
-                                    onClick={onPersonEarly3}
+                                    onKeyUp=  {() => { clearTimeout(typingTimer);
+                                        if (whatTime) {
+                                            typingTimer = setTimeout(doneTypingWhatTime, doneTypingInterval);
+                                                }
+                                            }
+                                        }
                                     onChange={e => { setWhatTime(e.target.value); }}
 
                                 />
@@ -612,12 +648,18 @@ function MainPlan() {
                     </div> : null
                 }
                 {personEarly3 ?
-                    <div style={{ borderTop: "#EF3D55 1px solid" }}>
+                    <div>
                         <form>
-                            <h3 style={{ marginTop: "30px" }}>
+                            <h3>
+                            <i id = "arrowPerson3" onClick = {() => {
+                                 showPersonEarly3(false)
+                                   showPersonEarly2(true)
+                                }
+                                }  className="fa fa-arrow-left back"></i> 
                                 how will you get to the polls?
                                 </h3>
-                            <div className="form-check">
+                                <div className = "row" style={{ marginTop: "30px"}}>
+                            <div  className="form-check col-sm-6">
                                 <label style={{ textAlign: "left !important" }}>
                                     <input
                                         type="radio"
@@ -630,7 +672,7 @@ function MainPlan() {
                                     walk
                                     </label>
                             </div>
-                            <div className="form-check">
+                            <div className="form-check col-sm-6">
                                 <label>
                                     <input
                                         type="radio"
@@ -644,7 +686,9 @@ function MainPlan() {
                                     bus
                                     </label>
                             </div>
-                            <div className="form-check">
+                            </div>
+                            <div className = 'row' lassName = "row" >
+                            <div className="form-check col-sm-6">
                                 <label>
                                     <input
                                         type="radio"
@@ -657,7 +701,7 @@ function MainPlan() {
                                     subway
                                     </label>
                             </div>
-                            <div className="form-check">
+                            <div className="form-check col-sm-6">
                                 <label>
                                     <input
                                         type="radio"
@@ -671,7 +715,9 @@ function MainPlan() {
                                     drive
                                     </label>
                             </div>
-                            <div className="form-check">
+                            </div>
+                            <div className = 'row'>
+                            <div className="form-check col-sm-6">
                                 <label>
                                     <input
                                         type="radio"
@@ -684,7 +730,7 @@ function MainPlan() {
                                     bike
                                     </label>
                             </div>
-                            <div className="form-check">
+                            <div className="form-check col-sm-6">
                                 <label>
                                     <input
                                         type="radio"
@@ -698,21 +744,9 @@ function MainPlan() {
                                     carpool
                             </label>
                             </div>
-                            <div className="form-check">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="react-tips"
-                                        value="mail"
-                                        onClick={onPersonEarly4}
-                                        style={{ marginRight: "5px" }}
-                                        onChange={e => { setGetToPolls("Lyft/Uber"); }}
-
-                                    />
-                                    Lyft/Uber
-                            </label>
                             </div>
-                            <div className="form-check">
+                            <div className = 'row'>
+                            <div className="form-check col-sm-6">
                                 <label>
                                     <input
                                         type="radio"
@@ -724,26 +758,52 @@ function MainPlan() {
                                         <input
                                         type="input"
                                         style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
-                                        onKeyUp={onPersonEarly4}
+                                        onKeyUp=  {() => { clearTimeout(typingTimer);
+                                        if (getToPolls) {
+                                            typingTimer = setTimeout(doneTypingGetToPolls, doneTypingInterval);
+                                                }
+                                            }
+                                        }
                                         onChange={e => { setGetToPolls(e.target.value); }}
 
                                     />
                                 </label>
                             </div>
+                            <div className="form-check col-sm-6">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="react-tips"
+                                        value="mail"
+                                        onClick={onPersonEarly4}
+                                        onk
+                                        style={{ marginRight: "5px" }}
+                                        onChange={e => { setGetToPolls("Lyft/Uber"); }}
+
+                                    />
+                                    Lyft/Uber
+                            </label>
+                            </div>
+                            </div>
                         </form>
                     </div> : null
                 }
                 {personEarly4 ?
-                    <div style={{ borderTop: "#EF3D55 1px solid" }}>
-                        <h3 style={{ marginTop: "30px" }}>
+                    <div >
+                        <h3 >
+                        <i id = "arrowPerson4" onClick = {() => {
+                                   showPersonEarly3(true);
+                                   showPersonEarly4(false)
+                                }
+                                }  className="fa fa-arrow-left back"></i>
                             who else can you bring with you to vote?
                             </h3>
-                        <form style={{ marginBottom: "30px" }}>
+                        <form style={{ marginTop: "30px" }}>
                             <input
                                 type="input"
                                 style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
                                 onKeyUp={onFinishButtonEarly}
-                                onChange={e => { setBringWith(e.target.value); console.log(e.target.value) }}
+                                onChange={e => { setBringWith(e.target.value);    console.log(e.target.value) }}
                             />
                         </form>
                         {finishButtonEarly ?
@@ -858,12 +918,16 @@ function MainPlan() {
                     </div>
                 </Modal>
                 {personElection ?
-                    <div style={{ borderTop: "#EF3D55 1px solid" }}>
-
-                        <h3 style={{ marginTop: "30px" }}>
+                    <div >
+                        <h3>
+                        <i id = "arrowElection" onClick = {() => {
+                                   showBallotPlan(true);
+                                   showPersonElection(false)
+                                }
+                                }  className="fa fa-arrow-left back"></i> 
                             what time will you go to the polls on election day?
                             </h3>
-                        <div className="form-check">
+                        <div className="form-check" style = {{marginTop : "30px"}}>
                             <label>
                                 <input
                                     type="radio"
@@ -914,7 +978,12 @@ function MainPlan() {
                                     <input
                                     type="input"
                                     style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
-                                    onKeyUp={onPersonElection2}
+                                    onKeyUp=  {() => { clearTimeout(typingTimer);
+                                        if (whatTimeElection) {
+                                            typingTimer = setTimeout(doneTypingWhatTimeElection, doneTypingInterval);
+                                                }
+                                            }
+                                        }
                                     onChange={e => { setWhatTimeElection(e.target.value); console.log(e.target.value); }}
                                 />
                             </label>
@@ -922,13 +991,17 @@ function MainPlan() {
                     </div> : null
                 }
                 {personElection2 ?
-                    <div style={{ borderTop: "#EF3D55 1px solid" }}>
-
+                    <div >
                         <form>
-                            <h3 style={{ marginTop: "30px" }}>
+                            <h3>
+                            <i id = "arrowElection2" onClick = {() => {
+                                   showPersonElection(true);
+                                   showPersonElection2(false)
+                                }
+                                }  className="fa fa-arrow-left back"></i> 
                                 how will you get to the polls?
                                 </h3>
-                            <div className="form-check">
+                            <div className="form-check" style={{ marginTop: "30px" }}>
                                 <label style={{ textAlign: "left !important" }}>
                                     <input
                                         type="radio"
@@ -1039,7 +1112,12 @@ function MainPlan() {
                                         <input
                                         type="input"
                                         style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
-                                        onKeyUp={onPersonElection3}
+                                        onKeyUp=  {() => { clearTimeout(typingTimer);
+                                            if (getToPollsElection) {
+                                                typingTimer = setTimeout(doneTypingGetToPollsElection, doneTypingInterval);
+                                                    }
+                                                }
+                                            }
                                         onChange={e => { setGetToPollsElection(e.target.value); console.log(e.target.value); }}
 
                                     />
@@ -1049,11 +1127,16 @@ function MainPlan() {
                     </div> : null
                 }
                 {personElection3 ?
-                    <div style={{ borderTop: "#EF3D55 1px solid" }}>
-                        <h3 style={{ marginTop: "30px" }}>
+                    <div>
+                        <h3>
+                        <i id = "arrowElection3" onClick = {() => {
+                                   showPersonElection2(true);
+                                   showPersonElection3(false)
+                                }
+                                }  className="fa fa-arrow-left back"></i> 
                             do you need to take off work or secure childcare?
                             </h3>
-                        <form style={{ marginBottom: "30px" }}>
+                        <form  style={{ marginTop: "30px" }}>
                             <div className="form-check">
                                 <label>
                                     <input
@@ -1080,8 +1163,13 @@ function MainPlan() {
                                          <input
                                         type="input"
                                         style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px", marginBottom: "30px" }}
-                                        onKeyUp={onPersonElection4}
-                                        onChange={e => { setGetToPollsElection(e.target.value); console.log(e.target.value) }}
+                                        onKeyUp={() => { clearTimeout(typingTimer);
+                                            if (takeOffWork) {
+                                                typingTimer = setTimeout(doneTypingTakeOffWork, doneTypingInterval);
+                                                    }
+                                                }
+                                            }
+                                        onChange={e => { setTakeOffWork(e.target.value); console.log(e.target.value) }}
 
                                     />
                                 </label>
@@ -1090,11 +1178,16 @@ function MainPlan() {
                     </div> : null
                 }
                 {personElection4 ?
-                    <div style={{ borderTop: "#EF3D55 1px solid" }}>
-                        <h3 style={{ marginTop: "30px" }}>
+                    <div>
+                        <h3 >
+                        <i id = "arrowElection4" onClick = {() => {
+                                   showPersonElection3(true);
+                                   showPersonElection4(false)
+                                }
+                                }  className="fa fa-arrow-left back"></i> 
                             who else can you bring with you to vote?
                             </h3>
-                        <form style={{ marginBottom: "30px" }}>
+                        <form style={{ marginTop: "30px" }}>
                             <input
                                 type="input"
                                 style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
