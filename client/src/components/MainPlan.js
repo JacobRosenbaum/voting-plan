@@ -5,17 +5,19 @@ import 'react-datepicker/dist/react-datepicker.css';
 import Modal from 'react-modal';
 import API from "../utils/API";
 import Export from "./Export";
-// import useWindowSize from 'react-use/lib/useWindowSize'
-import Confetti from 'react-confetti'
-
+// import useWindowSize from 'react-use-window-size';
+import Confetti from 'react-confetti';
+import Link from 'react-router-dom/Link';
 
 Modal.setAppElement(document.getElementById('root'));
 
 function MainPlan() {
 
-    // const { width, height } = useWindowSize()
+
     var typingTimer;                //timer identifier
     var doneTypingInterval = 3500;  //time in ms (5 seconds)
+
+    // const { width, height } = useWindowSize()
 
     const customStyles = {
         content: {
@@ -82,11 +84,10 @@ function MainPlan() {
     const [electionFriendEmail1, setElectionFriendEmail1] = useState();
     const [electionFriendEmail2, setElectionFriendEmail2] = useState();
     const [ballotPlan, showBallotPlan] = useState(true);
-    const [confetti, showConfetti] = useState(false)
+    const [confetti, showConfetti] = useState(false);
+    const [complete, showComplete] = useState(false)
 
-    function handleMailSubmit() {
-
-       
+    function handleMailSubmit(event) {
 
         console.log(nameMail, emailMail, castBallotHowMail, mailBallotWhen);
 
@@ -293,10 +294,14 @@ function MainPlan() {
                     {/* <i class="fa fa-arrow-left"></i> */}
                       HOW DO YOU PLAN TO CAST YOUR BALLOT?
                         </h3>
+                        <div style = {{fontFamily: '"Gotham", sans-serif', color: 'black', textAlign: 'center'}}>
+                        *note sure yet? don't worry! <a id = "clickHere" href = "https://www.headcount.org/state">click here</a> for more info on the options in your state and/or reach out to us [link my email] with any questions at all, we're here to help!
+                        </div>
+
 
                     <div className="form-check">
-                        <label style={{ textAlign: "left !important" }}>
-                            <input
+                        <label id = "mailInput"style={{ textAlign: "left !important",fontFamily: '"Gotham", sans-serif' }}>
+                            <input 
                                 type="radio"
                                 name="react-tips"
                                 value="by mail"
@@ -317,11 +322,11 @@ function MainPlan() {
                                     ;
                                 }}
                             />
-                            by mail
+                            BY MAIL
                             </label>
                     </div>
                     <div className="form-check">
-                        <label>
+                        <label id = "mailInput2">
                             <input
                                 type="radio"
                                 name="react-tips"
@@ -334,11 +339,11 @@ function MainPlan() {
 
                                 }
                             />
-                            in person, early
+                            IN PERSON, EARLY
                             </label>
                     </div>
                     <div className="form-check">
-                        <label>
+                        <label id = "mailInput3">
                             <input
                                 type="radio"
                                 name="react-tips"
@@ -350,7 +355,7 @@ function MainPlan() {
                                 }
                                 }
                             />
-                            in person, on election day
+                            IN PERSON, ON ELECTION DAY
                             </label>
                     </div>
                 </form>
@@ -484,7 +489,7 @@ function MainPlan() {
                                 <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
                                     hey that was easy! who else should make a plan to vote right now?
                                 </h4>
-                                <form onSubmit={handleMailSubmit} style={{ textAlign: "left" }}>
+                                <form  style={{ textAlign: "left" }}>
                                     <ol>
                                         <li>
                                             <input
@@ -527,11 +532,19 @@ function MainPlan() {
                                         <button
                                             class="btn btn-primary mailButton"
                                             type = 'submit'
-                                            onClick={() => {
-                                                setTimeout(() => 
+                                            onClick={(e) => 
+                                                { 
+                                                    e.preventDefault();
+                                                   
+                                                    {handleMailSubmit()};
+                                                
+                                                setTimeout( 
                                                 setMailIsOpen(false),
+                                                showComplete(true),
                                                 showConfetti(true),
-                                                console.log('confetti'), 1000);
+                                                showMail(false),
+                                                showFinishButtonMail(false),
+                                                console.log('confetti'), 5000);
                                              }}
                                         >
                                             i'm finished
@@ -543,10 +556,27 @@ function MainPlan() {
 
                     </div>
                 </Modal>
-                {confetti ? 
-                <div>
-                    hello
-               
+                {complete ? 
+                <div style = {{textAlign: 'center' }}>
+                    <div style = {{position: 'relative', bottom: '300px'}}>
+                     <Confetti 
+                        colors={["#004789", "#EF3D55"]}
+                        numberOfPieces={1000}
+                        recycle={false}
+                        // initialVelocityX={{min:-200, max: 200}}
+                        // initialVelocityY={{min:200, max: 200}}
+                        // width={1800}
+                        confettiSource=	{ {x: 450, y:-80}}
+                        
+                        />
+                        </div>
+                    <h1>
+                        WOOHOO! YOU MADE A VOTING PLAN!
+                       
+                    </h1>
+                    <h2>
+                        CHECK YOUR EMAIL TO FIND IT
+                    </h2>
                </div> : null
 
                 }

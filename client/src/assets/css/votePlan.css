@@ -1,5 +1,5 @@
 #votePicture {
-    width: 900px
+    width: 1000px
 }
 
 #voteRegister {
@@ -47,17 +47,17 @@
 } */
 #yes {
     width: 300px;
-    margin-left: 160px
+    margin-left: 200px
 }
 
 #no {
     width: 300px;
-    margin-right: 160px
+    margin-right: 200px
 }
 
 #maybe {
-    width: 450px;
-    margin-top: 30px
+    width: 430px;
+    margin-top: 50px
 }
 
 #yes:hover {

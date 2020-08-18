@@ -79,10 +79,13 @@ input[type="radio"] {
     background-color: white !important;
     color: #004789
 }
+.mailButton:hover{
+color: #004789 !important
+}
 
 .fa-arrow-left {
     position: relative;
-    right: 140px;
+    right: 200px;
     z-index: 50900;
     font-size: 25px
 }
@@ -118,6 +121,32 @@ label {
 .container {
     position: relative;
     top: 50px
+}
+#mailInput{
+    color: #004789 !important
+}
+#mailInput2{
+    color: #EF3D55 !important;
+    font-family: 'Gotham', sans-serif
+}
+#mailInput3{
+    color: #004789 !important;
+    font-family: 'Gotham', sans-serif
+
+}
+
+#clickHere{
+    color: black !important;
+    z-index: 10221910576576567567565;
+
+}
+
+#clickHere:hover{
+    cursor: pointer;
+}
+#arrowMail {
+    right: 130px;
+    z-index: 3427643746732
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {

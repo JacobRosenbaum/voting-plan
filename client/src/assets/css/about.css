@@ -7,7 +7,6 @@
     color: #004789;
     z-index: 200;
 
-
 }
 
 .btn-primary {
@@ -33,10 +32,12 @@ a {
 }
 
 #letsGoButton {
-    width: 350px;
-    /* position: relative;
-    left: 350px */
-    margin-top: 30px
+    width: 360px;
+    position: relative;
+    right: 40px;
+    margin-top: 30px;
+    text-align: center;
+    
 }
 
 #letsGoButton:hover {
@@ -53,6 +54,8 @@ a {
     position: absolute;
     bottom: 510px;
     left: 100px;
+    border: 2px red solid;
+    z-index: 1;
    
 }
 

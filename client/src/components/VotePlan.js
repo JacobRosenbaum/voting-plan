@@ -3,7 +3,7 @@ import VotePicture from "../assets/images/votePlanText.png";
 import letsGoButton from "../assets/images/letsGoButton.png";
 import "../assets/css/votePlan.css";
 import Modal from 'react-modal';
-// import How3 from "../components/How2";
+ import How2 from "../components/How2";
 import MainPlan from "../components/MainPlan.js"
 import voteRegister from "../assets/images/voteRegister.png";
 import yes from "../assets/images/yes.png";
@@ -31,7 +31,7 @@ function VotePlan() {
             color: 'white',
             textAlign: 'center',
             border: '5px #EF3D55 solid',
-            fontFamily: '"Gotham Medium", sans-serif'
+            fontFamily: '"Gotham Light", sans-serif'
         }
     };
 
@@ -122,7 +122,7 @@ Tweet
                         {/* <div>No problem! </div> */}
                         <div style={{ marginBottom: "50px" }}>
                             <h3>NO PROBLEM!</h3>
-                            <div style={{ color: "white !important" }}><a style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/am-i-registered-to-vote/" target="_blank">CLICK HERE </a> TO FIND OUT - THEN COME ON BACK!</div>
+                            <div style={{ color: "white !important" }}><a style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/am-i-registered-to-vote/" target="_blank">CLICK HERE</a> TO FIND OUT - THEN COME ON BACK!</div>
                         </div>
                     </Modal>
 

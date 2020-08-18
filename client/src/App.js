@@ -15,15 +15,15 @@ function App() {
                 {/* <img id = "oneSticker" src={oneSticker}/>
             <img id = "twoStickers" src={twoStickers}/> */}
             </div>
-            <footer >
-                <b>Let's DO Something ©    <a href = "https://www.instagram.com/ldsomething/" target = "_blank"> <i class="fa fa-instagram foot"></i></a>
-                    <a href = "https://www.facebook.com/LDSomething" target = "_blank"> <i class="fa fa-facebook foot"></i></a>
-                    <a href = "https://twitter.com/LDoSomething" target = "_blank"><i class="fa fa-twitter foot"></i></a>
-                    </b>
-                {/* <img id = "lets" src = {letsDoSomething} /> */}
-
-
-                {/* <img style ={{height: '19px', position: 'relative',right: '3px'}} src = {i} /> */}
+            <footer style={{ textAlign: 'center' }}>
+                <div>
+                    Let's DO Something
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/ldsomething/" target="_blank"> <i class="fa fa-instagram foot"></i></a>
+                    <a href="https://www.facebook.com/LDSomething" target="_blank"> <i class="fa fa-facebook foot"></i></a>
+                    <a href="https://twitter.com/LDoSomething" target="_blank"> <i class="fa fa-twitter foot"></i></a>
+                </div>
             </footer>
         </div>
 
