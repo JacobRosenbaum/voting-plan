@@ -16,9 +16,7 @@ function App() {
             <img id = "twoStickers" src={twoStickers}/> */}
             </div>
             <footer style={{ textAlign: 'center' }}>
-                <div>
-                    Let's DO Something
-                </div>
+                <div style={{ textAlign: 'center' }}>Let's DO Something</div>
                 <div>
                     <a href="https://www.instagram.com/ldsomething/" target="_blank"> <i class="fa fa-instagram foot"></i></a>
                     <a href="https://www.facebook.com/LDSomething" target="_blank"> <i class="fa fa-facebook foot"></i></a>

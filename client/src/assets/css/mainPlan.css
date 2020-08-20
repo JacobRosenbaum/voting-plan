@@ -135,8 +135,8 @@ label {
 
 }
 
-#clickHere{
-    color: black !important;
+.clickHere{
+    color: white !important;
     z-index: 10221910576576567567565;
 
 }
@@ -144,9 +144,30 @@ label {
 #clickHere:hover{
     cursor: pointer;
 }
+
 #arrowMail {
     right: 130px;
     z-index: 3427643746732
+}
+
+.shadowButton{
+    background-color: rgb (247,246,241) !important;
+    text-align: center;
+    border: 4px rgb(238,58,85) solid;
+    color: rgb(0,72,137 );
+    width: 300px;
+    font-size: 55px;
+    box-shadow: -10px 10px rgb(226, 222, 213);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    font-family: "Gotham", sans-serif
+}
+
+.btn{
+    border-radius: 0px !important
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {

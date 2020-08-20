@@ -15,10 +15,13 @@
 }
 
 
-a {
-    color: white !important;
+/* a {
+    color: white;
     text-decoration: underline
-}
+} */
+/* a:hover{
+    color:white
+} */
 
 #yes {
     text-align: center;

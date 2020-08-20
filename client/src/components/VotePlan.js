@@ -4,7 +4,8 @@ import letsGoButton from "../assets/images/letsGoButton.png";
 import "../assets/css/votePlan.css";
 import Modal from 'react-modal';
  import How2 from "../components/How2";
-import MainPlan from "../components/MainPlan.js"
+import MainPlan from "../components/MainPlan.js";
+import MainPlan2 from "../components/MainPlan2.js"
 import voteRegister from "../assets/images/voteRegister.png";
 import yes from "../assets/images/yes.png";
 import iDontKnow from "../assets/images/iDontKnow.png";
@@ -108,7 +109,7 @@ Tweet
                         {/* <div>No problem! </div> */}
                         <div style={{ marginBottom: "50px" }}>
                             <h3>NO PROBLEM!</h3>
-                            <div style={{ color: "white !important" }}><a style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/register-to-vote/" target="_blank">CLICK HERE</a> TO GET REGISTERED - THEN COME ON BACK!</div>
+                            <div style={{ color: "white !important" }}><a class = "clickHere" style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/register-to-vote/" target="_blank">CLICK HERE</a> TO GET REGISTERED - THEN COME ON BACK!</div>
                         </div>
                     </Modal>
                     <Modal
@@ -122,14 +123,14 @@ Tweet
                         {/* <div>No problem! </div> */}
                         <div style={{ marginBottom: "50px" }}>
                             <h3>NO PROBLEM!</h3>
-                            <div style={{ color: "white !important" }}><a style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/am-i-registered-to-vote/" target="_blank">CLICK HERE</a> TO FIND OUT - THEN COME ON BACK!</div>
+                            <div style={{ color: "white !important" }}><a class = "clickHere" style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/am-i-registered-to-vote/" target="_blank">CLICK HERE</a> TO FIND OUT - THEN COME ON BACK!</div>
                         </div>
                     </Modal>
 
                 </div> : null
             }
             {component ?
-                <MainPlan /> : null
+                <MainPlan2 /> : null
             }
 
         </div>

@@ -295,17 +295,13 @@ function MainPlan() {
                       HOW DO YOU PLAN TO CAST YOUR BALLOT?
                         </h3>
                         <div style = {{fontFamily: '"Gotham", sans-serif', color: 'black', textAlign: 'center'}}>
-                        *note sure yet? don't worry! <a class = "clickHere" href = "https://www.headcount.org/state">click here</a> for more info on the options in your state and/or reach out to us [link my email] with any questions at all, we're here to help!
+                        *note sure yet? don't worry! <a id = "clickHere" href = "https://www.headcount.org/state">click here</a> for more info on the options in your state and/or reach out to us [link my email] with any questions at all, we're here to help!
                         </div>
 
 
                     <div className="form-check">
                         <label id = "mailInput"style={{ textAlign: "left !important",fontFamily: '"Gotham", sans-serif' }}>
-                            <input 
-                                type="radio"
-                                name="react-tips"
-                                value="by mail"
-                                // onChange={onMail}
+                            <button className = "button shadowButton"
                                 style={{ marginRight: "5px" }}
                                 onClick={e => {
                                     setCastBallotHowMail(e.target.value);
@@ -321,8 +317,11 @@ function MainPlan() {
                                     showBallotPlan(false)
                                     ;
                                 }}
-                            />
-                            BY MAIL
+                            >
+                            
+                                BY MAIL!
+                               
+                            </button>
                             </label>
                     </div>
                     <div className="form-check">
