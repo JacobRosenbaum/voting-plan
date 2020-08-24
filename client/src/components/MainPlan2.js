@@ -95,12 +95,12 @@ function MainPlan() {
 
         if (mailFriendEmail1) {
 
-            API.mailFriend1({ mailFriendName1, mailFriendEmail1 })
+            API.mailFriend1({ mailFriendName1, mailFriendEmail1, nameMail })
 
         };
         if (mailFriendEmail2) {
 
-            API.mailFriend2({ mailFriendName2, mailFriendEmail2 })
+            API.mailFriend2({ mailFriendName2, mailFriendEmail2, nameMail })
 
         };
 
@@ -120,12 +120,12 @@ function MainPlan() {
 
         if (earlyFriendEmail1) {
 
-            API.earlyFriend1({ earlyFriendName1, earlyFriendEmail1 })
+            API.earlyFriend1({ earlyFriendName1, earlyFriendEmail1,nameEarly  })
 
         };
         if (earlyFriendEmail2) {
 
-            API.earlyFriend2({ earlyFriendName2, earlyFriendEmail2 })
+            API.earlyFriend2({ earlyFriendName2, earlyFriendEmail2, nameEarly })
 
         };
     
@@ -147,12 +147,12 @@ function MainPlan() {
 
         if (electionFriendEmail1) {
 
-            API.electionFriend1({ electionFriendName1, electionFriendEmail1 })
+            API.electionFriend1({ electionFriendName1, electionFriendEmail1, nameElection })
 
         };
         if (electionFriendEmail2) {
 
-            API.electionFriend2({ electionFriendName2, electionFriendEmail2 })
+            API.electionFriend2({ electionFriendName2, electionFriendEmail2, nameElection })
 
         };
 

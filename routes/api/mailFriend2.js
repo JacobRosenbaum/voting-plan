@@ -5,6 +5,8 @@ router.route("/")
   .post((req, res) => {
     const name = req.body.mailFriendName2;
     const email = req.body.mailFriendEmail2;
+    const friendName = req.body.nameMail
+
  
     console.log(name)
     console.log(email);
@@ -17,7 +19,7 @@ router.route("/")
       }
     });
 
-    const userOptions = emailOptions(name, email)
+    const userOptions = emailOptions(name, email, friendName)
 
     transporter.sendMail(userOptions, function (error, info) {
 
@@ -31,17 +33,42 @@ router.route("/")
     res.end();
   });
 
-function emailOptions(name, email) {
+function emailOptions(name, email, friendName) {
   console.log("from mail email options friend 2")
   let emailOptions = {}
   emailOptions.from = 'letsdosomething2020@gmail.com';
   emailOptions.to = email;
-  emailOptions.subject = 'VOTE PLAN TEST';
-  emailOptions.html = `<p> Hello ${name}! </p> <p style = "border-top: red 2px solid"> </p>`;
-  emailOptions.attachments = [{
-    filename: "voting plan", 
-    content: "voting plan"
-  }]
+  emailOptions.subject = 'Make a Voting Plan!';
+  emailOptions.html = `<div>
+  
+  Hi friend of ${friendName}!
+
+  <br>
+  <br>
+
+  ${friendName} made a voting plan and thought you’d like to do the same.
+  <br>
+  
+  <br>
+  
+  Did you know that writing down a plan makes us more likely to execute that plan? Cool, huh? So let’s all make a voting plan for the upcoming election!
+  
+  <br>
+  <br>
+  Are you in? Great! I knew I could count on you.
+  <br>
+  <br>
+  
+  <a href = "http://voting-plan.herokuapp.com" target = "blank">Click here</a> to make YOUR voting plan. It will take about 3 minutes and will be fun!
+  <br>
+  <br>
+  
+  xo,
+  <br>
+  <br>
+  
+  Jen @ Let’s DO Something!
+  </div>`
   return emailOptions
 };
 
