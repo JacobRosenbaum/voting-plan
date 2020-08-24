@@ -293,7 +293,7 @@ function MainPlan() {
             <div className = "jumbotronX" style={{ marginBottom: "30px" }}>
                 <form>
                     
-                    <h3 class = "question" style = {{fontFamily: '"Gotham", sans-serif', color: 'black'}}>
+                    <h3 class = "question" >
                     
                        HOW DO YOU PLAN TO CAST YOUR BALL<span><img id = "exclamation" src = {exclamation}/>T?</span>
                         </h3>

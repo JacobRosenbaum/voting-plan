@@ -110,3 +110,27 @@
     }
 
 }
+/* @media (max-width: 1579px){
+    #oneSticker{
+        width: 180px;
+        top: 10px;
+        left: 10px
+    }
+
+    #twoStickers{
+        width: 250px;
+        right: 10px
+    }
+}
+@media (max-width: 1213px){
+    #oneSticker{
+        width: 150px;
+        top: 10px;
+        left: 10px
+    }
+
+    #twoStickers{
+        width: 220px;
+        right: 10px
+    }
+} */
