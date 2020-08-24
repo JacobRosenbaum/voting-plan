@@ -11,6 +11,9 @@
     position: relative;
     bottom: 150px
 }
+.modalClick{
+color: white!important
+}
 
 #funVote {
     color: black !important;
@@ -149,7 +152,7 @@
     }
 
     .container {
-        top: 20px
+        top: 23px
     }
     #x{
         left: 160px;
@@ -160,4 +163,18 @@
         z-index: 302393230;
     }
 
+}
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    #votePicture{
+        width: 700px
+    }
+    #letsGoButton{
+        width: 250px
+    }
 }

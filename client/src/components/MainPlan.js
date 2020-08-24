@@ -832,7 +832,7 @@ function MainPlan() {
                         <form style={{ marginTop: "30px" }}>
                             <input
                                 type="input"
-                                style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
+                                style={{ marginLeft: "7px", border: "1px solid black", width: "300px" }}
                                 onKeyUp={onFinishButtonEarly}
                                 onChange={e => { setBringWith(e.target.value);    console.log(e.target.value) }}
                             />
@@ -1221,7 +1221,7 @@ function MainPlan() {
                         <form style={{ marginTop: "30px" }}>
                             <input
                                 type="input"
-                                style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
+                                style={{ marginLeft: "7px", border: "1px solid black", width: "300px" }}
                                 onKeyUp={onFinishButtonElection}
                                 onChange={e => { setBringWithElection(e.target.value); console.log(e.target.value) }}
                             />

@@ -292,15 +292,17 @@ function MainPlan() {
             {ballotPlan ?
             <div className = "jumbotronX" style={{ marginBottom: "30px" }}>
                 <form>
-                    <h3 style = {{fontFamily: '"Gotham", sans-serif', color: 'black'}}>
+                    
+                    <h3 class = "question" style = {{fontFamily: '"Gotham", sans-serif', color: 'black'}}>
                     
                        HOW DO YOU PLAN TO CAST YOUR BALL<span><img id = "exclamation" src = {exclamation}/>T?</span>
                         </h3>
                         {/* <img id = "castBallotImage" src = {castBallotImage} /> */}
-                       
-                        <div style = {{fontFamily: '"Gotham", sans-serif', color: 'black', textAlign: 'center'}}>
-                        *note sure yet? don't worry! <a id = "clickHere" href = "https://www.headcount.org/state">click here</a> for more info on the options in your state and/or reach out to us [link my email] with any questions at all, we're here to help!
-                        </div>
+                        <div style = {{textAlign: 'center'}}>
+                       <a className = "clickHere" href = "https://www.headcount.org/state" target = "_blank"><b>*NOT SURE YET? DON'T WORRY! <span className = "underline">CLICK HERE</span> FOR MORE INFO ON THE OPTIONS IN YOUR STATE AND/OR REACH OUT TO US AT LETSDOSOMETHING2020@GMAIL.COM WITH ANY QUESTIONS AT ALL, WE'RE HERE TO HELP!</b> </a>
+                       </div>
+                  {/*       *note sure yet? don't worry! <a id = "clickHere" href = "https://www.headcount.org/state">click here</a> for more info on the options in your state and/or reach out to us [link my email] with any questions at all, we're here to help! */}
+
 
 
                     <div className="form-check">
@@ -367,13 +369,14 @@ function MainPlan() {
                 {mail ?
                     <div >
                         <form id="whenWillYou">
-                            <h3>
+                            <h3 className = "question">
                              <i id = "arrowMail" onClick = {() => {
                                    showBallotPlan(true);
                                    showMail(false)
                                 }
                                 }  className="fa fa-arrow-left back"></i> 
-                                when will you fill in and mail back your ballot?
+                                WHEN WILL YOU FILL IN AND MAIL BACK YOUR BALLOT?
+                                {/* when will you fill in and mail back your ballot? */}
                                 </h3>
                             <div style = {{marginTop: '30px'}} className="form-check">
                                 <label style={{ textAlign: "left !important" }}>
@@ -586,31 +589,36 @@ function MainPlan() {
 
                 {personEarly ?
                     <div>
-                        <h3 >
+                        <h3 className="question">
                         <i id = "arrowPerson1" onClick = {() => {
                                    showBallotPlan(true);
                                    showPersonEarly(false)
                                 }
                                 }  className="fa fa-arrow-left back"></i> 
-                            what day will you go to the polls?
+                       WHEN WILL YOU VOTE?
                             </h3>
+                            <div style = {{textAlign: 'center'}}>
+                            <a className = "clickHere" href ="https://www.vote.org/early-voting-calendar/" target = '_blank'> 
+                            <b>PICKING A DAY HELPS MAKE SURE VOTING DOESN'T SLIP THROUGH THE CRACKS. <span className = "underline">CLICK HERE</span>  TO SEE WHEN EARLY VOTING OPENS IN YOUR STATE AND PICK A DAY THAT WORKS FOR YOUR CALENDAR RIGHT NOW! </b></a>
+                        </div>
                         <div style = {{marginTop: "30px"}}>
                             <DatePicker
                                 selected={startDatePerson}
                                 onChange={handleDateChangePerson}
+                                style = {{color: 'black !important'}}
                             />
                         </div>
                     </div> : null
                 }
                 {personEarly2 ?
                     <div >
-                        <h3 >
+                        <h3 className = "question">
                         <i id = "arrowPerson2" onClick = {() => {
                                  showPersonEarly2(false)
                                    showPersonEarly(true)
                                 }
                                 }  className="fa fa-arrow-left back"></i> 
-                            what time will you go to the polls on {startDatePerson.toString().slice(0, 15)}?
+                            WHEN WILL YOU GO TO YOUR POLLING PLACE ON {startDatePerson.toString().slice(0, 15).toUpperCase()}?
                                 </h3>
                         <div style = {{marginTop: "30px"}}className="form-check" >
                             <label>
@@ -684,13 +692,13 @@ function MainPlan() {
                 {personEarly3 ?
                     <div>
                         <form>
-                            <h3>
+                            <h3 className = "question">
                             <i id = "arrowPerson3" onClick = {() => {
                                  showPersonEarly3(false)
                                    showPersonEarly2(true)
                                 }
                                 }  className="fa fa-arrow-left back"></i> 
-                                how will you get to the polls?
+                               HOW WILL YOU GET TO THE POLLS?
                                 </h3>
                                 <div className = "row" style={{ marginTop: "30px"}}>
                             <div  className="form-check col-sm-6">
@@ -824,18 +832,22 @@ function MainPlan() {
                 }
                 {personEarly4 ?
                     <div >
-                        <h3 >
+                        <h3 className = "question">
                         <i id = "arrowPerson4" onClick = {() => {
                                    showPersonEarly3(true);
                                    showPersonEarly4(false)
                                 }
                                 }  className="fa fa-arrow-left back"></i>
-                            who else can you bring with you to vote?
+                            CAN YOU BRING ANYONE WITH YOU TO VOTE?
                             </h3>
-                        <form style={{ marginTop: "30px" }}>
+                            <div className = "bringWith" style ={{textAlign: 'center'}}>
+                               <b>VOTING IS MORE FUN WITH A FRIEND! IF YOU CAN BRING SOMEONE, WRITE THEIR NAME HERE. SOLO VOTING IS A++ AS WELL SO NO WORRIES IS NOT.</b>
+                                </div>
+
+                        <form style={{ marginTop: "30px", marginBottom: '30px', textAlign: 'center' }}>
                             <input
                                 type="input"
-                                style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
+                                style={{ marginLeft: "7px", border: "1px solid black", width: "300px" }}
                                 onKeyUp={onFinishButtonEarly}
                                 onChange={e => { setBringWith(e.target.value);    console.log(e.target.value) }}
                             />
@@ -953,14 +965,20 @@ function MainPlan() {
                 </Modal>
                 {personElection ?
                     <div >
-                        <h3>
+                        <h3 className = "question">
                         <i id = "arrowElection" onClick = {() => {
                                    showBallotPlan(true);
                                    showPersonElection(false)
                                 }
                                 }  className="fa fa-arrow-left back"></i> 
-                            what time will you go to the polls on election day?
+                            WHEN WILL YOU VOTE?
                             </h3>
+                            <div style = {{textAlign:'center'}}>
+                            <a className = "clickHere" href = "https://ballotpedia.org/State_Poll_Opening_and_Closing_Times_(2020)" target = "_blank">
+                                PICKING A TIME HELPS MARE SURE VOTING WILL HAPPEN. CLICK HERE TO SEE WHEN THE POLLS ARE OPEN IN YOUR STATE AND PICK A TIME THAT IS LIKELY TO WORK FOR YOU RIGHT NOW!
+                                </a>
+                                </div>
+                                
                         <div className="form-check" style = {{marginTop : "30px"}}>
                             <label>
                                 <input
@@ -1027,13 +1045,13 @@ function MainPlan() {
                 {personElection2 ?
                     <div >
                         <form>
-                            <h3>
+                            <h3 className = "question">
                             <i id = "arrowElection2" onClick = {() => {
                                    showPersonElection(true);
                                    showPersonElection2(false)
                                 }
                                 }  className="fa fa-arrow-left back"></i> 
-                                how will you get to the polls?
+                               HOW WILL YOU GET TO THE POLLS?
                                 </h3>
                             <div className="form-check" style={{ marginTop: "30px" }}>
                                 <label style={{ textAlign: "left !important" }}>
@@ -1162,13 +1180,14 @@ function MainPlan() {
                 }
                 {personElection3 ?
                     <div>
-                        <h3>
+                        <h3 className = "question">
                         <i id = "arrowElection3" onClick = {() => {
                                    showPersonElection2(true);
                                    showPersonElection3(false)
                                 }
                                 }  className="fa fa-arrow-left back"></i> 
-                            do you need to take off work or secure childcare?
+                                DO YOU NEED TO TAKE OFF WORK OR SECURE CHILDCARE?
+                           
                             </h3>
                         <form  style={{ marginTop: "30px" }}>
                             <div className="form-check">
@@ -1213,18 +1232,21 @@ function MainPlan() {
                 }
                 {personElection4 ?
                     <div>
-                        <h3 >
+                        <h3 className = "question">
                         <i id = "arrowElection4" onClick = {() => {
                                    showPersonElection3(true);
                                    showPersonElection4(false)
                                 }
                                 }  className="fa fa-arrow-left back"></i> 
-                            who else can you bring with you to vote?
+                           CAN YOU BRING ANYONE WITH YOU TO VOTE?
                             </h3>
-                        <form style={{ marginTop: "30px" }}>
+                            <div className = "bringWith" style ={{textAlign: 'center'}}>
+                               <b> VOTING IS MORE FUN WITH A FRIEND! IF YOU CAN BRING SOMEONE, WRITE THEIR NAME HERE. SOLO VOTING IS A++ AS WELL SO NO WORRIES IS NOT.</b>
+                                </div>
+                        <form style={{ marginTop: "30px", marginBottom: '30px', textAlign: 'center' }}>
                             <input
                                 type="input"
-                                style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
+                                style={{ marginLeft: "7px", border: "1px solid black", width: "300px" }}
                                 onKeyUp={onFinishButtonElection}
                                 onChange={e => { setBringWithElection(e.target.value); console.log(e.target.value) }}
                             />

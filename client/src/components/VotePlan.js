@@ -109,7 +109,7 @@ Tweet
                         {/* <div>No problem! </div> */}
                         <div style={{ marginBottom: "50px" }}>
                             <h3>NO PROBLEM!</h3>
-                            <div style={{ color: "white !important" }}><a class = "clickHere" style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/register-to-vote/" target="_blank">CLICK HERE</a> TO GET REGISTERED - THEN COME ON BACK!</div>
+                            <div style={{ color: "white !important" }}><a class = "modalClick" style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/register-to-vote/" target="_blank">CLICK HERE</a> TO GET REGISTERED - THEN COME ON BACK!</div>
                         </div>
                     </Modal>
                     <Modal
@@ -123,7 +123,7 @@ Tweet
                         {/* <div>No problem! </div> */}
                         <div style={{ marginBottom: "50px" }}>
                             <h3>NO PROBLEM!</h3>
-                            <div style={{ color: "white !important" }}><a class = "clickHere" style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/am-i-registered-to-vote/" target="_blank">CLICK HERE</a> TO FIND OUT - THEN COME ON BACK!</div>
+                            <div style={{ color: "white !important" }}><a class = "modalClick" style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/am-i-registered-to-vote/" target="_blank">CLICK HERE</a> TO FIND OUT - THEN COME ON BACK!</div>
                         </div>
                     </Modal>
 

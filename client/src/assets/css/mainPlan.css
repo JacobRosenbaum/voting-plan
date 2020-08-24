@@ -1,7 +1,9 @@
-h3 {
+.question {
     text-align: center !important;
     margin-bottom: 15px;
-    font-size: 62px
+    font-size: 62px;
+    font-Family: Gotham, sans-serif;
+     color: black
 }
 
 #exclamation{
@@ -24,8 +26,8 @@ li {
 }
 
 input {
-    color: #004789 !important;
-    border: #004789 .5px solid
+    color: black !important;
+    border: black .5px solid
 }
 
 input[type="radio"] {
@@ -160,14 +162,27 @@ label {
 }
 
 .clickHere{
-    color: white !important;
+    color: black !important;
+    text-align: center;
     z-index: 10221910576576567567565;
+    text-decoration: none !important
+}
+.underline{
+    text-decoration: underline !important
 
 }
+.bringWith{
+    color: black !important
+}
 
-#clickHere:hover{
+.underline:hover{
     cursor: pointer;
+   
 }
+.clickHere{
+    cursor: default
+}
+
 
 /* #arrowMail {
     right: 130px;
@@ -247,4 +262,21 @@ label {
     #begin {
         top: -40px
     }
+    .question{
+        font-size: 34px
+    }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .question{
+        font-size: 54px
+    }
+    /* .container{
+        top: 5px
+    } */
+
 }
