@@ -111,12 +111,22 @@ color: white!important
         width: 300px;
         text-align: center
     }
+    .question{
+        font-size: 2rem
+    }
+    .clickHere{
+        font-size: .7rem
+    }
+    .bringWith{
+        font-size: .7rem
+    }
 
     #letsGoButton {
-        width: 200px;
+        width: 150px;
         position: relative;
-    right: 35px;
+
     }
+   
 
     #funVote {
         font-size: .9rem
@@ -155,14 +165,20 @@ color: white!important
         top: 23px
     }
     #x{
-        left: 160px;
+        left: 170px;
         z-index: 302393230;
     }
     #maybeButton{
-        left: 160px;
+        left: 170px;
         z-index: 302393230;
     }
 
+    #yes{
+        margin-left: 170px !important
+    }
+    #no{
+        margin-right: 170px !important
+    }
 }
 
 
@@ -176,5 +192,11 @@ color: white!important
     }
     #letsGoButton{
         width: 250px
+    }
+    #yes{
+        margin-left: 1px !important
+    }
+    #no{
+        margin-right: 1px !important
     }
 }

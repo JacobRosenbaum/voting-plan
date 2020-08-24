@@ -265,6 +265,11 @@ label {
     .question{
         font-size: 34px
     }
+    #exclamation{
+        height: 27px;
+        
+        bottom: 3px;
+    }
 }
 
 @media only screen 
