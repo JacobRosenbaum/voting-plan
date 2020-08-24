@@ -18,9 +18,9 @@ function App() {
             <footer style={{ textAlign: 'center' }}>
                 <div style={{ textAlign: 'center' }}>Let's DO Something</div>
                 <div>
-                    <a href="https://www.instagram.com/ldsomething/" target="_blank"> <i class="fa fa-instagram foot"></i></a>
+                    <a href="https://www.instagram.com/ldsomething/" target="_blank"> <i style = {{marginRight: '20px'}} class="fa fa-instagram foot"></i></a>
                     <a href="https://www.facebook.com/LDSomething" target="_blank"> <i class="fa fa-facebook foot"></i></a>
-                    <a href="https://twitter.com/LDoSomething" target="_blank"> <i class="fa fa-twitter foot"></i></a>
+                    <a href="https://twitter.com/LDoSomething" target="_blank"> <i style = {{marginLeft: '20px'}}class="fa fa-twitter foot"></i></a>
                 </div>
             </footer>
         </div>

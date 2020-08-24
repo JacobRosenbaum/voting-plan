@@ -20,28 +20,12 @@ i:hover{
     cursor: pointer;
 }
 
-/* #oneSticker {
-    width: 250px;
-    position: relative;
-    bottom: 550px;
-    left: 50px
-   
-   
-}
-
-#twoStickers {
-    width: 375px;
-    position: relative;
-    left: 900px;
-    bottom: 200px
-   
-} */
 
 #lets{
     width: 100px
 }
 
 .foot{
-    margin-left: 20px !important;
+    /* margin-left: 20px !important; */
     text-decoration-color: #004789 !important
 }

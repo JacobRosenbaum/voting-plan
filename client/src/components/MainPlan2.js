@@ -8,6 +8,8 @@ import Export from "./Export";
 // import useWindowSize from 'react-use-window-size';
 import Confetti from 'react-confetti';
 import Link from 'react-router-dom/Link';
+import castBallotImage from "../assets/images/castBallot.png";
+import exclamation from "../assets/images/exclamation.png"
 
 Modal.setAppElement(document.getElementById('root'));
 
@@ -291,9 +293,11 @@ function MainPlan() {
             <div className = "jumbotronX" style={{ marginBottom: "30px" }}>
                 <form>
                     <h3 style = {{fontFamily: '"Gotham", sans-serif', color: 'black'}}>
-                    {/* <i class="fa fa-arrow-left"></i> */}
-                      HOW DO YOU PLAN TO CAST YOUR BALLOT?
+                    
+                       HOW DO YOU PLAN TO CAST YOUR BALL<span><img id = "exclamation" src = {exclamation}/>T?</span>
                         </h3>
+                        {/* <img id = "castBallotImage" src = {castBallotImage} /> */}
+                       
                         <div style = {{fontFamily: '"Gotham", sans-serif', color: 'black', textAlign: 'center'}}>
                         *note sure yet? don't worry! <a id = "clickHere" href = "https://www.headcount.org/state">click here</a> for more info on the options in your state and/or reach out to us [link my email] with any questions at all, we're here to help!
                         </div>

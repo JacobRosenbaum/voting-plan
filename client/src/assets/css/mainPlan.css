@@ -1,8 +1,14 @@
 h3 {
     text-align: center !important;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    font-size: 62px
 }
 
+#exclamation{
+    height: 49px;
+    position: relative;
+    bottom: 5px
+}
 li {
     margin-bottom: 20px
 }
@@ -93,17 +99,35 @@ color: #004789 !important
 .fa-arrow-left:hover {
     cursor: pointer;
 }
-
+#arrowMail{
+    right: 165px !important
+}
 #arrowPerson1 {
-    right: 200px !important
+    right: 250px !important
 }
 
 #arrowPerson2 {
-    right: 70px !important
+    right: 95px !important
+}
+#arrowPerson3 {
+    right: 280px !important
 }
 
 #arrowElection {
-    right: 70px !important
+    right: 135px !important
+}
+#arrowElection2 {
+    right: 135px !important
+}
+#arrowElection3 {
+    right: 135px !important
+}
+#arrowElection4 {
+    right: 135px !important
+}
+#castBallotImage{
+    width: 800px;
+    text-align: center
 }
 
 i {
@@ -118,10 +142,10 @@ label {
     text-align: left !important
 }
 
-.container {
+ .container {
     position: relative;
-    top: 50px
-}
+    bottom: 30px
+} 
 #mailInput{
     color: #004789 !important
 }
@@ -145,10 +169,10 @@ label {
     cursor: pointer;
 }
 
-#arrowMail {
+/* #arrowMail {
     right: 130px;
     z-index: 3427643746732
-}
+} */
 
 .shadowButton{
     background-color: rgb (247,246,241) !important;
