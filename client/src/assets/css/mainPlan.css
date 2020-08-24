@@ -264,7 +264,8 @@ label {
     }
     .question{
         font-size: 2rem;
-        font-family: Gotham Pro, sans-serif
+        font-family: Gotham, sans-serif;
+        font-weight: bold;
     }
     #exclamation{
         height: 27px;

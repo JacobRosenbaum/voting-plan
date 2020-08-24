@@ -127,7 +127,8 @@ color: white!important
    
 
     #funVote {
-        font-size: .9rem
+        font-size: .9rem;
+        margin-top: 15px
     }
 
     #voteRegister {
