@@ -63,7 +63,7 @@ function VotePlan() {
                         VOTING IS FUN. VOTING IS COOL. EVERYONE IS DOING IT. MAKE SURE YOU DO IT, TOO! <br />A GREAT WAY TO MAKE IT HAPPEN IS BY <b> MAKING A VOTING PLAN. </b> <br />  THIS SUPER SIMPLE TOOL WILL HELP YOU MAKE YOUR VOTING PLAN IN LESS THAN 3 MINUTES. IN?
                 </h5>
                     <img id="votePicture" src={VotePicture} />
-                    <a style = {{color: 'black !important', fontSize: "20px", width: "100px", zIndex: '392939039'}}class="twitter-share-button"
+                    {/* <a style = {{color: 'black !important', fontSize: "20px", width: "100px", zIndex: '392939039'}}class="twitter-share-button"
   href="https://twitter.com/intent/tweet"
   data-size="large"
   data-text="custom share text"
@@ -72,7 +72,7 @@ function VotePlan() {
   data-via="twitterdev"
   data-related="twitterapi,twitter">
 Tweet
-</a>
+</a> */}
                     <img onClick={() => {
                         showVote(false)
                         showButton(true)

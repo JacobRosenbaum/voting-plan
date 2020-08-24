@@ -710,7 +710,7 @@ function MainPlan() {
                                         value="mail"
                                         onClick={onPersonEarly4}
                                         style={{ marginRight: "5px" }}
-                                        onChange={e => { setGetToPolls("bus"); }}
+                                        onChange={e => { setGetToPolls("take a bus"); }}
 
                                     />
                                     bus
@@ -726,7 +726,7 @@ function MainPlan() {
                                         value="mail"
                                         onClick={onPersonEarly4}
                                         style={{ marginRight: "5px" }}
-                                        onChange={e => { setGetToPolls("subway"); }}
+                                        onChange={e => { setGetToPolls("ride the subway"); }}
                                     />
                                     subway
                                     </label>
@@ -785,7 +785,7 @@ function MainPlan() {
                                         onClick={onPersonEarly4}
                                         onk
                                         style={{ marginRight: "5px" }}
-                                        onChange={e => { setGetToPolls("Lyft/Uber"); }}
+                                        onChange={e => { setGetToPolls("take a Lyft/Uber"); }}
 
                                     />
                                     Lyft/Uber
@@ -1053,7 +1053,7 @@ function MainPlan() {
                                         value="mail"
                                         onClick={onPersonElection3}
                                         style={{ marginRight: "5px" }}
-                                        onChange={e => { setGetToPollsElection("bus"); }}
+                                        onChange={e => { setGetToPollsElection("take a bus"); }}
 
                                     />
                                     bus
@@ -1067,7 +1067,7 @@ function MainPlan() {
                                         value="mail"
                                         onClick={onPersonElection3}
                                         style={{ marginRight: "5px" }}
-                                        onChange={e => { setGetToPollsElection("subway"); }}
+                                        onChange={e => { setGetToPollsElection("ride the subway"); }}
 
                                     />
                                     subway
@@ -1123,7 +1123,7 @@ function MainPlan() {
                                         value="mail"
                                         onClick={onPersonElection3}
                                         style={{ marginRight: "5px" }}
-                                        onChange={e => { setGetToPollsElection("Lyft/Uber"); }}
+                                        onChange={e => { setGetToPollsElection("take a Lyft/Uber"); }}
 
                                     />
                                     Lyft/Uber
