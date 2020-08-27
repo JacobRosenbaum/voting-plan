@@ -131,10 +131,10 @@ button:hover{
     background-color: #004789;
     color: white
 }
-button:focus{
+/* button:focus{
     background-color: #004789;
     color: white
-}
+} */
 
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
@@ -143,9 +143,9 @@ button:focus{
         width: 300px;
         text-align: center
     }
-    #begin{
+    /* #begin{
         top: 5px
-    }
+    } */
     
     .clickHere{
         font-size: .7rem
