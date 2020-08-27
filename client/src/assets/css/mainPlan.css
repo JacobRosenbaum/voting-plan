@@ -252,19 +252,41 @@ label {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     input[type="input"] {
-        width: 250px !important;
-        margin-top: 10px
+        width: 250px ;
+        /* margin-top: 10px */
     }
-
+    .input{
+    width: 140px !important
+    }
     h1 {
         font-size: 1.2rem
     }
 
     .jumbotronX {
-        margin-bottom: 150px
+        margin-top: 70px !important
+    }
+    .plan{
+        width: 300px !important;
+        margin-left: 0px !important;
+        
+    }
+   .verbiage{
+    font-size: 1.5rem !important
+   }
+    
+    .whatnext{
+        font-size: .7rem
+    }
+    .woohoo{
+        margin-top: 50px !important
     }
 
-
+.finishButton{
+    margin-bottom: 0px !important
+}
+.next{
+    margin-bottom: 0px !important
+}
 
     .form-check {
         font-size: .9rem

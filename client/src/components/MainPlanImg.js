@@ -481,6 +481,7 @@ function MainPlan() {
                                   
                                         <input style = {{marginRight: '15px'}}
                                             type="input"
+                                            className = "input"
                                             // style={{ width: "300px", border: "1px solid #004789" }}
                                             placeholder="name"
                                              onKeyUp={e => { setNameMail(e.target.value); console.log(e.target.value) }}
@@ -490,6 +491,7 @@ function MainPlan() {
                                    
                                         <input style = {{marginLeft: '15px'}}
                                             type="input"
+                                            className = "input"
                                             // style={{ width: "300px", border: "1px solid #004789" }}
                                             placeholder="email address"
                                             // onKeyUp={onEmailFriends}
@@ -521,6 +523,7 @@ function MainPlan() {
                                         <li>
                                             <input
                                                 type="input"
+                                                className = "input"
                                                 style = {{marginRight: '15px'}}
                                                 placeholder="name"
                                                 onKeyUp={e => { setMailFriendName1(e.target.value); console.log(e.target.value) }}
@@ -529,6 +532,7 @@ function MainPlan() {
                                             </input>
                                             <input
                                                 type="input"
+                                                className = "input"
                                                 style = {{marginLeft: '15px'}}                                                placeholder="email address"
                                                 onKeyUp={e => { setMailFriendEmail1(e.target.value); console.log(e.target.value) }}
 
@@ -538,6 +542,7 @@ function MainPlan() {
                                         <li>
                                             <input
                                                 type="input"
+                                                 className = "input"
                                                 style = {{marginRight: '15px'}}
                                                 placeholder="name"
                                                 onChange={e => { setMailFriendName2(e.target.value); console.log(e.target.value) }}
@@ -545,6 +550,7 @@ function MainPlan() {
                                             >
                                             </input>
                                             <input
+                                             className = "input"
                                                 type="input"
                                                 style = {{marginLeft: '15px'}}                                                placeholder="email address"
                                                 onChange={e => { setMailFriendEmail2(e.target.value); console.log(e.target.value) }}
@@ -595,23 +601,23 @@ function MainPlan() {
                         
                         />
                         </div>
-                    <h1>
+                    <h1 className="woohoo">
                         woohoo! you made a voting plan!
                     </h1>
                     <div>
-                    <div style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '50%', height: '300px', marginLeft: '25%',color: '#004789'}}>
-        <h3 style = {{ paddingTop: '20%'}}>
+                    <div className = "plan" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '50%', height: '300px', marginLeft: '25%',color: '#004789'}}>
+        <h3 className="verbiage" style = {{ paddingTop: '20%'}}>
         i will cast my ballot by mail! <br/> and i will do it {mailBallotWhen.toLowerCase()}!
         </h3>
         </div>
                     </div>    
 
-                    <h5>
+                    <div className = "whatnext">
                     what next? 2 things: <br/>
 1) add your plan's details to your personal calendar 🗓 right now <br/>
 2) spread the word 🗣!  take a screenshot of your plan and post it to your <br/> social platforms and/or share the voting plan site on <a className = "red" href="https://www.instagram.com/ldsomething/" target="_blank">facebook,</a> <a className = "red" href="https://www.facebook.com/LDSomething" target="_blank">twitter,</a> or <a className = "red" href="https://twitter.com/LDoSomething" target="_blank">linkedIn</a> <br/> so others know how awesome it is to #MakeAPlan
 (we'll also email you a copy of your plan)
-                    </h5>
+                    </div>
                </div> : null
 
                 }
@@ -991,6 +997,7 @@ function MainPlan() {
                                   
                                         <input style = {{marginRight: '15px'}}
                                             type="input"
+                                            className = "input"
                                             // style={{ width: "300px", border: "1px solid #004789" }}
                                             placeholder="name"
                                              onKeyUp={e => { setNameEarly(e.target.value); console.log(e.target.value) }}
@@ -1000,6 +1007,7 @@ function MainPlan() {
                                    
                                         <input style = {{marginLeft: '15px'}}
                                             type="input"
+                                            className = "input"
                                             // style={{ width: "300px", border: "1px solid #004789" }}
                                             placeholder="email address"
                                             // onKeyUp={onEmailFriends}
@@ -1034,14 +1042,14 @@ function MainPlan() {
                                                 style = {{marginRight: '15px'}}
                                                 placeholder="name"
                                                 onKeyUp={e => { setEarlyFriendName1(e.target.value); console.log(e.target.value) }}
-
+                                                className = "input"
                                             >
                                             </input>
                                             <input
                                                 type="input"
                                                 style = {{marginLeft: '15px'}}                                                placeholder="email address"
                                                 onKeyUp={e => { setEarlyFriendEmail1(e.target.value); console.log(e.target.value) }}
-
+                                                className = "input"
                                             >
                                             </input>
                                         </li>
@@ -1051,14 +1059,14 @@ function MainPlan() {
                                                 style = {{marginRight: '15px'}}
                                                 placeholder="name"
                                                 onChange={e => { setEarlyFriendName2(e.target.value); console.log(e.target.value) }}
-
+                                                className = "input"
                                             >
                                             </input>
                                             <input
                                                 type="input"
                                                 style = {{marginLeft: '15px'}}                                                placeholder="email address"
                                                 onChange={e => { setEarlyFriendEmail2(e.target.value); console.log(e.target.value) }}
-
+                                                className = "input"
                                             >
                                             </input>
                                         </li>
@@ -1119,12 +1127,12 @@ function MainPlan() {
         </h3>
                     </div>    
 
-                    <h5>
+                    <div>
                     what next? 2 things: <br/>
 1) add your plan's details to your personal calendar 🗓 right now <br/>
 2) spread the word 🗣!  take a screenshot of your plan and post it to your <br/> social platforms and/or share the voting plan site on <a className = "red" href="https://www.instagram.com/ldsomething/" target="_blank">facebook,</a> <a className = "red" href="https://www.facebook.com/LDSomething" target="_blank">twitter,</a> or <a className = "red" href="https://twitter.com/LDoSomething" target="_blank">linkedIn</a> <br/> so others know how awesome it is to #MakeAPlan
 (we'll also email you a copy of your plan)
-                    </h5>
+                    </div>
                </div> : null
 
                 }
@@ -1613,6 +1621,7 @@ function MainPlan() {
                                         type="input"
                                         // style={{ width: "300px", border: "1px solid #004789" }}
                                         placeholder="name"
+                                        className = "input"
                                          onKeyUp={e => { setNameElection(e.target.value); console.log(e.target.value) }}
                                     >
                                     </input>
@@ -1620,6 +1629,7 @@ function MainPlan() {
                                
                                     <input style = {{marginLeft: '15px'}}
                                         type="input"
+                                         className = "input"
                                         // style={{ width: "300px", border: "1px solid #004789" }}
                                         placeholder="email address"
                                         // onKeyUp={onEmailFriends}
@@ -1651,6 +1661,7 @@ function MainPlan() {
                                     <li>
                                         <input
                                             type="input"
+                                            className = "input"
                                             style = {{marginRight: '15px'}}
                                             placeholder="name"
                                             onKeyUp={e => { setElectionFriendName1(e.target.value); console.log(e.target.value) }}
@@ -1659,6 +1670,7 @@ function MainPlan() {
                                         </input>
                                         <input
                                             type="input"
+                                             className = "input"
                                             style = {{marginLeft: '15px'}}                                                placeholder="email address"
                                             onKeyUp={e => { setElectionFriendEmail1(e.target.value); console.log(e.target.value) }}
 
@@ -1671,14 +1683,14 @@ function MainPlan() {
                                             style = {{marginRight: '15px'}}
                                             placeholder="name"
                                             onChange={e => { setElectionFriendName2(e.target.value); console.log(e.target.value) }}
-
+                                            className = "input"
                                         >
                                         </input>
                                         <input
                                             type="input"
                                             style = {{marginLeft: '15px'}}                                                placeholder="email address"
                                             onChange={e => { setElectionFriendEmail2(e.target.value); console.log(e.target.value) }}
-
+                                            className = "input"
                                         >
                                         </input>
                                     </li>
