@@ -10,9 +10,13 @@ footer {
     text-decoration: none!important
 }
 
+.red{
+    color: #EF3D55 !important
+}
+
 i{
     /* text-decoration: none !important; */
-    color: #EF3D55;
+    color: #004789;
     /* margin-left: 30px */
 }
 

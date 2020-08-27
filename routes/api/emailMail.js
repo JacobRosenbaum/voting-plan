@@ -64,7 +64,7 @@ function emailOptions(name, email, castBallotHowMail, mailBallotWhen) {
   <br>
   Share the Voting Plan site on <span
   class="fb-share-button" 
-  data-href="https://voting-plan.herokuapp.com"
+  data-href="https://votingplan.org"
    data-layout="button" 
    data-size="large"
    >

@@ -76,8 +76,7 @@ function About() {
             
         </div>
         <div style = {{zIndex: 2}}>
-        <img id="oneSticker" src={oneSticker} />
-        <img id="twoStickers" src={twoStickers} />
+        
         </div>
         </div>
     )

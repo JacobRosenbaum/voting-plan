@@ -6,11 +6,11 @@ body{
 }
 
 #alternate{
-    height: 330px;
+    height: 290px;
     position: relative;
-    top: 130px;
+     /* top: 130px; */
     left: 20px
-  
+   
 }
 #alternate:hover{
     cursor: pointer;

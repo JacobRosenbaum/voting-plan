@@ -4,6 +4,7 @@ import About from "../components/About";
 import oneSticker from "../assets/images/oneSticker.png";
 import twoStickers from "../assets/images/twoStickers.png"; 
 import alternate from "../assets/images/alternate.png"
+import VotePlan from '../components/VotePlan';
 
 function Main() {
 
@@ -11,7 +12,7 @@ function Main() {
 
     return (
         <div>
-            {about ?
+            {/* {about ?
             <div style={{ textAlign: 'center' }}> 
                     <img id="alternate" onClick={() => {
                       showAbout(false)
@@ -20,12 +21,12 @@ function Main() {
                     />
                  </div> :
                 <div>
-            <About />
-            {/* <img id="oneSticker" src={oneSticker} />
-            <img id="twoStickers" src={twoStickers} /> */}
             
             </div>
-            }
+            } */}
+                 <VotePlan />
+            <img id="oneSticker" src={oneSticker} />
+            <img id="twoStickers" src={twoStickers} /> 
         </div>
     )
 }

@@ -1,11 +1,19 @@
-.question {
+/* .question {
     text-align: center !important;
     margin-bottom: 15px;
     font-size: 62px;
     font-Family: Gotham, sans-serif;
      color: black
-}
+} */
 
+h1{
+    text-align: center
+}
+.form-check{
+    display: inline block !important;
+    text-align: center !important;
+    padding-left: 0px !important
+}
 #exclamation{
     height: 49px;
     position: relative;
@@ -24,14 +32,23 @@ li {
     color: #004789;
     opacity: .6
 }
+ #mailOther{
+     width: 250px !important
+ }
 
 input {
-    color: black !important;
-    border: black .5px solid
+    color: #004789!important;
+    border: #004789 1px solid;
+    border-radius: 5px;
+    text-align: center;
+    width: 250px !important;
+    padding-top: 3px;
+    padding-bottom: 3px
 }
 
 input[type="radio"] {
     cursor: pointer;
+  
 
 }
 
@@ -92,23 +109,27 @@ color: #004789 !important
 }
 
 .fa-arrow-left {
-    position: relative;
-    right: 200px;
+    /* position: relative; */
+    /* right: 200px; */
+    /* margin-left: 13px; */
     z-index: 50900;
-    font-size: 25px
+    font-size: 25px;
+    text-align: center;
+    margin-top: 15px
+    /* margin-top: 30px */
 }
 
 .fa-arrow-left:hover {
     cursor: pointer;
 }
-#arrowMail{
+/* #arrowMail{
     right: 165px !important
-}
-#arrowPerson1 {
+} */
+/* #arrowPerson1 {
     right: 250px !important
-}
+} */
 
-#arrowPerson2 {
+/* #arrowPerson2 {
     right: 95px !important
 }
 #arrowPerson3 {
@@ -126,7 +147,7 @@ color: #004789 !important
 }
 #arrowElection4 {
     right: 135px !important
-}
+} */
 #castBallotImage{
     width: 800px;
     text-align: center
@@ -136,9 +157,9 @@ i {
     z-index: 45030320
 }
 
-/* .jumbotronX{
-    margin-top: 220px !important
-} */
+.jumbotronX{
+    margin-top: 100px !important
+} 
 
 label {
     text-align: left !important
@@ -147,47 +168,44 @@ label {
  .container {
     position: relative;
     bottom: 30px
-} 
-#mailInput{
-    color: #004789 !important
-}
-#mailInput2{
-    color: #EF3D55 !important;
-    font-family: 'Gotham', sans-serif
-}
-#mailInput3{
-    color: #004789 !important;
-    font-family: 'Gotham', sans-serif
 
-}
-
+ }
 .clickHere{
-    color: black !important;
+    color: #EF3D55 !important;
     text-align: center;
     z-index: 10221910576576567567565;
-    text-decoration: none !important
+    text-decoration: none !important;
+    cursor: default
 }
 .underline{
     text-decoration: underline !important
 
 }
-.bringWith{
+/* .bringWith{
     color: black !important
-}
+} */
 
 .underline:hover{
     cursor: pointer;
    
 }
-.clickHere{
-    cursor: default
+.finishButton{
+    background-color: #004789 !important;
+    color: white !important;
+    padding: 8px !important
+}
+.finishButton:hover{
+    font-weight: bolder
+}
+.next:hover{
+    font-weight: bolder
+}
+.modalFinish:hover{
+    font-weight: bolder
+
 }
 
 
-/* #arrowMail {
-    right: 130px;
-    z-index: 3427643746732
-} */
 
 .shadowButton{
     background-color: rgb (247,246,241) !important;
@@ -218,10 +236,11 @@ label {
     h3 {
         font-size: 1.2rem
     }
+.jumbotronX{
+    margin-bottom: 150px
+}
 
-    #arrowMail {
-        right: 30px
-    }
+    
 
     #arrowPerson1 {
         right: 30px !important
@@ -260,12 +279,11 @@ label {
     }
 
     #begin {
-        top: -40px
+        top: -130px
     }
     .question{
         font-size: 2rem;
-        font-family: Gotham, sans-serif;
-        font-weight: bold;
+      
     }
     #exclamation{
         height: 27px;

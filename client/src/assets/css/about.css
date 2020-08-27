@@ -5,7 +5,8 @@
     margin-top: 100px;
     border-radius: 25px;
     color: #004789;
-    z-index: 200;
+    text-align: center
+
 
 }
 
@@ -49,7 +50,7 @@
 }
 
 #simple {
-    margin-top: 100px !important
+    margin-top: 250px !important
 }
 
 #oneSticker {
