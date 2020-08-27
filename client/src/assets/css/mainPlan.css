@@ -268,14 +268,16 @@ label {
     .plan{
         width: 300px !important;
         margin-left: 0px !important;
+        height: 200px !important
         
     }
    .verbiage{
-    font-size: 1.5rem !important
+    font-size: 1.3rem !important;
+    padding-top: 10% !important
    }
     
     .whatnext{
-        font-size: .7rem
+        font-size: .75rem
     }
     .woohoo{
         margin-top: 50px !important

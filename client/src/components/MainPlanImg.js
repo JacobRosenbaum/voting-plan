@@ -1240,7 +1240,7 @@ function MainPlan() {
                     <div className = "jumbotronX" >
                         <h1 className = "question">
                         
-                            when will you vote
+                            when will you vote?
                             </h1>
                             <div style = {{textAlign:'center'}}>
                             <a className = "clickHere" href = "https://ballotpedia.org/State_Poll_Opening_and_Closing_Times_(2020)" target = "_blank">
