@@ -79,17 +79,17 @@
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     #oneSticker {
-        width: 100px;
+        width: 70px;
         position: absolute;
         top: 10px;
-        left: 10px
+        left: 7px
     }
 
     #twoStickers {
-        width: 150px;
+        width: 100px;
       
-        bottom: 70px;
-        left: 220px
+        bottom: 45px;
+        left: 275px
     }
 }
 
