@@ -146,6 +146,12 @@ button:hover{
     /* #begin{
         top: 5px
     } */
+             
+    #opening{
+        position: relative;
+        top: 70px
+
+    }
     
     .clickHere{
         font-size: .7rem

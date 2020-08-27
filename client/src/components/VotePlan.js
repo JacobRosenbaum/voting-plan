@@ -65,7 +65,7 @@ function VotePlan() {
         <div class = "container">
         <div className=" jumbotron w3-animate-opacity" id="begin"  >
             {vote ?
-                <div style={{ textAlign: 'center' }}>
+                <div id = "opening" style={{ textAlign: 'center' }}>
                     <h5 id='funVote' >
                         voting is fun. voting is cool. everyone is going it. make sure you do it, too!
                         <br/> a great way to make it happen is by <b>making a voting plan</b>

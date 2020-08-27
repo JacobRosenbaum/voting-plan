@@ -256,7 +256,7 @@ label {
         margin-top: 10px
     }
 
-    h3 {
+    h1 {
         font-size: 1.2rem
     }
 
@@ -266,38 +266,6 @@ label {
 
 
 
-    #arrowPerson1 {
-        right: 30px !important
-    }
-
-    #arrowPerson2 {
-        right: 30px !important
-    }
-
-    #arrowPerson3 {
-        right: 30px !important
-    }
-
-    #arrowPerson4 {
-        right: 40px !important
-    }
-
-    #arrowElection {
-        right: 30px !important
-    }
-
-    #arrowElection2 {
-        right: 30px !important
-    }
-
-    #arrowElection3 {
-        right: 30px !important
-    }
-
-    #arrowElection4 {
-        right: 30px !important
-    }
-
     .form-check {
         font-size: .9rem
     }
@@ -306,11 +274,7 @@ label {
         top: -190px
     }
 
-    .question {
-        font-size: 2rem;
-
-    }
-
+   
     #exclamation {
         height: 27px;
 
