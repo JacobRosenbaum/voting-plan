@@ -6,19 +6,22 @@
      color: black
 } */
 
-h1{
+h1 {
     text-align: center
 }
-.form-check{
+
+.form-check {
     display: inline block !important;
     text-align: center !important;
     padding-left: 0px !important
 }
-#exclamation{
+
+#exclamation {
     height: 49px;
     position: relative;
     bottom: 5px
 }
+
 li {
     margin-bottom: 20px
 }
@@ -32,12 +35,13 @@ li {
     color: #004789;
     opacity: .6
 }
- #mailOther{
-     width: 250px !important
- }
+
+#mailOther {
+    width: 250px !important
+}
 
 input {
-    color: #004789!important;
+    color: #004789 !important;
     border: #004789 1px solid;
     border-radius: 5px;
     text-align: center;
@@ -48,7 +52,7 @@ input {
 
 input[type="radio"] {
     cursor: pointer;
-  
+
 
 }
 
@@ -104,8 +108,9 @@ input[type="radio"] {
     background-color: white !important;
     color: #004789
 }
-.mailButton:hover{
-color: #004789 !important
+
+.mailButton:hover {
+    color: #004789 !important
 }
 
 .fa-arrow-left {
@@ -116,12 +121,13 @@ color: #004789 !important
     font-size: 25px;
     text-align: center;
     margin-top: 15px
-    /* margin-top: 30px */
+        /* margin-top: 30px */
 }
 
 .fa-arrow-left:hover {
     cursor: pointer;
 }
+
 /* #arrowMail{
     right: 165px !important
 } */
@@ -148,7 +154,7 @@ color: #004789 !important
 #arrowElection4 {
     right: 135px !important
 } */
-#castBallotImage{
+#castBallotImage {
     width: 800px;
     text-align: center
 }
@@ -157,61 +163,78 @@ i {
     z-index: 45030320
 }
 
-.jumbotronX{
+.jumbotronX {
     margin-top: 100px !important
-} 
+}
 
 label {
     text-align: left !important
 }
 
- .container {
+.container {
     position: relative;
     bottom: 30px
+}
 
- }
-.clickHere{
+.clickHere {
     color: #EF3D55 !important;
     text-align: center;
     z-index: 10221910576576567567565;
     text-decoration: none !important;
     cursor: default
 }
-.underline{
-    text-decoration: underline !important
 
+.underline {
+    text-decoration: underline !important
 }
+
 /* .bringWith{
     color: black !important
 } */
 
-.underline:hover{
+.underline:hover {
     cursor: pointer;
-   
+
 }
-.finishButton{
+
+.finishButton {
     background-color: #004789 !important;
     color: white !important;
     padding: 8px !important
 }
-.finishButton:hover{
+
+.finishButton:hover {
     font-weight: bolder
 }
-.next:hover{
+
+.next {
+    margin-top: 30px;
+    background-color: #004789;
+    color: white;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    padding-right: 8px
+}
+
+.next:hover {
     font-weight: bolder
 }
-.modalFinish:hover{
-    font-weight: bolder
+.bottom{
+    margin-top: 0px !important
+}
 
+.modalFinish:hover {
+    font-weight: bolder
 }
 
 
 
-.shadowButton{
-    background-color: rgb (247,246,241) !important;
+.shadowButton {
+    background-color: rgb (247, 246, 241) !important;
     text-align: center;
-    border: 4px rgb(238,58,85) solid;
-    color: rgb(0,72,137 );
+    border: 4px rgb(238, 58, 85) solid;
+    color: rgb(0, 72, 137);
     width: 300px;
     font-size: 55px;
     box-shadow: -10px 10px rgb(226, 222, 213);
@@ -223,7 +246,7 @@ label {
     font-family: "Gotham", sans-serif
 }
 
-.btn{
+.btn {
     border-radius: 0px !important
 }
 
@@ -236,11 +259,12 @@ label {
     h3 {
         font-size: 1.2rem
     }
-.jumbotronX{
-    margin-bottom: 150px
-}
 
-    
+    .jumbotronX {
+        margin-bottom: 150px
+    }
+
+
 
     #arrowPerson1 {
         right: 30px !important
@@ -275,31 +299,31 @@ label {
     }
 
     .form-check {
-        font-size:.9rem
+        font-size: .9rem
     }
 
     #begin {
         top: -130px
     }
-    .question{
+
+    .question {
         font-size: 2rem;
-      
+
     }
-    #exclamation{
+
+    #exclamation {
         height: 27px;
-        
+
         bottom: 3px;
     }
 }
 
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
-    .question{
+    .question {
         font-size: 54px
     }
+
     /* .container{
         top: 5px
     } */

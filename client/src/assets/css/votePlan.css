@@ -131,6 +131,10 @@ button:hover{
     background-color: #004789;
     color: white
 }
+button:focus{
+    background-color: #004789;
+    color: white
+}
 
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
@@ -138,6 +142,9 @@ button:hover{
     #votePicture {
         width: 300px;
         text-align: center
+    }
+    #begin{
+        top: 5px
     }
     
     .clickHere{
@@ -152,8 +159,12 @@ button:hover{
         position: relative;
 
     }
-   
 
+    #makePlan{
+            font-size: 2.05rem;
+          
+    }
+    
     #funVote {
         font-size: .9rem;
         margin-top: 15px
@@ -219,6 +230,13 @@ button:hover{
     }
     #letsGoButton{
         width: 250px
+    }
+    #makePlan{
+        font-size: 50px
+    }
+    #alternate{
+        height: 180px;
+        top: 30px
     }
     #yes{
         margin-left: 1px !important
