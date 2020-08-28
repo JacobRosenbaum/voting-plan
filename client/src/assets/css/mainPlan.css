@@ -271,6 +271,17 @@ label {
         height: 170px !important
         
     }
+    .planEarly{
+        width: 300px !important;
+        margin-left: 0px !important;
+        height: 235px !important
+    }
+    .planElection{
+        width: 300px !important;
+        margin-left: 0px !important;
+        height: 260px !important
+        
+    }
    .verbiage{
     font-size: 1.3rem !important;
     padding-top: 10% !important

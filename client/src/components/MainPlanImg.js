@@ -645,7 +645,12 @@ function MainPlan() {
                                     style={{  width: "250px", marginBottom: "30px" }}
                                     placeholder="write a specific date"
                                     onKeyUp= {
-                                        ()=> {showEarlyNextButton(true)}
+                                        e=> {showEarlyNextButton(true);
+                                            setStartDatePerson(e.target.value);
+                                            setWhatDay(startDatePerson.toString());
+                                     
+                                         console.log(whatDay)
+                                        }
                                     }
                                     // onKeyUp=  {() => { clearTimeout(typingTimer);
                                     //     if (startDatePerson) {
@@ -653,12 +658,10 @@ function MainPlan() {
                                     //             }
                                     //         }
                                     //     }
-                                     onChange={e => { setStartDatePerson(e.target.value);
+                                    //  onChange={e => { 
                                         
-                                         setWhatDay(startDatePerson.toString());
-                                     
-                                         console.log(whatDay)
-                                     }}
+                                         
+                                    //  }}
                                         
 
                                 />
@@ -1113,12 +1116,12 @@ function MainPlan() {
                         
                         />
                         </div>
-                    <h1>
+                    <h1 className="woohoo">
                         woohoo! you made a voting plan!
                     </h1>
                  
-                    <div style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '50%', height: '300px', marginLeft: '25%',color: '#004789'}}>
-        <h3 style = {{ paddingTop: '10%'}}>
+                    <div className = "planEarly" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '50%', height: '300px', marginLeft: '25%',color: '#004789'}}>
+        <h3 className="verbiage" style = {{ paddingTop: '10%'}}>
         i will cast my ballot in person, early! 
         <br/>
         identifier plan to vote on {whatDay.toLowerCase()}, {whatTime.toLowerCase()}!
@@ -1127,7 +1130,7 @@ function MainPlan() {
         </h3>
                     </div>    
 
-                    <div>
+                    <div className = "whatnext">
                     what next? 2 things: <br/>
 1) add your plan's details to your personal calendar 🗓 right now <br/>
 2) spread the word 🗣!  take a screenshot of your plan and post it to your <br/> social platforms and/or share the voting plan site on <a className = "red" href="https://www.instagram.com/ldsomething/" target="_blank">facebook,</a> <a className = "red" href="https://www.facebook.com/LDSomething" target="_blank">twitter,</a> or <a className = "red" href="https://twitter.com/LDoSomething" target="_blank">linkedIn</a> <br/> so others know how awesome it is to #MakeAPlan
@@ -1737,12 +1740,12 @@ function MainPlan() {
                     
                     />
                     </div>
-                <h1>
+                <h1 className="woohoo">
                     woohoo! you made a voting plan!
                 </h1>
              
-                <div style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '50%', height: '300px', marginLeft: '25%',color: '#004789'}}>
-    <h3 style = {{ paddingTop: '7%'}}>
+                <div className = "planElection" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '50%', height: '300px', marginLeft: '25%',color: '#004789'}}>
+    <h3 className="verbiage" style = {{ paddingTop: '7%'}}>
     i will cast my ballot in person, on election day on november 3rd! 
     <br/>
     i plan to vote {whatTimeElection.toLowerCase()}!
@@ -1753,7 +1756,7 @@ function MainPlan() {
     </h3>
                 </div>    
 
-                <h5>
+                <h5 className = "whatnext">
                 what next? 2 things: <br/>
 1) add your plan's details to your personal calendar 🗓 right now <br/>
 2) spread the word 🗣!  take a screenshot of your plan and post it to your <br/> social platforms and/or share the voting plan site on <a className = "red" href="https://www.instagram.com/ldsomething/" target="_blank">facebook,</a> <a className = "red" href="https://www.facebook.com/LDSomething" target="_blank">twitter,</a> or <a className = "red" href="https://twitter.com/LDoSomething" target="_blank">linkedIn</a> <br/> so others know how awesome it is to #MakeAPlan
