@@ -251,3 +251,112 @@ button:hover{
         margin-right: 1px !important
     }
 }
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    #votePicture{
+        width: 700px
+    }
+    #letsGoButton{
+        width: 250px
+    }
+    #makePlan{
+        font-size: 30px
+    }
+    #alternate{
+        height: 130px;
+        top: 30px
+    }
+    #yes{
+        margin-left: 1px !important
+    }
+    #no{
+        margin-right: 1px !important
+    }
+    #votePicture {
+        width: 300px;
+        text-align: center
+    }
+    /* #begin{
+        top: 5px
+    } */
+             
+    #opening{
+        position: relative;
+        top: 70px
+
+    }
+    
+    .clickHere{
+        font-size: .7rem
+    }
+    .bringWith{
+        font-size: .7rem
+    }
+
+    #letsGoButton {
+        width: 150px;
+        position: relative;
+
+    }
+
+    #makePlan{
+            font-size: 2.05rem;
+          
+    }
+    
+    #funVote {
+        font-size: .9rem;
+        margin-top: 15px
+    }
+
+    #voteRegister {
+        width: 300px;
+        position: relative;
+        top: 100px
+    }
+
+    #yes {
+        width: 130px;
+        position: relative;
+        top: 100px;
+        right: 150px;
+        z-index: 2000
+    }
+
+    #no {
+        width: 130px;
+        position: relative;
+        top: 68.2px;
+        left: 150px;
+        z-index: 2000
+    }
+
+    #maybe {
+        width: 200px;
+        position: relative;
+        top: 60px;
+        z-index: 2000
+    }
+
+    .container {
+        top: 23px
+    }
+    #x{
+        left: 160px;
+        z-index: 302393230;
+    }
+    #maybeButton{
+        left: 145px;
+        z-index: 302393230;
+    }
+
+    #yes{
+        margin-left: 170px !important
+    }
+    #no{
+        margin-right: 170px !important
+    }
+  }

@@ -328,3 +328,73 @@ label {
     } */
 
 }
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    input[type="input"] {
+        width: 250px ;
+        /* margin-top: 10px */
+    }
+    .input{
+    width: 140px !important
+    }
+    h1 {
+        font-size: 1.2rem
+    }
+
+    .jumbotronX {
+        margin-top: 70px !important
+    }
+    .plan{
+        width: 300px !important;
+        margin-left: 0px !important;
+        height: 170px !important
+        
+    }
+    .planEarly{
+        width: 300px !important;
+        margin-left: 0px !important;
+        height: 235px !important
+    }
+    .planElection{
+        width: 300px !important;
+        margin-left: 0px !important;
+        height: 260px !important
+        
+    }
+   .verbiage{
+    font-size: 1.3rem !important;
+    padding-top: 10% !important
+   }
+    
+    .whatnext{
+        font-size: .75rem
+    }
+    .woohoo{
+        margin-top: 50px !important
+    }
+
+.finishButton{
+    margin-bottom: 0px !important
+}
+.next{
+    margin-bottom: 0px !important
+}
+
+    .form-check {
+        font-size: .9rem
+    }
+
+    #begin {
+        top: -140px
+    }
+
+   
+    #exclamation {
+        height: 27px;
+
+        bottom: 3px;
+    }
+  }

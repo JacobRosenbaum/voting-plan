@@ -80,7 +80,26 @@
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     #oneSticker {
         width: 70px;
-        position: absolute;
+        /* position: absolute; */
+        top: 10px;
+        left: 7px
+    }
+
+    #twoStickers {
+        width: 100px;
+      
+        bottom: 45px;
+        left: 275px
+    }
+}
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    #oneSticker {
+        width: 70px;
+        /* position: absolute; */
         top: 10px;
         left: 7px
     }
@@ -93,6 +112,7 @@
     }
 }
 
+
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
@@ -100,16 +120,27 @@
 
     #oneSticker{
         width: 100px;
-        position: absolute;
+        /* position: absolute; */
         top: 10px;
         left: 10px
     }
      #twoStickers {
-        width: 170px;
-        position: fixed;
-       left: 830px
+        width: 155px;
+        /* position: fixed; */
+       left: 770px
     }
 
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #twoStickers {
+        width: 155px;
+        /* position: fixed; */
+       left: 590px
+    }
 }
 /* @media (max-width: 1579px){
     #oneSticker{
@@ -135,3 +166,19 @@
         right: 10px
     }
 } */
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #oneSticker{
+            width: 150px !important;
+            top: 10px !important;
+            left: 10px !important
+    }
+    #twoStickers {
+        width: 200px !important;
+       left: 1050px !important;
+       bottom: 150px !important
+    }
+}
