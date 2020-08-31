@@ -34,7 +34,7 @@ function VotePlan() {
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#004789',
-            borderRadius: '20px',
+            borderRadius: '15px',
             color: 'white',
             textAlign: 'center',
             border: '5px #EF3D55 solid',

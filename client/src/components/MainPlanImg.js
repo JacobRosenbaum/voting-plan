@@ -30,7 +30,7 @@ function MainPlan() {
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#004789',
-            borderRadius: '20px',
+            borderRadius: '18px',
             color: 'white',
             textAlign: 'center',
             border: '5px #EF3D55 solid',
@@ -135,7 +135,7 @@ function MainPlan() {
     function handleEarlySubmit() {
         console.log(nameEarly, emailEarly, castBallotHowEarly, whatDay, whatTime, getToPolls, bringWith)
 
-        API.emailEarly({ nameEarly, emailEarly, castBallotHowEarly, whatDay, whatTime, getToPolls, bringWith }).catch(err => console.log(err));
+        API.emailEarly({ nameEarly, emailEarly, castBallotHowEarly, whatDay, whatTime, getToPolls, bringWith, bringWithFriendEarly }).catch(err => console.log(err));
 
         if (earlyFriendEmail1) {
 
@@ -162,7 +162,7 @@ function MainPlan() {
     function handleElectionSubmit() {
         console.log(nameElection, emailElection, castBallotHowElection, whatTimeElection, getToPollsElection, bringWithElection, takeOffWork)
 
-        API.emailElection({ nameElection, emailElection, castBallotHowElection, whatTimeElection, getToPollsElection, bringWithElection, takeOffWork }).catch(err => console.log(err));
+        API.emailElection({ nameElection, emailElection, castBallotHowElection, whatTimeElection, getToPollsElection, bringWithElection, takeOffWork, bringWithFriendElection }).catch(err => console.log(err));
 
         if (electionFriendEmail1) {
 
@@ -591,7 +591,7 @@ function MainPlan() {
                 </Modal>
                 {complete ? 
                 <div style = {{textAlign: 'center' }}>
-                    <div style = {{position: 'relative', bottom: '300px'}}>
+                    <div className = "confetti" style = {{position: 'relative', bottom: '300px'}}>
                      <Confetti 
                         colors={["#004789", "#EF3D55"]}
                         numberOfPieces={1000}
@@ -1823,7 +1823,7 @@ function MainPlan() {
                                             { 
                                                 e.preventDefault();
                                                
-                                                {handleEarlySubmit()};
+                                                {handleElectionSubmit()};
                                             
                                             setTimeout( 
                                             setElectionIsOpen(false),

@@ -282,7 +282,10 @@ background-color: white
     h1 {
         font-size: 1.2rem
     }
-
+  .confetti{
+      left: 200px !important;
+      bottom: 0px !important
+  }
     .jumbotronX {
         margin-top: 70px !important
     }
@@ -348,9 +351,9 @@ background-color: white
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
 
-    .question {
+    /* .question {
         font-size: 54px
-    }
+    } */
 
     /* .container{
         top: 5px
@@ -510,10 +513,30 @@ background-color: white
   and (max-device-width: 1600px) {
 
         h1{
-            font-size: 30px !important;
+            font-size: 27px !important;
             margin-top: 20px !important
         }
         .whatnext{
-            font-size: .8rem !important
+            font-size: .6rem !important
         }
   }
+  @media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+    .whatnext{
+        font-size: 1.1rem !important
+    }
+    h1{
+        font-size: 2.5rem !important
+    }
+    #funvote{
+        font-size: 27px !important
+    }
+    #opener{
+        font-size: 27px !important;
+        width: 330px !important
+    }
+}

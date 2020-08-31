@@ -41,25 +41,24 @@ function emailOptions(name, email, friendName) {
   emailOptions.subject = 'Make a Voting Plan!';
   emailOptions.html = `<div>
   
-  Hi friend of ${friendName}!
+  Hi ${name}!
 
   <br>
   <br>
 
-  ${friendName} made a voting plan and thought you’d like to do the same.
+  Your friend ${friendName} made a voting plan and thought you’d like to do the same.
   <br>
   
   <br>
   
-  Did you know that writing down a plan makes us more likely to execute that plan? Cool, huh? So let’s all make a voting plan for the upcoming election!
-  
+  Did you know that writing down a plan makes us more likely to execute that plan? Cool, huh? So let’s all make a <a href = "http://votingplan.org" target = "blank">voting plan</a> for the upcoming election!  
   <br>
   <br>
   Are you in? Great! I knew I could count on you.
   <br>
   <br>
   
-  <a href = "http://voting-plan.herokuapp.com" target = "blank">Click here</a> to make YOUR voting plan. It will take about 3 minutes and will be fun!
+  <a href = "http://votingplan.org" target = "blank">Click here</a> to make YOUR voting plan. It will take about 3 minutes and will be fun!
   <br>
   <br>
   
@@ -67,7 +66,7 @@ function emailOptions(name, email, friendName) {
   <br>
   <br>
   
-  Jen @ Let’s DO Something!
+  Jen @ votingplan.org!
   </div>`
   return emailOptions
 };

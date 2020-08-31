@@ -255,6 +255,7 @@ and (max-device-width: 1250px) {
     #begin{
         bottom: 100px !important
     }
+    
 
 }
 
@@ -275,6 +276,9 @@ and (max-device-width: 1250px) {
     }
     #begin{
   top: 0px !important
+    }
+    #whatnext{
+        font-size: 1rem !important
     }
 }
 
