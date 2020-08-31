@@ -349,17 +349,6 @@ background-color: white
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-
-    /* .question {
-        font-size: 54px
-    } */
-
-    /* .container{
-        top: 5px
-    } */
-
-}
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
@@ -529,12 +518,15 @@ background-color: white
  
 
         h1{
-            font-size: 27px !important;
+            font-size: 28px !important;
             margin-top: 10px !important
         }
         .whatnext{
-            font-size: 1rem !important;
+            font-size: 1.1rem !important;
             margin-top: -10px !important
+        }
+        #woohoo{
+            margin-top: 30px !important
         }
   }
   @media only screen 
