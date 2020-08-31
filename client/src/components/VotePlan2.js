@@ -141,7 +141,7 @@ Click below to get started!
                     >
                         <i id="x" class="fa fa-times" onClick={closeVoteModal}></i>
                         {/* <div>No problem! </div> */}
-                        <div style={{ marginBottom: "50px" }}>
+                        <div style={{ marginBottom: "30px", marginTop: '20px' }}>
                             <h3>No problem!</h3>
                             <div style={{ color: "white !important" }}><a class = "modalClick" style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/register-to-vote/" target="_blank">Click here</a> to get registered - then come on back!</div>
                         </div>
@@ -155,7 +155,7 @@ Click below to get started!
                     >
                         <i id="maybeButton" class="fa fa-times" onClick={closeMaybeModal}></i>
                         {/* <div>No problem! </div> */}
-                        <div style={{ marginBottom: "50px" }}>
+                        <div style={{ marginBottom: "30px", marginTop: '20px' }}>
                             <h3>No problem!</h3>
                             <div style={{ color: "white !important" }}><a class = "modalClick" style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/am-i-registered-to-vote/" target="_blank">Click here</a> to find out - then come on back!</div>
                         </div>

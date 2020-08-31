@@ -62,10 +62,10 @@
    
 } */
 #oneSticker{
-    width: 250px;
+    width: 240px;
     position: absolute;
     top: 10px;
-    left: 5px;
+    left: 13px;
     z-index: -1;
 }
 
@@ -84,10 +84,11 @@
     z-index: -1;
 } */
 #twoStickers{
-    width: 370px;
+    width: 350px;
     position: absolute;
-    right: 10px;
-    bottom: 50px
+    right: 15px;
+    bottom: 50px;
+    z-index: -1;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
@@ -124,24 +125,24 @@
         left: 275px
     }
 }
-
-
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
+  and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 1) {
-
     #oneSticker{
-        width: 100px;
-        /* position: absolute; */
-        top: 10px;
-        left: 10px
+        width: 100px !important;
+
     }
-     #twoStickers {
-        width: 155px;
-        /* position: fixed; */
-       left: 770px
-    }
+  #twoStickers {
+      width: 150px !important;
+   
+    right: 20px !important;
+    bottom: 60px !important
+  }
+  /* #begin{
+      top: 100px !important
+  } */
 
 }
 @media only screen 
@@ -149,10 +150,18 @@
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) {
+      #oneSticker{
+          width: 100px !important;
+
+      }
     #twoStickers {
-        width: 155px;
-        /* position: fixed; */
-       left: 590px
+        width: 150px !important;
+     
+      right: 20px !important;
+      bottom: 60px !important
+    }
+    #begin{
+        top: 100px !important
     }
 }
 /* @media (max-width: 1579px){
@@ -179,22 +188,7 @@
         right: 10px
     }
 } */
-@media only screen 
-  and (min-device-width: 1366px) 
-  and (max-device-width: 1366px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    #oneSticker{
-            width: 150px !important;
-            top: 10px !important;
-            left: 10px !important
-    }
-    #twoStickers {
-        width: 200px !important;
-       left: 1050px !important;
-       bottom: 150px !important
-    }
-}
+
 /* @media (max-device-width: 1500px)and
 (max-device-width: 1627px){
     #oneSticker{
@@ -228,7 +222,7 @@
     }
 
 }
-@media screen 
+/* @media screen 
 and (min-device-width: 1250px) 
 and (max-device-width: 1250px) {
 
@@ -244,23 +238,43 @@ and (max-device-width: 1250px) {
         bottom: 50px
     }
 
-  }
+  } */
   @media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     #oneSticker{
-        top: 10px !important;
-        width: 100px !important
+        top: 20px !important;
+        left: 20px !important;
+        width: 200px !important
     }
     #twoStickers{
-        left: 1050px !important;
-        width: 150px !important
+       right: 40px !important;
+        width: 240px !important
     }
     #begin{
-        bottom: 50px
+        bottom: 100px !important
     }
 
 }
 
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #oneSticker{
+            width: 180px !important;
+            top: 10px !important;
+            left: 10px !important
+    }
+    #twoStickers {
+        width: 250px !important;
+      right: 30px !important;
+       bottom: 60px !important
+    }
+    #begin{
+  top: 0px !important
+    }
+}
 

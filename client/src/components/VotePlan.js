@@ -135,7 +135,7 @@ function VotePlan() {
                     >
                         <i id="x" class="fa fa-times" onClick={closeVoteModal}></i>
                         {/* <div>No problem! </div> */}
-                        <div style={{ marginBottom: "50px" }}>
+                        <div style={{ marginBottom: "50px", marginTop: '50px' }}>
                             <h3>no problem!</h3>
                             <div style={{ color: "white !important" }}><a class = "modalClick" style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/register-to-vote/" target="_blank">click here</a> to get registered - then come on back!</div>
                         </div>
