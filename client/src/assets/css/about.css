@@ -182,3 +182,36 @@
        bottom: 150px !important
     }
 }
+/* @media (max-device-width: 1500px)and
+(max-device-width: 1627px){
+    #oneSticker{
+        width: 130px !important;
+        top: 10px !important;
+        left: 10px !important
+}
+#twoStickers {
+    width: 280px !important;
+   left: 1050px !important;
+   bottom: 150px !important
+}
+} */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+    #oneSticker {
+        width: 70px;
+        /* position: absolute; */
+        top: 10px;
+        left: 7px
+    }
+
+    #twoStickers {
+        width: 100px;
+      
+        bottom: 45px;
+        left: 275px
+    }
+
+}

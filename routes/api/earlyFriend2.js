@@ -13,8 +13,8 @@ router.route("/")
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'letsdosomething2020@gmail.com',
-        pass: 'L3tsd0this!2020'
+        user: 'votingplan@gmail.com',
+        pass: 'jacobrocks11!'
       }
     });
 
@@ -35,7 +35,7 @@ router.route("/")
 function emailOptions(name, email, friendName) {
   console.log("from early email options friend 2")
   let emailOptions = {}
-  emailOptions.from = 'letsdosomething2020@gmail.com';
+  emailOptions.from = 'votingplan@gmail.com';
   emailOptions.to = email;
   emailOptions.subject = 'Make a Voting Plan!';
   emailOptions.html = `<div>

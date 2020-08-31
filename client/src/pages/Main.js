@@ -5,6 +5,7 @@ import oneSticker from "../assets/images/oneSticker.png";
 import twoStickers from "../assets/images/twoStickers.png"; 
 import alternate from "../assets/images/alternate.png"
 import VotePlan from '../components/VotePlan';
+import VotePlan2 from '../components/VotePlan2';
 
 function Main() {
 
@@ -24,7 +25,7 @@ function Main() {
             
             </div>
             } */}
-                 <VotePlan />
+                 <VotePlan2 />
             <img id="oneSticker" src={oneSticker} />
             <img id="twoStickers" src={twoStickers} /> 
         </div>

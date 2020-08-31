@@ -313,13 +313,13 @@ function MainPlan() {
                 
                     <h1 class = "question" >
                     
-                    how do you plan to cast your ballot?
+                    How do you plan to cast your ballot?
                         </h1>
                         {/* <img id = "castBallotImage" src = {castBallotImage} /> */}
                         <div style = {{textAlign: 'center', marginBottom: '30px'}}>
-                       <a className = "clickHere" href = "https://www.headcount.org/state" target = "_blank"><b>
-                           *not sure yet? don't worry! <span className = "underline">click here</span> for more info on the options in your state and/or reach out to us at letsdosomething2020@gmail.com with any questions at all, we're happy to help!
-                           </b> </a>
+                       <a className = "clickHere" href = "https://projects.fivethirtyeight.com/how-to-vote-2020/" target = "_blank">
+                       Not sure yet? Don’t worry! <span className = "underline">Click here</span> for more info on the options in your state
+                           </a>
                        </div>
                   {/*       *note sure yet? don't worry! <a id = "clickHere" href = "https://www.headcount.org/state">click here</a> for more info on the options in your state and/or reach out to us [link my email] with any questions at all, we're here to help! */}
                     <div className="form-check">
@@ -388,45 +388,45 @@ function MainPlan() {
                     <div className = "jumbotronX" style = {{textAlign:'center'}}>
                                 <h1 className = "question">
                              
-                                when will you fill in and mail back your ballot?
+                                When will you fill in and mail back your ballot?
                                 {/* when will you fill in and mail back your ballot? */}
                                 </h1>
                                 <div className="form-check" style = {{marginTop: '30px'}}>
-                               
-                               <button
-                                  
-                                //    onClick={onFinishButtonMail}
-                                   onClick={e => { setMailBallotWhen("the weekend after I receive my ballot");
-                                   showFinishButtonMail(true) }}
-
-                               >
-                               the weekend after I receive my ballot
-                               </button>
-                       </div>
-                            <div  className="form-check">
                                
                                     <button
                                       
                                     
                                         // onClick={onFinishButtonMail}
-                                        onClick={e => { setMailBallotWhen("the minute it arrives in the mail (can’t wait!)");
+                                        onClick={e => { setMailBallotWhen("the minute it arrives");
                                         showFinishButtonMail(true) }}
 
                                     >
-                                    the minute it arrives in the mail (can’t wait!)
+                                    the minute it arrives
                            </button>
+                             
+                       </div>
+                            <div  className="form-check">
+                            <button
+                                      
+                                      // onClick={onFinishButtonMail}
+                                      onClick={e => { setMailBallotWhen("the same day it arrives");
+                                      showFinishButtonMail(true) }}
+
+                                  >
+                                  the same day it arrives
+                                  </button>
                             </div>
                             <div className="form-check">
-                                
-                                    <button
-                                      
-                                        // onClick={onFinishButtonMail}
-                                        onClick={e => { setMailBallotWhen("before I go to sleep the night it arrives in the mail");
-                                        showFinishButtonMail(true) }}
-
-                                    >
-                                    before I go to sleep the night it arrives in the mail
-                                    </button>
+                            <button
+                                  
+                                  //    onClick={onFinishButtonMail}
+                                     onClick={e => { setMailBallotWhen("the weekend after I receive my ballot");
+                                     showFinishButtonMail(true) }}
+  
+                                 >
+                                 before I got to sleep the night it arrives
+                                 </button>
+                                   
                             </div>
                        
                             <div className="form-check">
@@ -472,9 +472,9 @@ function MainPlan() {
                         {mailModal ?
                         <div>
                             <h4 style={{ marginBottom: "30px" }}>
-                                awesome! you're almost done!
+                                Awesome! You're almost done!
                                 <div style={{ marginTop: "3px" }}>
-                                    we just need to your name and <br/>email address so we can send over your plan
+                                    We just need to your name and <br/>email address so we can send over your plan
                                 </div>
                             </h4>
                             <form style={{ textAlign: 'center'}}>
@@ -483,7 +483,7 @@ function MainPlan() {
                                             type="input"
                                             className = "input"
                                             // style={{ width: "300px", border: "1px solid #004789" }}
-                                            placeholder="name"
+                                            placeholder="first name"
                                              onKeyUp={e => { setNameMail(e.target.value); console.log(e.target.value) }}
                                         >
                                         </input>
@@ -525,7 +525,7 @@ function MainPlan() {
                                                 type="input"
                                                 className = "input"
                                                 style = {{marginRight: '15px'}}
-                                                placeholder="name"
+                                                placeholder="first name"
                                                 onKeyUp={e => { setMailFriendName1(e.target.value); console.log(e.target.value) }}
 
                                             >
@@ -544,7 +544,7 @@ function MainPlan() {
                                                 type="input"
                                                  className = "input"
                                                 style = {{marginRight: '15px'}}
-                                                placeholder="name"
+                                                placeholder="first name"
                                                 onChange={e => { setMailFriendName2(e.target.value); console.log(e.target.value) }}
 
                                             >
@@ -597,25 +597,29 @@ function MainPlan() {
                         // initialVelocityX={{min:-200, max: 200}}
                         // initialVelocityY={{min:200, max: 200}}
                         // width={1800}
-                        confettiSource=	{ {x: 450, y:-80}}
+                        confettiSource=	{ {x: 550, y:-80}}
                         
                         />
                         </div>
                     <h1 className="woohoo">
-                        woohoo! you made a voting plan!
+                        Woohoo! You made a Voting Plan!
                     </h1>
-                    <div>
-                    <div className = "plan" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '50%', height: '300px', marginLeft: '25%',color: '#004789'}}>
-        <h3 className="verbiage" style = {{ paddingTop: '20%'}}>
-        i will cast my ballot by mail! <br/> and i will do it {mailBallotWhen.toLowerCase()}!
-        </h3>
+                
+                    <button className = "plan" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '300px', height: '300px',color: '#004789'}}>
+        <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
+            {nameMail}'s Voting Plan
+            </h4>
+            <br/>
+           
+            <div>
+        I will cast my ballot by mail! <br/> <br/>And i will do it {mailBallotWhen}!
         </div>
-                    </div>    
-
+        </button>
+                  
                     <div className = "whatnext">
-                    what next? 2 things: <br/>
-1) add your plan's details to your personal calendar 🗓 right now <br/>
-2) spread the word 🗣!  take a screenshot of your plan and post it to your <br/> social platforms and/or share the voting plan site on <a className = "red" href="https://www.instagram.com/ldsomething/" target="_blank">facebook,</a> <a className = "red" href="https://www.facebook.com/LDSomething" target="_blank">twitter,</a> or <a className = "red" href="https://twitter.com/LDoSomething" target="_blank">linkedIn</a> <br/> so others know how awesome it is to #MakeAPlan
+                    What next? 2 things: <br/><br/>
+1) Add your plan's details to your personal calendar 🗓 right now <br/><br/>
+2) Spread the word 🗣!  Take a screenshot of your plan and post it to your <br/> social platforms and/or share a link to votingplan.org on <a className = "red" href="https://www.instagram.com/ldsomething/" target="_blank">Facebook,</a> <a className = "red" href="https://www.facebook.com/LDSomething" target="_blank">Twitter,</a> or <a className = "red" href="https://twitter.com/LDoSomething" target="_blank">LinkedIn</a> <br/> so others know how awesome it is to #MakeAPlan
 (we'll also email you a copy of your plan)
                     </div>
                </div> : null
@@ -646,8 +650,8 @@ function MainPlan() {
                                     placeholder="write a specific date"
                                     onKeyUp= {
                                         e=> {showEarlyNextButton(true);
-                                            setStartDatePerson(e.target.value);
-                                            setWhatDay(startDatePerson.toString());
+                                            // setStartDatePerson(e.target.value);
+                                            setWhatDay(e.target.value);
                                      
                                          console.log(whatDay)
                                         }
@@ -694,7 +698,7 @@ function MainPlan() {
                     <div className = "jumbotronX" >
                         <h1 className = "question">
                        
-                            when will you go to your polling place on {startDatePerson.toLowerCase()}?
+                            when will you go to your polling place on {whatDay.toLowerCase()}?
                             {/* {startDatePerson.toString().slice(0, 15).toUpperCase()} */}
                                 </h1>
                         <div style = {{marginTop: "30px"}}className="form-check" >
@@ -943,9 +947,8 @@ function MainPlan() {
                             can you bring anyone with you to vote?
                             </h1>
                             <div className = "bringWith red" style ={{textAlign: 'center'}}>
-                               voting is more fun with a friend!
-                                if you can bring someone, write their name here, 
-                                 solo voting is A++ as well so no worries if not.
+                            voting is more fun with a friend! if you can bring someone, write their name here:
+(no worries if not, solo voting is AMAZING)
                                 </div>
 
                         <form style={{ marginTop: "30px", marginBottom: '30px', textAlign: 'center' }}>
@@ -1112,28 +1115,71 @@ function MainPlan() {
                         // initialVelocityX={{min:-200, max: 200}}
                         // initialVelocityY={{min:200, max: 200}}
                         // width={1800}
-                        confettiSource=	{ {x: 450, y:-80}}
+                        confettiSource=	{ {x: 550, y:-80}}
                         
                         />
                         </div>
-                    <h1 className="woohoo">
+                    {/* <h1 className="woohoo">
                         woohoo! you made a voting plan!
                     </h1>
                  
                     <div className = "planEarly" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '50%', height: '300px', marginLeft: '25%',color: '#004789'}}>
-        <h3 className="verbiage" style = {{ paddingTop: '10%'}}>
-        i will cast my ballot in person, early! 
+        <h1 className="verbiage" style = {{ paddingTop: '10%'}}>
+            {nameEarly}'s voting plan
+            </h1>
+            <br/>
+            <br/>
+            <h3>
+        
+        I will cast my ballot in person, early! 
         <br/>
-        identifier plan to vote on {whatDay.toLowerCase()}, {whatTime.toLowerCase()}!
         <br/>
-        i will {getToPolls.toLowerCase()} to the polls and I will bring {bringWith.toLowerCase()} with me!
-        </h3>
-                    </div>    
+        I plan to vote on {whatDay}, {whatTime.toLowerCase()}!
+        <br/>
+        <br/>
+        I will {getToPolls.toLowerCase()} to the polls and I will bring {bringWith.toLowerCase()} with me!
+        </h3> */}
+                    {/* </div>     */}
 
-                    <div className = "whatnext">
+                    {/* <div className = "whatnext">
                     what next? 2 things: <br/>
 1) add your plan's details to your personal calendar 🗓 right now <br/>
 2) spread the word 🗣!  take a screenshot of your plan and post it to your <br/> social platforms and/or share the voting plan site on <a className = "red" href="https://www.instagram.com/ldsomething/" target="_blank">facebook,</a> <a className = "red" href="https://www.facebook.com/LDSomething" target="_blank">twitter,</a> or <a className = "red" href="https://twitter.com/LDoSomething" target="_blank">linkedIn</a> <br/> so others know how awesome it is to #MakeAPlan
+(we'll also email you a copy of your plan)
+                    </div> */}
+                    <h1 className="woohoo">
+                        Woohoo! You made a Voting Plan!
+                    </h1>
+                
+                    <button className = "planEarly" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '300px', height: '300px',color: '#004789'}}>
+        <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
+            {nameEarly}'s Voting Plan
+            </h4>
+            <br/>
+           
+            <div>
+            {/* <h1 className="verbiage" style = {{ paddingTop: '10%'}}>
+            {nameEarly}'s voting plan
+            </h1> */}
+            
+           
+            <div className = "inPersonEarly">
+        
+        I will cast my ballot in person, early! 
+        <br/>
+        <br/>
+        I plan to vote on {whatDay}, {whatTime.toLowerCase()}!
+        <br/>
+        <br/>
+        I will {getToPolls.toLowerCase()} to the polls and I will bring {bringWith.toLowerCase()} with me!
+        </div>
+        </div>
+        </button>
+                  
+                    <div className = "whatnext">
+                    What next? 2 things: <br/><br/>
+1) Add your plan's details to your personal calendar 🗓 right now <br/><br/>
+2) Spread the word 🗣!  Take a screenshot of your plan and post it to your <br/> social platforms and/or share a link to votingplan.org on <a className = "red" href="https://www.instagram.com/ldsomething/" target="_blank">Facebook,</a> <a className = "red" href="https://www.facebook.com/LDSomething" target="_blank">Twitter,</a> or <a className = "red" href="https://twitter.com/LDoSomething" target="_blank">LinkedIn</a> <br/> so others know how awesome it is to #MakeAPlan
 (we'll also email you a copy of your plan)
                     </div>
                </div> : null
@@ -1736,32 +1782,37 @@ function MainPlan() {
                     // initialVelocityX={{min:-200, max: 200}}
                     // initialVelocityY={{min:200, max: 200}}
                     // width={1800}
-                    confettiSource=	{ {x: 450, y:-80}}
+                    confettiSource=	{ {x: 550, y:-80}}
                     
                     />
                     </div>
                 <h1 className="woohoo">
-                    woohoo! you made a voting plan!
+                    Woohoo! You made a voting plan!
                 </h1>
              
-                <div className = "planElection" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '50%', height: '300px', marginLeft: '25%',color: '#004789'}}>
-    <h3 className="verbiage" style = {{ paddingTop: '7%'}}>
-    i will cast my ballot in person, on election day on november 3rd! 
+                <button className = "planElection" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '300px', height: '300px', color: '#004789'}}>
+                <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
+            {nameEarly}'s Voting Plan
+            </h4>
+            <div>
+    I will cast my ballot in person, on election day on November 3rd! 
     <br/>
-    i plan to vote {whatTimeElection.toLowerCase()}!
     <br/>
-    {takeOffWork.toLowerCase()}!
+    I plan to vote {whatTimeElection}!
     <br/>
-    i will {getToPollsElection.toLowerCase()} to the polls and i will bring {bringWithElection.toLowerCase()} with me!
-    </h3>
-                </div>    
+    {takeOffWork}!
+    <br/>
+    <br/>
+    I will {getToPollsElection.toLowerCase()} to the polls and I will bring {bringWithElection} with me!
+    </div>
+                </button>    
 
-                <h5 className = "whatnext">
-                what next? 2 things: <br/>
-1) add your plan's details to your personal calendar 🗓 right now <br/>
-2) spread the word 🗣!  take a screenshot of your plan and post it to your <br/> social platforms and/or share the voting plan site on <a className = "red" href="https://www.instagram.com/ldsomething/" target="_blank">facebook,</a> <a className = "red" href="https://www.facebook.com/LDSomething" target="_blank">twitter,</a> or <a className = "red" href="https://twitter.com/LDoSomething" target="_blank">linkedIn</a> <br/> so others know how awesome it is to #MakeAPlan
+                <div className = "whatnext">
+                What next? 2 things: <br/> <br/>
+1) Add your plan's details to your personal calendar 🗓 right now <br/> <br/>
+2) Spread the word 🗣!  Take a screenshot of your plan and post it to your <br/> social platforms and/or share the voting plan site on <a className = "red" href="https://www.instagram.com/ldsomething/" target="_blank">facebook,</a> <a className = "red" href="https://www.facebook.com/LDSomething" target="_blank">twitter,</a> or <a className = "red" href="https://twitter.com/LDoSomething" target="_blank">linkedIn</a> <br/> so others know how awesome it is to #MakeAPlan
 (we'll also email you a copy of your plan)
-                </h5>
+                </div>
            </div> : null
 
             }

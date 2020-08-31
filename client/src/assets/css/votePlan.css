@@ -16,7 +16,19 @@ color: white!important
 }
 
 #funVote {
-    font-size: 18px;
+    font-size: 24px;
+}
+#opener{
+        width: 300px;
+     
+        margin-top: 30px;
+        font-size: 24px;
+      
+        background-color: #004789 !important;
+        color: white !important
+}
+#opener:hover{
+        font-weight: bolder
 }
 ul, li {
     margin-left:0px;
@@ -93,7 +105,7 @@ ul, li {
 
 #x {
     position: relative;
-    left: 193px;
+    left: 185px;
     bottom: 17px;
     font-size: 25px;
     color: white !important
@@ -101,7 +113,7 @@ ul, li {
 
 #maybeButton {
     position: relative;
-    left: 169px;
+    left: 162px;
     bottom: 17px;
     font-size: 25px;
     color: white !important
@@ -151,6 +163,11 @@ button:hover{
         position: relative;
         top: 70px
 
+    }
+    #opener{
+
+        font-size: .9rem;
+        width: 210px
     }
     
     .clickHere{
@@ -358,5 +375,226 @@ button:hover{
     }
     #no{
         margin-right: 170px !important
+    }
+  }
+  @media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+    #votePicture {
+        width: 300px;
+        text-align: center
+    }
+    /* #begin{
+        top: 5px
+    } */
+             
+    #opening{
+        position: relative;
+        top: 70px
+
+    }
+    
+    .clickHere{
+        font-size: .7rem
+    }
+    .bringWith{
+        font-size: .7rem
+    }
+
+    #letsGoButton {
+        width: 150px;
+        position: relative;
+
+    }
+
+    #makePlan{
+            font-size: 2.05rem;
+          
+    }
+    
+    #funVote {
+        font-size: .9rem;
+        margin-top: 15px
+    }
+
+    #voteRegister {
+        width: 300px;
+        position: relative;
+        top: 100px
+    }
+
+    #yes {
+        width: 130px;
+        position: relative;
+        top: 100px;
+        right: 150px;
+        z-index: 2000
+    }
+
+    #no {
+        width: 130px;
+        position: relative;
+        top: 68.2px;
+        left: 150px;
+        z-index: 2000
+    }
+
+    #maybe {
+        width: 200px;
+        position: relative;
+        top: 60px;
+        z-index: 2000
+    }
+
+    .container {
+        top: 23px
+    }
+    #x{
+        left: 160px;
+        z-index: 302393230;
+    }
+    #maybeButton{
+        left: 145px;
+        z-index: 302393230;
+    }
+
+    #yes{
+        margin-left: 170px !important
+    }
+    #no{
+        margin-right: 170px !important
+    }
+    #votePicture{
+        width: 700px
+    }
+    #letsGoButton{
+        width: 250px
+    }
+    #makePlan{
+        font-size: 30px
+    }
+    #alternate{
+        height: 130px;
+        top: 30px
+    }
+    #yes{
+        margin-left: 1px !important
+    }
+    #no{
+        margin-right: 1px !important
+    }
+    #votePicture {
+        width: 300px;
+        text-align: center
+    }
+    /* #begin{
+        top: 5px
+    } */
+             
+    #opening{
+        position: relative;
+        top: 70px
+
+    }
+    
+    .clickHere{
+        font-size: .7rem
+    }
+    .bringWith{
+        font-size: .7rem
+    }
+
+    #letsGoButton {
+        width: 150px;
+        position: relative;
+
+    }
+
+    #makePlan{
+            font-size: 2.05rem;
+          
+    }
+    
+    #funVote {
+        font-size: .9rem;
+        margin-top: 15px
+    }
+
+    #voteRegister {
+        width: 300px;
+        position: relative;
+        top: 100px
+    }
+
+    #yes {
+        width: 130px;
+        position: relative;
+        top: 100px;
+        right: 150px;
+        z-index: 2000
+    }
+
+    #no {
+        width: 130px;
+        position: relative;
+        top: 68.2px;
+        left: 150px;
+        z-index: 2000
+    }
+
+    #maybe {
+        width: 200px;
+        position: relative;
+        top: 60px;
+        z-index: 2000
+    }
+
+    .container {
+        top: 23px
+    }
+    #x{
+        left: 160px;
+        z-index: 302393230;
+    }
+    #maybeButton{
+        left: 145px;
+        z-index: 302393230;
+    }
+
+    #yes{
+        margin-left: 170px !important
+    }
+    #no{
+        margin-right: 170px !important
+    }
+}
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    #votePicture{
+        width: 700px
+    }
+    #letsGoButton{
+        width: 250px
+    }
+    #makePlan{
+        font-size: 50px
+    }
+    #alternate{
+        height: 180px;
+        top: 30px
+    }
+    #yes{
+        margin-left: 1px !important
+    }
+    #no{
+        margin-right: 1px !important
     }
   }
