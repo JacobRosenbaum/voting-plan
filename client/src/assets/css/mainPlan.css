@@ -320,7 +320,10 @@ background-color: white
    
     
     .whatnext{
-        font-size: .75rem
+        font-size: .75rem;
+        background-color: rgba(255, 255, 255,.9) !important;
+        border-radius: 50px !important
+       
     }
     .woohoo{
         margin-top: 50px !important
@@ -395,7 +398,9 @@ background-color: white
 }
     
     .whatnext{
-        font-size: .75rem
+        font-size: .75rem;
+        background-color: rgba(255, 255, 255,.9) !important;
+        border-radius: 50px !important
     }
     .woohoo{
         margin-top: 50px !important

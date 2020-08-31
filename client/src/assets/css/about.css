@@ -101,7 +101,7 @@
 
     #twoStickers {
         width: 100px;
-      
+      /* position: fixed; */
         bottom: 45px;
         left: 275px
     }
