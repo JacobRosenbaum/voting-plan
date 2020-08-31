@@ -71,7 +71,7 @@ function VotePlan() {
 Welcome to votingplan.org!
 <br/>
 <br/>
-This super simple tool will help you make a plan to vote in this year’s <b>*very*</b> important election.
+This super simple tool will help you make a plan to vote <br/>in this year’s <b>*very*</b> important election.
 <br/>
 <br/>
 Click below to get started!

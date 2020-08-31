@@ -215,3 +215,14 @@
     }
 
 }
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) {
+
+    #oneSticker{
+        bottom: 10px 
+    }
+    
+
+  }
+

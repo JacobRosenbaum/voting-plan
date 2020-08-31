@@ -105,7 +105,7 @@ ul, li {
 
 #x {
     position: relative;
-    left: 185px;
+    left: 175px;
     bottom: 17px;
     font-size: 25px;
     color: white !important
@@ -113,7 +113,7 @@ ul, li {
 
 #maybeButton {
     position: relative;
-    left: 162px;
+    left: 152px;
     bottom: 17px;
     font-size: 25px;
     color: white !important
@@ -166,8 +166,8 @@ button:hover{
     }
     #opener{
 
-        font-size: .9rem;
-        width: 210px
+        font-size: 1.3rem !important;
+        width: 250px
     }
     
     .clickHere{
@@ -189,7 +189,7 @@ button:hover{
     }
     
     #funVote {
-        font-size: .9rem;
+        font-size: 1.3rem !important;
         margin-top: 15px
     }
 
@@ -597,4 +597,14 @@ button:hover{
     #no{
         margin-right: 1px !important
     }
+  }
+  @media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) {
+
+    #maybeButton{
+        left: 100px
+    }
+    
+
   }

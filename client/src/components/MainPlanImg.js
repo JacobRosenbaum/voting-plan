@@ -420,11 +420,11 @@ function MainPlan() {
                             <button
                                   
                                   //    onClick={onFinishButtonMail}
-                                     onClick={e => { setMailBallotWhen("the weekend after I receive my ballot");
+                                     onClick={e => { setMailBallotWhen("before I go to sleep the night it arrives");
                                      showFinishButtonMail(true) }}
   
                                  >
-                                 before I got to sleep the night it arrives
+                                 before I go to sleep the night it arrives
                                  </button>
                                    
                             </div>
