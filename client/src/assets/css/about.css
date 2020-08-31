@@ -53,13 +53,20 @@
     margin-top: 250px !important
 }
 
-#oneSticker {
+/* #oneSticker {
     width: 265px;
     position: fixed;
     bottom: 520px;
     left: 45px;
     z-index: -1;
    
+} */
+#oneSticker{
+    width: 250px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    z-index: -1;
 }
 
 /* #oneSticker{
@@ -69,12 +76,18 @@
     left: 20px
 } */
 
-#twoStickers {
+/* #twoStickers {
     width: 380px;
     position: fixed;
     left: 1250px;
     bottom: 80px;
     z-index: -1;
+} */
+#twoStickers{
+    width: 370px;
+    position: absolute;
+    right: 10px;
+    bottom: 50px
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
@@ -232,4 +245,22 @@ and (max-device-width: 1250px) {
     }
 
   }
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    #oneSticker{
+        top: 10px !important;
+        width: 100px !important
+    }
+    #twoStickers{
+        left: 1050px !important;
+        width: 150px !important
+    }
+    #begin{
+        bottom: 50px
+    }
+
+}
+
 

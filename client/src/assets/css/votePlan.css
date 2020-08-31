@@ -104,17 +104,17 @@ ul, li {
 }
 
 #x {
-    position: relative;
-    left: 175px;
-    bottom: 17px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
     font-size: 25px;
     color: white !important
 }
 
 #maybeButton {
-    position: relative;
-    left: 152px;
-    bottom: 17px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
     font-size: 25px;
     color: white !important
 }
@@ -598,13 +598,4 @@ button:hover{
         margin-right: 1px !important
     }
   }
-  @media screen 
-  and (device-width: 1920px) 
-  and (device-height: 1080px) {
-
-    #maybeButton{
-        left: 100px
-    }
-
-
-  }
+ 
