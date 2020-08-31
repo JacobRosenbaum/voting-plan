@@ -190,9 +190,13 @@ button:hover{
     }
     
     #funVote {
-        font-size: 1.3rem !important;
+        font-size: 1.4rem !important;
         margin-top: 15px
     }
+    /* #opener{
+        font-size: 1.4rem !important;
+
+    } */
 
     #voteRegister {
         width: 300px;
@@ -603,3 +607,15 @@ button:hover{
     }
   }
  
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 1){
+#opener{
+    font-size: 1.2rem !important
+}
+#funvote{
+    font-size: 1.2rem !important
+
+}
+  }
