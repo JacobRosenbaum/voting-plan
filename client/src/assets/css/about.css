@@ -216,13 +216,20 @@
 
 }
 @media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) {
+and (min-device-width: 1250px) 
+and (max-device-width: 1250px) {
 
     #oneSticker{
-        bottom: 10px 
+        top: 10px !important;
+        width: 100px !important
     }
-    
+    #twoStickers{
+        left: 1050px !important;
+        width: 150px !important
+    }
+    #begin{
+        bottom: 50px
+    }
 
   }
 

@@ -599,12 +599,12 @@ button:hover{
     }
   }
   @media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) {
+  and (device-width: 1920px) 
+  and (device-height: 1080px) {
 
     #maybeButton{
         left: 100px
     }
-    
+
 
   }
