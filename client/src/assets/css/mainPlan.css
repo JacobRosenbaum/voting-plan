@@ -267,6 +267,9 @@ background-color: white
     color: #004789 !important;
     background-color: white
 }
+.verbiageElection{
+    font-size: 15px
+}
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     input[type="input"] {
@@ -286,24 +289,32 @@ background-color: white
     .plan{
         width: 300px !important;
         margin-left: 0px !important;
-        height: 170px !important
+        /* height: 170px !important */
         
     }
     .planEarly{
         width: 300px !important;
         margin-left: 0px !important;
-        height: 235px !important
+        /* height: 235px !important */
     }
     .planElection{
         width: 300px !important;
         margin-left: 0px !important;
-        height: 260px !important
+        /* height: 260px !important */
         
+    }
+    .phoneElection{
+        font-size: 1.3rem !important;
+        padding-top: 3% !important
     }
    .verbiage{
     font-size: 1.3rem !important;
     padding-top: 10% !important
    }
+   .verbiageElection{
+       font-size: .9rem !important
+   }
+   
     
     .whatnext{
         font-size: .75rem
@@ -368,24 +379,28 @@ background-color: white
     .plan{
         width: 300px !important;
         margin-left: 0px !important;
-        height: 170px !important
+        /* height: 170px !important */
         
     }
     .planEarly{
         width: 300px !important;
         margin-left: 0px !important;
-        height: 235px !important
+        /* height: 235px !important */
     }
     .planElection{
         width: 300px !important;
         margin-left: 0px !important;
-        height: 260px !important
+        /* height: 260px !important */
         
     }
    .verbiage{
     font-size: 1.3rem !important;
     padding-top: 10% !important
    }
+   .phoneElection{
+    font-size: 1.3rem !important;
+    padding-top: 3% !important
+}
     
     .whatnext{
         font-size: .75rem
@@ -438,24 +453,28 @@ background-color: white
     .plan{
         width: 300px !important;
         margin-left: 0px !important;
-        height: 170px !important
+        /* height: 170px !important */
         
     }
     .planEarly{
         width: 300px !important;
         margin-left: 0px !important;
-        height: 235px !important
+        /* height: 235px !important */
     }
     .planElection{
         width: 300px !important;
         margin-left: 0px !important;
-        height: 260px !important
+        /* height: 260px !important */
         
     }
    .verbiage{
     font-size: 1.3rem !important;
     padding-top: 10% !important
    }
+   .phoneElection{
+    font-size: 1.3rem !important;
+    padding-top: 3% !important
+}
     
     .whatnext{
         font-size: .75rem

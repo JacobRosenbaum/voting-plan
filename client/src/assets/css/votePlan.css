@@ -12,7 +12,8 @@
     bottom: 150px
 }
 .modalClick{
-color: white!important
+color: white!important;
+text-decoration: underline !important
 }
 
 #funVote {
@@ -225,10 +226,10 @@ button:hover{
     .container {
         top: 23px
     }
-    #x{
+    /* #x{
         left: 160px;
         z-index: 302393230;
-    }
+    } */
     /* #maybeButton{
         left: 145px;
         z-index: 302393230;
@@ -361,14 +362,14 @@ button:hover{
     .container {
         top: 23px
     }
-    #x{
+    /* #x{
         left: 160px;
         z-index: 302393230;
-    }
-    #maybeButton{
+    } */
+    /* #maybeButton{
         left: 145px;
         z-index: 302393230;
-    }
+    } */
 
     #yes{
         margin-left: 170px !important
@@ -452,14 +453,14 @@ button:hover{
     .container {
         top: 23px
     }
-    #x{
+    /* #x{
         left: 160px;
         z-index: 302393230;
-    }
-    #maybeButton{
+    } */
+    /* #maybeButton{
         left: 145px;
         z-index: 302393230;
-    }
+    } */
 
     #yes{
         margin-left: 170px !important
@@ -555,14 +556,14 @@ button:hover{
     .container {
         top: 23px
     }
-    #x{
+    /* #x{
         left: 160px;
         z-index: 302393230;
     }
     #maybeButton{
         left: 145px;
         z-index: 302393230;
-    }
+    } */
 
     #yes{
         margin-left: 170px !important
