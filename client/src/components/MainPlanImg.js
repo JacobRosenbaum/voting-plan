@@ -641,7 +641,7 @@ function MainPlan() {
                             </h1>
                             <div style = {{textAlign: 'center'}}>
                             <a className = "clickHere" href ="https://www.vote.org/early-voting-calendar/" target = '_blank'> 
-                            Picking a day helps make sure voting doesn't slip through the cracks <span className = "underline">click here</span>  to see when early voting opens in your state and pick a specific date between now and November 2nd
+                            Picking a day helps make sure voting doesn't slip through the cracks. <span className = "underline">Click here</span>  to see when early voting opens in your state and pick a specific date between now and November 2nd
                                  that works for your calendar right now!
                            </a>
                         </div>

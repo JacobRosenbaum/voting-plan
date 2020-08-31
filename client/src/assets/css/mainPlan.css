@@ -505,3 +505,15 @@ background-color: white
         bottom: 3px;
     }
   }
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) {
+
+        h1{
+            font-size: 30px !important;
+            margin-top: 20px !important
+        }
+        .whatnext{
+            font-size: .8rem !important
+        }
+  }
