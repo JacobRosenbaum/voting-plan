@@ -1135,7 +1135,7 @@ function MainPlan() {
                 </Modal>
                 {completeEarly ? 
                 <div style = {{textAlign: 'center' }}>
-                    <div style = {{position: 'relative', bottom: '300px'}}>
+                    <div className = "confetti" style = {{position: 'relative', bottom: '300px'}}>
                      <Confetti 
                         colors={["#004789", "#EF3D55"]}
                         numberOfPieces={1000}
@@ -1845,7 +1845,7 @@ function MainPlan() {
             </Modal>
             {completeElection ? 
             <div style = {{textAlign: 'center' }}>
-                <div style = {{position: 'relative', bottom: '300px'}}>
+                <div className = "confetti" style = {{position: 'relative', bottom: '300px'}}>
                  <Confetti 
                     colors={["#004789", "#EF3D55"]}
                     numberOfPieces={1000}
