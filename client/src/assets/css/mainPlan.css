@@ -560,3 +560,27 @@ background-color: white
         width: 330px !important
     }
 }
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+      .woohoo{
+          margin-top: -100px !important
+      }
+      .whatnext{
+        background-color: rgba(255, 255, 255,.9) !important;
+        border-radius: 50px !important
+      }
+  }
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+      .woohoo{
+          margin-top: -60px !important
+      }
+      .whatnext{
+        background-color: rgba(255, 255, 255,.9) !important;
+        border-radius: 50px !important
+      }
+  }

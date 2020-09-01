@@ -752,7 +752,7 @@ function MainPlan() {
             <br/>
            
             <div>
-        I will cast my ballot by mail! <br/> <br/>And i will do it {mailBallotWhen}!
+        I will cast my ballot by mail! <br/> <br/>And I will do it {mailBallotWhen}!
         </div>
         </button>
                   
