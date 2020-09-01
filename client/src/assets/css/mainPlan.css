@@ -283,8 +283,10 @@ background-color: white
         font-size: 1.2rem
     }
   .confetti{
-      left: 200px !important;
-      bottom: 0px !important
+      /* position: absolute !important;
+     top: 0px !important; */
+     display: none !important
+    
   }
     .jumbotronX {
         margin-top: 70px !important
