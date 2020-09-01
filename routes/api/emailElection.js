@@ -109,7 +109,9 @@ function emailOptions(name, email, castBallotHowElection, whatTime, getToPolls, 
   <br>
   <br>
   
-  Jen @ <a href = "http://votingplan.org"> votingplan.org </a> `
+  Jen @ <a href = "http://votingplan.org"> votingplan.org </a> <br>
+  <br>
+  P.S. Do you have any more questions about how to vote in your state? We love helping people vote, so don’t hesitate to send us a note at <a href = "votingplan@gmail.com">votingplan@gmail.com</a> and we will reply ASAP with a simple answer.`
 //`
   
 //   Hi ${name}!
