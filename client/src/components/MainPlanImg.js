@@ -10,6 +10,9 @@ import Confetti from 'react-confetti';
 import Link from 'react-router-dom/Link';
 import castBallotImage from "../assets/images/castBallot.png";
 import exclamation from "../assets/images/exclamation.png"
+import VotePlan from './VotePlan2';
+import Register from "./Register.js"
+
 
 Modal.setAppElement(document.getElementById('root'));
 
@@ -21,7 +24,7 @@ function MainPlan() {
 
     // const { width, height } = useWindowSize()
 
-    const customStyles = {
+    const customStyles1 = {
         content: {
             top: '50%',
             left: '50%',
@@ -89,7 +92,7 @@ function MainPlan() {
     const [electionFriendName2, setElectionFriendName2] = useState();
     const [electionFriendEmail1, setElectionFriendEmail1] = useState();
     const [electionFriendEmail2, setElectionFriendEmail2] = useState();
-    const [ballotPlan, showBallotPlan] = useState(true);
+    const [ballotPlan, showBallotPlan] = useState(false);
     const [confetti, showConfetti] = useState(false);
     const [complete, showComplete] = useState(false);
     const [completeEarly, showCompleteEarly] = useState(false);
@@ -103,6 +106,50 @@ function MainPlan() {
     const [electionNextButton, showElectionNextButton] = useState(false);
     const [election2NextButton, showElection2NextButton] = useState(false);
     const [election3NextButton, showElection3NextButton] = useState(false);
+    const [register, showRegister] = useState(true);
+    const [voteModalIsOpen, setVoteIsOpen] = useState(false);
+    const [maybeModalIsOpen, setMaybeIsOpen] = useState(false);
+    const [button, showButton] = useState(true);
+    const [component, showComponent] = useState(false);
+    const [vote, showVote] = useState(true)
+
+
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            backgroundColor: '#004789',
+            borderRadius: '15px',
+            color: 'white',
+            textAlign: 'center',
+            border: '5px #EF3D55 solid',
+            zIndex: 205
+        }
+    };
+
+    function openVoteModal() {
+        setVoteIsOpen(true);
+    }
+
+    function closeVoteModal() {
+        setVoteIsOpen(false);
+    }
+    function openMaybeModal() {
+        setMaybeIsOpen(true);
+    }
+
+    function closeMaybeModal() {
+        setMaybeIsOpen(false);
+    }
+    function startPlan() {
+        showBallotPlan(true);
+        showRegister(false);
+
+    }
 
 
 
@@ -310,9 +357,93 @@ function MainPlan() {
     // }
     return (
         <div class='container' >
+            <div className = "start">
+            {register ?
+            
+         
+            <div id="voteDiv">
+                {/* <img style={{ marginBottom: '50px' }} src={voteRegister} id="voteRegister"
+                /> */}
+                <h1 style = {{marginBottom: '30px'}}>Are you registered to vote?</h1>
+                <div style = {{textAlign: "left"}}>
+                       <div>
+                            <div className="form-check">
+                                <button
+                                onClick={startPlan}
+                                >
+                                    yes
+                                </button>
+                            </div>
+                            <div className="form-check">
+                                <button 
+                                onClick={openMaybeModal}
+                                >
+                                    maybe
+                                </button>
+                            </div>
+                            <div className="form-check">
+                                <button
+                                onClick={openVoteModal}
+                                >
+                                not yet
+                                </button>   
+                            </div>
+                          
+                        </div>
+                        {/* <div className="form-check">
+                        <label >
+                            <input
+                            type="radio"
+                            name="react-tips"
+                            onClick={openMaybeModal}
+                            style={{ marginRight: "5px" }} />
+                        i don't know
+                            </label>
+                        </div> */}
+                        
+                   
+                    </div>
+                 
+            <Modal
+                isOpen={voteModalIsOpen}
+                // onAfterOpen={afterOpenModal}
+                onRequestClose={closeVoteModal}
+                style={customStyles1}
+                contentLabel="Example Modal"
+            >
+                <i id="x" class="fa fa-times" onClick={closeVoteModal}></i>
+                {/* <div>No problem! </div> */}
+                <div style={{ marginBottom: "30px", marginTop: '20px' }}>
+                    <h3>No problem!</h3>
+                    <div style={{ color: "white !important" }}><a class = "modalClick" style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/register-to-vote/" target="_blank">Click here</a> to get registered - then come on back!</div>
+                </div>
+            </Modal>
+            <Modal
+                isOpen={maybeModalIsOpen}
+                // onAfterOpen={afterOpenModal}
+                onRequestClose={closeMaybeModal}
+                style={customStyles1}
+                contentLabel="Example Modal"
+            >
+                <i id="maybeButton" class="fa fa-times" onClick={closeMaybeModal}></i>
+                {/* <div>No problem! </div> */}
+                <div style={{ marginBottom: "30px", marginTop: '20px' }}>
+                    <h3>No problem!</h3>
+                    <div style={{ color: "white !important" }}><a class = "modalClick" style={{ color: "white !important", textDecoration: "underline !important" }} href="https://www.vote.org/am-i-registered-to-vote/" target="_blank">Click here</a> to find out - then come on back!</div>
+                </div>
+            </Modal>
+
+        </div>
+            : null
+
+            }
+            </div>
             {ballotPlan ?
             <div className = "jumbotronX" style={{ marginBottom: "30px" }}>
-                
+                {/* {register ?
+                <VotePlan2 />
+
+                } */}
                     <h1 class = "question" >
                     
                     How do you plan to cast your ballot?
@@ -320,9 +451,10 @@ function MainPlan() {
                         {/* <img id = "castBallotImage" src = {castBallotImage} /> */}
                         <div style = {{textAlign: 'center', marginBottom: '30px'}}>
                        <a className = "clickHere" href = "https://projects.fivethirtyeight.com/how-to-vote-2020/" target = "_blank">
-                       Not sure yet? Don’t worry! <span className = "underline">Click here</span> for more info on the options in your state
+                       Not sure yet? Don’t worry! <span className = "underline">Click here</span> for more info on the options in your state.
                            </a>
                        </div>
+                       
                   {/*       *note sure yet? don't worry! <a id = "clickHere" href = "https://www.headcount.org/state">click here</a> for more info on the options in your state and/or reach out to us [link my email] with any questions at all, we're here to help! */}
                     <div className="form-check">
                     <button
@@ -383,8 +515,14 @@ function MainPlan() {
                             in person, on election day (november 3rd!)
                             </button>
                     </div>
+                    <i id = "arrowPerson1" onClick = {() => {
+                                  showRegister(true);
+                                  showBallotPlan(false)
+                                }
+                                }  className="fa fa-arrow-left back"></i> 
                 
             </div> : null }
+            
             <div>
                 {mail ?
                     <div className = "jumbotronX" style = {{textAlign:'center'}}>
@@ -954,8 +1092,7 @@ function MainPlan() {
                             Can you bring anyone with you to vote?
                             </h1>
                             <div className = "bringWith red" style ={{textAlign: 'center'}}>
-                            Voting is more fun with a friend! if you can bring someone, write their name here:
-(no worries if not, solo voting is AMAZING)
+                            Voting is more fun with a friend! If you can bring someone, write their name below. And no worries if not, voting solo is AMAZING too.
                                 </div>
                                 <button style={{ marginTop: "30px"}}
                                 onClick = {
@@ -1649,8 +1786,7 @@ function MainPlan() {
                            Can you bring anyone with you to vote?
                             </h3>
                             <div className = "bringWith red" style ={{textAlign: 'center'}}>
-                            Voting is more fun with a friend! if you can bring someone, write their name here:
-(no worries if not, solo voting is AMAZING)
+                            Voting is more fun with a friend! If you can bring someone, write their name below. And no worries if not, voting solo is AMAZING too.
                                 </div><button style={{ marginTop: "30px"}}
                                 onClick = {
                                     ()=>{

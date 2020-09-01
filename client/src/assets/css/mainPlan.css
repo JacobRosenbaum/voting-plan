@@ -9,6 +9,10 @@
 h1 {
     text-align: center
 }
+.start{
+    position: relative;
+   top: 250px !important
+}
 
 .form-check {
     display: inline block !important;

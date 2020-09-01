@@ -102,8 +102,9 @@
     #twoStickers {
         width: 100px;
       /* position: fixed; */
-        bottom: 45px;
-        left: 275px
+        bottom: 53px;
+        right: 20px !important
+        /* left: 275px */
     }
 }
 @media only screen 
@@ -122,7 +123,8 @@
         width: 100px;
       
         bottom: 45px;
-        left: 275px
+        right: 7px !important;
+        /* left: 275px */
     }
 }
 @media only screen 

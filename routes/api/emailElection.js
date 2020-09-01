@@ -95,7 +95,7 @@ function emailOptions(name, email, castBallotHowElection, whatTime, getToPolls, 
     href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvotingplan.org%2F&amp;src=sdkpreparse"
      class="fb-xfbml-parse-ignore">Facebook</a></span>, 
      <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org">Twitter</a>,
-      or <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://votingplan.org"> LinkedIn</a>
+     <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://votingplan.org">LinkedIn</a>, or <a href = "https://instagram.com">Instagram</a>
      so others know how awesome it is to #MakeAPlan.
      </li>
      </ol>

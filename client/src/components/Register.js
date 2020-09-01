@@ -1,30 +1,20 @@
 import React, { useState } from 'react';
-import VotePicture from "../assets/images/votePlanText.png";
-import letsGoButton from "../assets/images/letsGoButton.png";
+
 import "../assets/css/about.css"
 import "../assets/css/votePlan.css";
 import Modal from 'react-modal';
-import Register from "./Register.js"
- import How2 from "./How2";
-import MainPlan from "./MainPlan.js";
-import MainPlan2 from "./MainPlan2.js";
+
 import MainPlanImg from "./MainPlanImg";
-import voteRegister from "../assets/images/voteRegister.png";
-import yes from "../assets/images/yes.png";
-import iDontKnow from "../assets/images/iDontKnow.png";
-import notYet from "../assets/images/notYet.png";
-import alternate from "../assets/images/alternate.png";
-import exclamation from "../assets/images/exclamation.png"
+
 
 
 
 function VotePlan() {
     const [voteModalIsOpen, setVoteIsOpen] = useState(false);
     const [maybeModalIsOpen, setMaybeIsOpen] = useState(false);
-    const [button, showButton] = useState(false);
+    const [button, showButton] = useState(true);
     const [component, showComponent] = useState(false);
-    const [vote, showVote] = useState(true);
-    const [register, showRegister] = useState(false)
+    const [vote, showVote] = useState(true)
 
 
     const customStyles = {
@@ -64,32 +54,10 @@ function VotePlan() {
 
     }
     return (
-        <div class = "container">
-        <div className=" jumbotron w3-animate-opacity" id="begin"  >
-            {vote ?
-                <div id = "opening" style={{ textAlign: 'center' }}>
-                    <h3 id='funVote' style = {{marginTop: '70px'}} >
-                       
-Welcome to votingplan.org!
-<br/>
-<br/>
-This super simple tool will help you make a plan to vote <br/>in this year’s <b>*very*</b> important election.
-<br/>
-<br/>
-Click below to get started!
-                
-
-                </h3>
-                    {/* <img id="votePicture" src={VotePicture} /> */}
-                    {/* <h1 id = "makePlan">make a voting plan</h1> */}
-                    <button id = "opener" onClick={() => {
-                        showVote(false)
-                        showComponent(true)
-                    }} >
-                        Make my voting plan!
-                        </button>
-                </div> : null}
+   <div className = "jumbotron">
+            
             {button ?
+            
                 <div id="simple" style={{ textAlign: 'center' }}>
                     <div id="voteDiv">
                         {/* <img style={{ marginBottom: '50px' }} src={voteRegister} id="voteRegister"
@@ -165,11 +133,10 @@ Click below to get started!
 
                 </div> : null
             }
-            {component ?
+          {component ?
                 <MainPlanImg /> : null
             }
 
-        </div>
         </div>
     )
 }
