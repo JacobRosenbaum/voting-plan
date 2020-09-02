@@ -450,7 +450,7 @@ function MainPlan() {
                         </h1>
                         {/* <img id = "castBallotImage" src = {castBallotImage} /> */}
                         <div style = {{textAlign: 'center', marginBottom: '30px'}}>
-                       <a className = "clickHere" href = "https://projects.fivethirtyeight.com/how-to-vote-2020/" target = "_blank">
+                       <a className = "clickHere" href = "https://slate.com/news-and-politics/2020/08/2020-voting-guide.html" target = "_blank">
                        Not sure yet? Don’t worry! <span className = "underline">Click here</span> for more info on the options in your state.
                            </a>
                        </div>
