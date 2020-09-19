@@ -33,3 +33,36 @@ i:hover{
     /* margin-left: 20px !important; */
     text-decoration-color: #004789 !important
 }
+#iFrame{
+    margin: 10px
+}
+#about{
+    letter-spacing: .5px
+}
+#about:hover{
+            cursor: pointer;
+            font-weight: bolder
+            
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    #iFrame{
+        width: 320px;
+        height: 180px
+    }
+
+}
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    #iFrame{
+        width: 320px;
+        height: 180px
+    }
+
+}

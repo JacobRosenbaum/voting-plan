@@ -619,3 +619,21 @@ button:hover{
 
 }
   }
+
+
+  /* @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #opener{
+        font-size: 17px !important;
+            width: 250px !important;
+           
+    }
+    #funVote{
+        font-size: 17px !important;
+        margin-top: -20px  !important
+
+    
+    }
+} */
