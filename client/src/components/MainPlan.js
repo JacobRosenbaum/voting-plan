@@ -4,7 +4,7 @@ import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 import Modal from 'react-modal';
 import API from "../utils/API";
-import Export from "./Export";
+
 // import useWindowSize from 'react-use-window-size';
 import Confetti from 'react-confetti';
 import Link from 'react-router-dom/Link';

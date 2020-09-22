@@ -4,7 +4,6 @@ import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 import Modal from 'react-modal';
 import API from "../utils/API";
-import Export from "./Export"
 
 
 Modal.setAppElement(document.getElementById('root'));
