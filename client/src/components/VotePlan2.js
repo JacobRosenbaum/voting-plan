@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import Register from "./Register.js"
  import How2 from "./How2";
 import MainPlan from "./MainPlan.js";
-import MainPlan2 from "./MainPlan2.js";
+
 import MainPlanImg from "./MainPlanImg";
 import voteRegister from "../assets/images/voteRegister.png";
 import yes from "../assets/images/yes.png";

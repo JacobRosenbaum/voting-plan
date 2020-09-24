@@ -6,7 +6,7 @@ import "../assets/css/votePlan.css";
 import Modal from 'react-modal';
  import How2 from "../components/How2";
 import MainPlan from "../components/MainPlan.js";
-import MainPlan2 from "../components/MainPlan2.js";
+
 import MainPlanImg from "../components/MainPlanImg";
 import voteRegister from "../assets/images/voteRegister.png";
 import yes from "../assets/images/yes.png";
