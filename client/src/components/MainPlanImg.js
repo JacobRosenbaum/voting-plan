@@ -364,7 +364,7 @@ function MainPlan() {
             <div id="voteDiv">
                 {/* <img style={{ marginBottom: '50px' }} src={voteRegister} id="voteRegister"
                 /> */}
-                <h1 style = {{marginBottom: '30px'}}>Are you registered to vote?</h1>
+                <h1 style = {{marginBottom: '30px'}}>Are you registered to vote at your current address?</h1>
                 <div style = {{textAlign: "left"}}>
                        <div>
                             <div className="form-check">
@@ -450,7 +450,7 @@ function MainPlan() {
                         </h1>
                         {/* <img id = "castBallotImage" src = {castBallotImage} /> */}
                         <div style = {{textAlign: 'center', marginBottom: '30px'}}>
-                       <a className = "clickHere" href = "https://slate.com/news-and-politics/2020/08/2020-voting-guide.html" target = "_blank">
+                       <a className = "clickHere" href = "https://www.rockthevote.org/how-to-vote/" target = "_blank">
                        Not sure yet? Don’t worry! <span className = "underline">Click here</span> for more info on the options in your state.
                            </a>
                        </div>
@@ -512,7 +512,7 @@ function MainPlan() {
                                 }
                                 }
                             >
-                            in person, on election day (november 3rd!)
+                            in person, on election day (november 8th!)
                             </button>
                     </div>
                     <i id = "arrowPerson1" onClick = {() => {
@@ -778,8 +778,8 @@ function MainPlan() {
                       When will you vote?
                             </h1>
                             <div style = {{textAlign: 'center'}}>
-                            <a className = "clickHere" href ="https://www.vote.org/early-voting-calendar/" target = '_blank'> 
-                            Picking a day helps make sure voting doesn't slip through the cracks. <span className = "underline">Click here</span>  to see when early voting opens in your state and pick a specific date between now and November 2nd
+                            <a className = "clickHere" href ="https://ballotpedia.org/State_Poll_Opening_and_Closing_Times_(2022)" target = '_blank'> 
+                            Picking a day helps make sure voting doesn't slip through the cracks. <span className = "underline">Click here</span>  to see when early voting opens in your state and pick a specific date between now and November 7th
                                  that works for your calendar right now!
                            </a>
                         </div>
@@ -1089,7 +1089,7 @@ function MainPlan() {
                     <div className = "jumbotronX" >
                         <h1 className = "question">
                       
-                            Can you bring anyone with you to vote?
+                        Who will you bring with you to vote?
                             </h1>
                             <div className = "bringWith red" style ={{textAlign: 'center'}}>
                             Voting is more fun with a friend! If you can bring someone, write their name below. And no worries if not, voting solo is AMAZING too.
@@ -1103,7 +1103,7 @@ function MainPlan() {
                                 }
                                 
                                 >
-                                nope, voting solo!
+                                voting solo this time!
                                 </button>
                         <form style={{ marginBottom: '30px', textAlign: 'center' }}>
                             
@@ -1111,7 +1111,7 @@ function MainPlan() {
                                 type="input"
                                 
                                 onKeyDown ={onFinishButtonEarly}
-                                placeholder = "my friend's name"
+                                placeholder = "my friend's name(s)"
                                 onKeyUp={e => { 
                                    
                                     setBringWith(e.target.value);
@@ -1477,11 +1477,11 @@ function MainPlan() {
                                   
                                     // onClick={onPersonElection2}
                                  
-                                    onClick={e => { setWhatTimeElection("before work");
+                                    onClick={e => { setWhatTimeElection("on my way to work");
                                     showPersonElection2(true);
                                     showPersonElection(false); }}
                                 >
-                                before work
+                                on my way to work
                         </button>
                         </div>
                         <div className="form-check">
@@ -1503,11 +1503,11 @@ function MainPlan() {
                                    
                                     // onClick={onPersonElection2}
                                 
-                                    onClick={e => { setWhatTimeElection("after work");
+                                    onClick={e => { setWhatTimeElection("on my way home from work");
                                     showPersonElection2(true);
                                     showPersonElection(false); }}
                                 >
-                                after work
+                                on my way home from work
                         </button>
                         </div>
                         <div className="form-check">
@@ -1783,7 +1783,7 @@ function MainPlan() {
                     <div className = "jumbotronX" >
                         <h3 className = "question">
                    
-                           Can you bring anyone with you to vote?
+                        Who will you bring with you to vote?
                             </h3>
                             <div className = "bringWith red" style ={{textAlign: 'center'}}>
                             Voting is more fun with a friend! If you can bring someone, write their name below. And no worries if not, voting solo is AMAZING too.
@@ -1796,7 +1796,7 @@ function MainPlan() {
                                 }
                                 
                                 >
-                                nope, voting solo!
+                                voting solo this time!
                                 </button>
                         <form style={{ marginBottom: '30px', textAlign: 'center' }}>
                             
@@ -1804,7 +1804,7 @@ function MainPlan() {
                                 type="input"
                                 
                                 onKeyDown ={onFinishButtonElection}
-                                placeholder = "my friend's name"
+                                placeholder = "my friend's name(s)"
                                 onKeyUp={e => { 
                                    
                                     setBringWithElection(e.target.value);

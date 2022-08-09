@@ -44,13 +44,21 @@ function App() {
             <img id = "twoStickers" src={twoStickers}/> */}
             </div>
             <footer style={{ textAlign: 'center' }}>
-                <div style={{ textAlign: 'center' }}
+                
+                <div className = "red end">
+                {/* <span
+  class="fb-share-button" 
+  data-href="https://votingplan.org"
+   data-layout="button" 
+   data-size="large"
+   > */}
+   <a style = {{marginRight: '20px'}}
                 onClick={openModal}
                 id = "about"
             
                 >
                 About Us
-                    </div>
+                    </a>
                 <Modal
                         isOpen={ModalIsOpen}
                         // onAfterOpen={afterOpenModal}
@@ -65,13 +73,6 @@ function App() {
 
                         
                     </Modal>
-                <div className = "red end">
-                {/* <span
-  class="fb-share-button" 
-  data-href="https://votingplan.org"
-   data-layout="button" 
-   data-size="large"
-   > */}
    <a target="_blank"
     href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvotingplan.org%2F&amp;src=sdkpreparse"
      class="fb-xfbml-parse-ignore" target = "_blank"><i style = {{marginRight: '20px'}} class="fa fa-facebook foot red"></i></a> 

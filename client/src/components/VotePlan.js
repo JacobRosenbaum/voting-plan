@@ -86,7 +86,7 @@ function VotePlan() {
                     <div id="voteDiv">
                         {/* <img style={{ marginBottom: '50px' }} src={voteRegister} id="voteRegister"
                         /> */}
-                        <h1 style = {{marginBottom: '30px'}}>are you registered to vote?</h1>
+                        <h1 style = {{marginBottom: '30px'}}>Are you registered to vote at your current address?</h1>
                         <div style = {{textAlign: "left"}}>
                                <div>
                                     <div className="form-check">
