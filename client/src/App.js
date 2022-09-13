@@ -6,27 +6,27 @@ import twoStickers from "../src/assets/images/twoStickers.png";
 import i from "../src/assets/images/exclamation.png";
 import letsDoSomething from "../src/assets/images/letsDoSomething.png";
 import Modal from 'react-modal';
-import {
-    EmailShareButton,
-    FacebookShareButton,
-    HatenaShareButton,
-    InstapaperShareButton,
-    LineShareButton,
-    LinkedinShareButton,
-    LivejournalShareButton,
-    MailruShareButton,
-    OKShareButton,
-    PinterestShareButton,
-    PocketShareButton,
-    RedditShareButton,
-    TelegramShareButton,
-    TumblrShareButton,
-    TwitterShareButton,
-    ViberShareButton,
-    VKShareButton,
-    WhatsappShareButton,
-    WorkplaceShareButton
-  } from "react-share";
+// import {
+//     EmailShareButton,
+//     FacebookShareButton,
+//     HatenaShareButton,
+//     InstapaperShareButton,
+//     LineShareButton,
+//     LinkedinShareButton,
+//     LivejournalShareButton,
+//     MailruShareButton,
+//     OKShareButton,
+//     PinterestShareButton,
+//     PocketShareButton,
+//     RedditShareButton,
+//     TelegramShareButton,
+//     TumblrShareButton,
+//     TwitterShareButton,
+//     ViberShareButton,
+//     VKShareButton,
+//     WhatsappShareButton,
+//     WorkplaceShareButton
+//   } from "react-share";
 
 
 function App() {
@@ -101,7 +101,7 @@ function App() {
                     </Modal>
    <a target="_blank"
     href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvotingplan.org%2F&amp;src=sdkpreparse"
-     class="fb-xfbml-parse-ignore" target = "_blank"><i style = {{marginRight: '20px'}} class="fa fa-facebook foot red"></i></a> 
+     class="fb-xfbml-parse-ignore"><i style = {{marginRight: '20px'}} class="fa fa-facebook foot red"></i></a> 
            <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://votingplan.org" target = "_blank"><i class="fa fa-linkedin foot red"></i></a>
      <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org" target = "_blank"><i style = {{marginLeft: '20px'}}class="fa fa-twitter foot red"></i></a>
                  
