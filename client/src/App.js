@@ -6,7 +6,27 @@ import twoStickers from "../src/assets/images/twoStickers.png";
 import i from "../src/assets/images/exclamation.png";
 import letsDoSomething from "../src/assets/images/letsDoSomething.png";
 import Modal from 'react-modal';
-
+import {
+    EmailShareButton,
+    FacebookShareButton,
+    HatenaShareButton,
+    InstapaperShareButton,
+    LineShareButton,
+    LinkedinShareButton,
+    LivejournalShareButton,
+    MailruShareButton,
+    OKShareButton,
+    PinterestShareButton,
+    PocketShareButton,
+    RedditShareButton,
+    TelegramShareButton,
+    TumblrShareButton,
+    TwitterShareButton,
+    ViberShareButton,
+    VKShareButton,
+    WhatsappShareButton,
+    WorkplaceShareButton
+  } from "react-share";
 
 
 function App() {
@@ -43,9 +63,13 @@ function App() {
                 {/* <img id = "oneSticker" src={oneSticker}/>
             <img id = "twoStickers" src={twoStickers}/> */}
             </div>
+
+
             <footer style={{ textAlign: 'center' }}>
                 
                 <div className = "red end">
+                <FacebookShareButton/>
+<LinkedinShareButton />
                 {/* <span
   class="fb-share-button" 
   data-href="https://votingplan.org"
@@ -67,9 +91,11 @@ function App() {
                         contentLabel="Example Modal"
                     >
                         <i id="x" class="fa fa-times" onClick={closeModal}></i>
-                        <iframe src="https://player.vimeo.com/video/453484807" id = "iFrame"
-                        width="640" height="360" frameborder="0" 
-                        allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/743925536"
+                        // "https://player.vimeo.com/video/453484807"
+                         id = "iFrame"
+                        width="640" height="360" frameBorder="0" 
+                        allow="autoplay; fullscreen" allowFullScreen></iframe>
 
                         
                     </Modal>
@@ -79,6 +105,7 @@ function App() {
            <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://votingplan.org" target = "_blank"><i class="fa fa-linkedin foot red"></i></a>
      <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org" target = "_blank"><i style = {{marginLeft: '20px'}}class="fa fa-twitter foot red"></i></a>
                  
+
 </div>
 </footer>
 </div>
