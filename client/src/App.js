@@ -67,9 +67,9 @@ function App() {
 
             <footer style={{ textAlign: 'center' }}>
                 
-                <div className = "red end">
+                {/* <div className = "red end">
                 <FacebookShareButton/>
-<LinkedinShareButton />
+<LinkedinShareButton /> */}
                 {/* <span
   class="fb-share-button" 
   data-href="https://votingplan.org"
@@ -105,8 +105,6 @@ function App() {
            <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://votingplan.org" target = "_blank"><i class="fa fa-linkedin foot red"></i></a>
      <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org" target = "_blank"><i style = {{marginLeft: '20px'}}class="fa fa-twitter foot red"></i></a>
                  
-
-</div>
 </footer>
 </div>
     );
