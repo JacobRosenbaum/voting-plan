@@ -868,7 +868,9 @@ My '22 Voting Plan
         </div>
         </button>
         <div className = "whatnext">
-        What next? Take a screenshot of your plan and text it to 3 friends! Then ask them to make a plan too :)
+        What next?  
+            <br/>Take a screenshot of your plan and text it to 3 friends!<br/>
+             Then ask them to make a plan too :)
     
         {/* <button  className='shareButton' id='fbButton'>
             <a target="_blank"
@@ -881,10 +883,6 @@ My '22 Voting Plan
     <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org"
     target = "_blank"
        id='twitterLink'>Share to Twitter!</a></button> */}
-
-<br/>
-            <br/>
-            <br/>
             </div>
            
            
