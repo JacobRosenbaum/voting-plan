@@ -17,7 +17,7 @@ router.route("/")
       service: 'gmail',
       auth: {
         user: 'votingplan@gmail.com',
-        pass: 'jacobrocks11!'
+        pass: 'ekpldvohxgdprtya'
       }
     });
 

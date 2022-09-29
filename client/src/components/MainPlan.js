@@ -819,7 +819,7 @@ function MainPlan() {
                         </form>
                     </div> : null
                 }
-                {personEarly4 ?
+                {/* {personEarly4 ?
                     <div >
                         <h3 >
                         <i id = "arrowPerson4" onClick = {() => {
@@ -846,6 +846,68 @@ function MainPlan() {
                                     i'm finished
                                     </button>
                             </div> : null}
+                    </div> : null
+                }  */}
+                {personEarly4 ?
+                    <div className = "jumbotronX" >
+                        <h1 className = "question">
+                      
+                        Who will you bring with you to vote?
+                            </h1>
+                            <div className = "bringWith red" style ={{textAlign: 'center'}}>
+                            Voting is more fun with a friend! If you can bring someone, write their name below. And no worries if not, voting solo is AMAZING too.
+                                </div>
+                                <button style={{ marginTop: "30px"}}
+                                onClick = {
+                                    ()=>{
+                                            setBringWith("");
+                                            showFinishButtonEarly(true)
+                                    }
+                                }
+                                
+                                >
+                                voting solo this time!
+                                </button>
+                        <form style={{ marginBottom: '30px', textAlign: 'center' }}>
+                            
+                            <input
+                                type="input"
+                                
+                                onKeyDown ={onFinishButtonEarly}
+                                placeholder = "my friend's name(s)"
+                                onKeyUp={e => { 
+                                   
+                                    setBringWith(e.target.value);
+                                   
+                                       
+                                     console.log(e.target.value) }}
+                            />
+                        </form>
+                        <i id = "arrowPerson4" onClick = {() => {
+                                   showPersonEarly3(true);
+                                   showPersonEarly4(false);
+                                   showFinishButtonEarly(false)
+                                }
+                                }  className="fa fa-arrow-left back"></i>
+                        {/* {finishButtonEarly ?
+                            <div style={{ textAlign: "center", marginTop: "30px" }}>
+                                <button
+                                    className="finishButton"
+                                    onClick= { ()=> {if (bringWith){
+                                        
+                                        setBringWithFriendEarly(`I will bring ${bringWith} with me!`)
+                                        }
+                                        else {
+                                            setBringWithFriendEarly("")
+                                        }
+                                    
+                                        setEarlyIsOpen(true);
+                                    }
+                                }
+                                >
+                                    i'm finished
+                                    </button>
+                            </div> : null} */}
                     </div> : null
                 }
                 <Modal

@@ -5,6 +5,9 @@ import 'react-datepicker/dist/react-datepicker.css';
 import Modal from 'react-modal';
 import API from "../utils/API";
 
+import InstagramEmbed from 'react-instagram-embed';
+
+
 // import useWindowSize from 'react-use-window-size';
 import Confetti from 'react-confetti';
 import Link from 'react-router-dom/Link';
@@ -42,10 +45,15 @@ function MainPlan() {
     };
 
     const [mail, showMail] = useState(false);
+    const [mail2, setMail2] = useState(false);
+    const [mailModalTestRun, setMailModalTestRun] = useState(false);
+    const [test, setTest] = useState(false);
+    const [mailNextButton, showMailNextButton] = useState(false);
     const [personEarly, showPersonEarly] = useState(false);
     const [personEarly2, showPersonEarly2] = useState(false);
     const [personEarly3, showPersonEarly3] = useState(false);
     const [personEarly4, showPersonEarly4] = useState(false);
+    const [personEarly5, showPersonEarly5] = useState(false);
     const [personElection, showPersonElection] = useState(false);
     const [personElection2, showPersonElection2] = useState(false);
     const [personElection3, showPersonElection3] = useState(false);
@@ -103,6 +111,7 @@ function MainPlan() {
     const [earlyNextButton, showEarlyNextButton] = useState(false);
     const [early2NextButton, showEarly2NextButton] = useState(false);
     const [early3NextButton, showEarly3NextButton] = useState(false);
+    const [early5NextButton, showEarly5NextButton] = useState(false);
     const [electionNextButton, showElectionNextButton] = useState(false);
     const [election2NextButton, showElection2NextButton] = useState(false);
     const [election3NextButton, showElection3NextButton] = useState(false);
@@ -238,6 +247,9 @@ function MainPlan() {
     }
     function closeMailModal() {
         setMailIsOpen(false);
+    }
+    function closeMailModalTestRun() {
+        setMailModalTestRun(false);
     }
     function openEarlyModal() {
         setEarlyIsOpen(true);
@@ -512,7 +524,7 @@ function MainPlan() {
                                 }
                                 }
                             >
-                            in person, on election day (november 8th!)
+                            in person, on election day (november 3rd!)
                             </button>
                     </div>
                     <i id = "arrowPerson1" onClick = {() => {
@@ -532,25 +544,35 @@ function MainPlan() {
                                 {/* when will you fill in and mail back your ballot? */}
                                 </h1>
                                 <div className="form-check" style = {{marginTop: '30px'}}>
-                               
-                                    <button
-                                      
-                                    
-                                        // onClick={onFinishButtonMail}
-                                        onClick={e => { setMailBallotWhen("the minute it arrives");
-                                        showFinishButtonMail(true) }}
+                                <button
+                            
+                            // onClick={onPersonElection}
+                            style={{ marginRight: "5px" }}
+                            onClick = {
+                                ()=>{
+                                    setMailBallotWhen("the minute it arrives");
+                                    // showMail(false);
+                                    // setMail2(true)
+                                    showFinishButtonMail(true)
 
-                                    >
-                                    the minute it arrives
-                           </button>
-                             
+                                }
+                            }
+                        >
+                          the minute it arrives
+                        </button>
                        </div>
                             <div  className="form-check">
                             <button
                                       
                                       // onClick={onFinishButtonMail}
-                                      onClick={e => { setMailBallotWhen("the same day it arrives");
-                                      showFinishButtonMail(true) }}
+                                      onClick={e => { 
+                                          setMailBallotWhen("the same day it arrives")
+                                    //   showFinishButtonMail(true)
+                                        // showMail(false)
+                                        // setMail2(true)
+                                        showFinishButtonMail(true)
+
+                                     }}
 
                                   >
                                   the same day it arrives
@@ -560,8 +582,12 @@ function MainPlan() {
                             <button
                                   
                                   //    onClick={onFinishButtonMail}
-                                     onClick={e => { setMailBallotWhen("before I go to sleep the night it arrives");
-                                     showFinishButtonMail(true) }}
+                                     onClick={e => { setMailBallotWhen("before I go to sleep the night it arrives")
+                                    //  showFinishButtonMail(true)
+                                    // showMail(false)
+                                    // setMail2(true)
+                                    showFinishButtonMail(true)
+                                     }}
   
                                  >
                                  before I go to sleep the night it arrives
@@ -574,9 +600,12 @@ function MainPlan() {
                                         type="input"
                                         // style={{ marginLeft: "7px", border: "1px solid #0000cd", width: "300px" }}
                                         // onKeyUp=  {onFinishButtonMail}
-                                        onKeyUp={e => { setMailBallotWhen(e.target.value); 
-                                            console.log(e.target.value);
-                                            showFinishButtonMail(true) }}
+                                        onKeyUp={e => { setMailBallotWhen(e.target.value)
+                                            console.log(e.target.value)
+                                            showFinishButtonMail(true)
+                                        //  showMailNextButton(true)
+                                         
+                                         }}
                                         placeholder="other (what's right for you?)"
                                     />
                                
@@ -588,18 +617,74 @@ function MainPlan() {
                                 }
                                 }  className="fa fa-arrow-left back"></i> 
                                
-                        {finishButtonMail ?
-                            <div style={{ textAlign: "center", marginTop: "30px" }}>
-                                <button class = "finishButton"
-                                    
-                                    onClick={openMailModal}
-                                >
-                                    i'm finished
-                                    </button>
-                            </div> : null}
+                       </div> : null }
+                       {mail2 ?
+                    <div className = "jumbotronX" >
+                        <h1 className = "question">
+                      
+                        What's your first name (so we can personalize your plan)?
+                            </h1>
+                     
+                               
+                        <form style={{ marginBottom: '30px', textAlign: 'center' }}>
+                            
+                            <input
+                                type="input"
+                                
+                                onKeyDown ={onFinishButtonEarly}
+                                placeholder = "optional"
+                                onKeyUp={e => { 
+                                    setNameMail(e.target.value);
+                                     console.log(e.target.value) }}
+                            />
+                        </form>
+                        <i id = "arrowPerson4" onClick = {() => {
+                                   showMail(true);
+                                //    setMail2(false);
+                                   showFinishButtonMail(false)
+                                }
+                                }  className="fa fa-arrow-left back"></i>
+                        
                     </div>
                     : null
                 }
+                {finishButtonMail ?
+                            <div style={{ textAlign: "center", marginTop: "30px" }}>
+                                <button class = "finishButton"
+                                    
+                                    //onClick={openMailModal}
+                                    onClick = {
+                                        ()=>{
+                                            // showComplete(true)
+                                            // showConfetti(true)
+                                            // setMail2(false)
+                                                showFinishButtonMail(false)
+                                                showMailModal(true)
+                                                setMailIsOpen(true)
+                                                
+                                        }
+                                    }
+                                 
+                                >
+                                    i'm finished
+                                    </button>
+                            </div>
+                              : null}
+                    {mailNextButton ? 
+                        <button 
+                        style = {{marginTop: '30px'}} className = "next"
+                        onClick = {
+                            ()=>{
+                                showMailNextButton(false);
+                                showMail(false);
+                                // setMail2(true)
+                            }
+                        }
+                        >
+                       next
+                        </button>: null
+
+                    } 
                 <Modal
                     isOpen={modalMailIsOpen}
                     // onAfterOpen={afterOpenModal}
@@ -612,9 +697,10 @@ function MainPlan() {
                         {mailModal ?
                         <div>
                             <h4 style={{ marginBottom: "30px" }}>
-                                Awesome! You're almost done!
+                            Awesome! You're Almost Done!
                                 <div style={{ marginTop: "3px" }}>
-                                    We just need your name and <br/>email address so we can send over your plan
+                                Want a reminder to vote?<br></br> If so enter your email address below. Otherwise just click "i'm done" to see your plan!
+                                    {/* We just need your name and <br/>email address so we can send over your plan */}
                                 </div>
                             </h4>
                             <form style={{ textAlign: 'center'}}>
@@ -641,18 +727,36 @@ function MainPlan() {
                                     <br/>
                                 
                                 <button className = "next" style = {{marginTop:'30px', backgroundColor: '#EF3D55', color: 'white', paddingTop:'6px',paddingBottom:'6px', paddingLeft:'8px', paddingRight: '8px'}} 
-                                onClick={()=>
+                                onClick={(e)=>
                                     {showMailModal(false);
-                                    showEmailFriends(true)
+                                        e.preventDefault();
+                                                   
+                                        {handleMailSubmit()};
+                                    
+                                    setTimeout( 
+                                    setMailIsOpen(false),
+                                    showComplete(true),
+                                    showConfetti(true),
+                                    showMail(false),
+                                    showFinishButtonMail(false),
+                                    console.log('confetti'), 10);
+                                    // showEmailFriends(true)
+                                    // showEmailFriends(false)
+                                    // setMailIsOpen(false)
+                                    // showComplete(true)
+                                    // showConfetti(true)
                                 }}
                                 
                                 >
-                                    next
+                                    i'm done!
                                 </button>
 
                             </form>
                         </div> : null
                         } 
+                        
+                                    
+                    
                         {emailFriends ?
                             <div >
                                 <h4 style={{ marginTop: "30px", marginBottom: "30px" }}>
@@ -707,7 +811,7 @@ function MainPlan() {
                                                 { 
                                                     e.preventDefault();
                                                    
-                                                    {handleMailSubmit()};
+                                                    // {handleMailSubmit()};
                                                 
                                                 setTimeout( 
                                                 setMailIsOpen(false),
@@ -746,30 +850,103 @@ function MainPlan() {
                     </h1>
                 
                     <button className = "plan" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '300px', height: '300px',color: '#004789'}}>
-        <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
-            {nameMail}'s Voting Plan
-            </h4>
+        
+            {nameMail ?
+            <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
+                {nameMail.charAt(0).toUpperCase()}{nameMail.substring(1)}'s Voting Plan
+{/* {nameMail}'s Voting Plan */}
+</h4> : <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
+My Voting Plan
+</h4> 
+            }
+            
+            
             <br/>
            
             <div>
         I will cast my ballot by mail! <br/> <br/>And I will do it {mailBallotWhen}!
         </div>
         </button>
-                  
-                    <div className = "whatnext">
+        <div className = "whatnext">
+    
+        <button  className='shareButton' id='fbButton'>
+            <a target="_blank"
+        id='fbLink'
+        // style = {{marginTop:'30px', backgroundColor: '#EF3D55', color: 'white', padding:'8px'}} 
+    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvotingplan.org%2F&amp;src=sdkpreparse"
+    >Share to Facebook!</a></button> 
+     <button  class='shareButton' 
+      id='twitterButton' >
+    <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org"
+    target = "_blank"
+       id='twitterLink'>Share to Twitter!</a></button>
+
+
+            </div>
+                    {/* <div className = "whatnext">
                     What next? 2 things: <br/><br/>
 1) Add your plan's details to your personal calendar 🗓 right now <br/><br/>
 2) Spread the word 🗣!  Take a screenshot of your plan and post it to your <br/> social platforms and/or share a link to votingplan.org on 
    <a target="_blank"
     href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvotingplan.org%2F&amp;src=sdkpreparse"
-     class="fb-xfbml-parse-ignore red" target = "_blank"> Facebook</a>, 
+     class="fb-xfbml-parse-ignore red"> Facebook</a>, 
      <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org" className = "red" target = "_blank"> Twitter</a>,
       <a className = "red" href="https://www.linkedin.com/sharing/share-offsite/?url=https://votingplan.org" target = "_blank"> LinkedIn,</a> or <a className = "red" href = "https://instagram.com" target = "_blank"> Instagram </a> <br/> so others know how awesome it is to #MakeAPlan
 (we'll also email you a copy of your plan)
-                    </div>
+                    </div> */}
                </div> : null
 
                 }
+                
+                    <Modal
+                    isOpen={mailModalTestRun}
+                    // onAfterOpen={afterOpenModal}
+                    onRequestClose={closeMailModalTestRun}
+                    style={customStyles}
+                    contentLabel="Modal"
+                >
+                        <div>
+                           
+                                <h4 style={{ marginTop: "3px" }}>
+                                    Email incoming!
+                                </h4>
+                                <div style={{ marginBottom: "30px" }}>
+                                    Please type your email address below
+                                    </div>
+                         
+                            <form style={{ textAlign: 'center'}}>
+                                        <input 
+                                            type="input"
+                                            className = "input"
+                                            // style={{ width: "300px", border: "1px solid #004789" }}
+                                            placeholder="email address"
+                                            // onKeyUp={onEmailFriends}
+                                            onKeyUp={e => { setEmailMail(e.target.value); console.log(e.target.value) }}
+                                        >
+                                        </input>
+                                    <br/>
+                                
+                                <button className = "next" style = {{marginTop:'30px', backgroundColor: '#EF3D55', color: 'white', paddingTop:'6px',paddingBottom:'6px', paddingLeft:'8px', paddingRight: '8px'}} 
+                                onClick={(e)=>
+                                    {showMailModal(false);
+                                        e.preventDefault();
+                                                   
+                                        {handleMailSubmit()};
+                                    
+                                    setMailModalTestRun(false)
+                                    // showEmailFriends(true)
+                                    // showEmailFriends(false)
+                                    // setMailIsOpen(false)
+                                    // showComplete(true)
+                                    // showConfetti(true)
+                                }}
+                                
+                                >
+                                    i'm done!
+                                </button>
+
+                            </form>
+                        </div></Modal>
 
                 {personEarly ?
                     <div className = "jumbotronX" >
@@ -1098,7 +1275,10 @@ function MainPlan() {
                                 onClick = {
                                     ()=>{
                                             setBringWith("");
+                                            // showPersonEarly5(true)
+                                            // showPersonEarly4(false)
                                             showFinishButtonEarly(true)
+
                                     }
                                 }
                                 
@@ -1114,9 +1294,10 @@ function MainPlan() {
                                 placeholder = "my friend's name(s)"
                                 onKeyUp={e => { 
                                    
-                                    setBringWith(e.target.value);
+                                    setBringWith(e.target.value)
+                                    showFinishButtonEarly(true)
+                                    // showEarly5NextButton(true);
                                    
-                                       
                                      console.log(e.target.value) }}
                             />
                         </form>
@@ -1126,7 +1307,54 @@ function MainPlan() {
                                    showFinishButtonEarly(false)
                                 }
                                 }  className="fa fa-arrow-left back"></i>
-                        {finishButtonEarly ?
+                                </div> : null
+}
+
+                                        {early5NextButton ? 
+                                            <button 
+                                            style = {{marginTop: '30px'}} className = "next"
+                                            onClick = {
+                                                ()=>{
+                                                    showEarly5NextButton(false);
+                                                    showPersonEarly5(true);
+                                                    showPersonEarly4(false)
+                                                }
+                                            }
+                                            >
+                                           next
+                                            </button>: null
+                    
+                                        } 
+                {personEarly5 ?
+                    <div className = "jumbotronX" >
+                        <h1 className = "question">
+                      
+                        What's your first name (so we can personalize your plan)?
+                            </h1>
+                     
+                               
+                        <form style={{ marginBottom: '30px', textAlign: 'center' }}>
+                            
+                            <input
+                                type="input"
+                                
+                                onKeyDown ={onFinishButtonEarly}
+                                placeholder = "my name"
+                                onKeyUp={e => { 
+                                    setNameEarly(e.target.value);
+                                     console.log(e.target.value) }}
+                            />
+                        </form>
+                        <i id = "arrowPerson4" onClick = {() => {
+                                   showPersonEarly4(true);
+                                   showPersonEarly5(false);
+                                   showFinishButtonEarly(false)
+                                }
+                                }  className="fa fa-arrow-left back"></i>
+                        
+                    </div> : null
+                }
+                {finishButtonEarly ?
                             <div style={{ textAlign: "center", marginTop: "30px" }}>
                                 <button
                                     className="finishButton"
@@ -1138,15 +1366,20 @@ function MainPlan() {
                                             setBringWithFriendEarly("")
                                         }
                                     
-                                        setEarlyIsOpen(true);
+                                        // showCompleteEarly(true)
+                                        // showConfetti(true)
+                                        showPersonEarly4(false);
+                                        showEarlyModal(true);
+                                        setEarlyIsOpen(true)
+                                        showFinishButtonEarly(false)
                                     }
                                 }
                                 >
-                                    i'm finished
-                                    </button>
-                            </div> : null}
-                    </div> : null
-                }
+                                i'm finished
+                                </button>
+                        </div> : null}
+                
+            
                 <Modal
                     isOpen={modalEarlyIsOpen}
                     // onAfterOpen={afterOpenModal}
@@ -1158,10 +1391,17 @@ function MainPlan() {
                     <div>
                         {earlyModal ?
                         <div>
-                            <h4 style={{ marginBottom: "30px" }}>
+                            {/* <h4 style={{ marginBottom: "30px" }}>
                                 Awesome! You're almost done!
                                 <div style={{ marginTop: "3px" }}>
                                     We just need your name and <br/>email address so we can send over your plan
+                                </div>
+                            </h4> */}
+                            <h4 style={{ marginBottom: "30px" }}>
+                            Awesome! You're Almost Done!
+                                <div style={{ marginTop: "3px" }}>
+                                Want a reminder to vote?<br></br> If so enter your email address below. Otherwise just click "i'm done" to see your plan!
+                                    {/* We just need your name and <br/>email address so we can send over your plan */}
                                 </div>
                             </h4>
                             <form style={{ textAlign: 'center'}}>
@@ -1188,9 +1428,20 @@ function MainPlan() {
                                     <br/>
                                 
                                 <button className = "next" style = {{marginTop:'30px', backgroundColor: '#EF3D55', color: 'white', paddingTop:'6px',paddingBottom:'6px', paddingLeft:'8px', paddingRight: '8px'}} 
-                                onClick={()=>
-                                    {showEarlyModal(false);
-                                    showEmailEarlyFriends(true)
+                                onClick={(e)=>
+                                    {showEarlyModal(false)
+                                        e.preventDefault();
+                                                   
+                                        {handleEarlySubmit()};
+                                    
+                                    setTimeout( 
+                                    setEarlyIsOpen(false),
+                                    showCompleteEarly(true),
+                                    showConfetti(true),
+                                    showPersonEarly4(false),
+                                    showFinishButtonEarly(false),
+                                    console.log('confetti'), 10);
+                                    // showEmailEarlyFriends(true)
                                 }}
                                 
                                 >
@@ -1317,9 +1568,17 @@ function MainPlan() {
                     </h1>
                 
                     <button className = "planEarly" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '300px', height: '300px',color: '#004789'}}>
-        <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
+        {/* <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
             {nameEarly}'s Voting Plan
-            </h4>
+            </h4> */}
+            {nameEarly ?
+            <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
+                {nameEarly.charAt(0).toUpperCase()}{nameEarly.substring(1)}'s Voting Plan
+{/* {nameEarly}'s Voting Plan */}
+</h4> : <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
+My Voting Plan
+</h4> 
+            }
             <br/>
            
             <div>
@@ -1338,23 +1597,36 @@ function MainPlan() {
         <br/>
         I will {getToPolls.toLowerCase()} to the polls! 
         <br />
-        <br/>
+        <br />
         {bringWithFriendEarly}
         </div>
         </div>
         </button>
-                  
         <div className = "whatnext">
+        <button  className='shareButton' id='fbButton'>
+            <a target="_blank"
+        id='fbLink'
+        // style = {{marginTop:'30px', backgroundColor: '#EF3D55', color: 'white', padding:'8px'}} 
+    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvotingplan.org%2F&amp;src=sdkpreparse"
+    >Share to Facebook!</a></button> 
+     <button  class='shareButton' 
+      id='twitterButton' >
+    <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org"
+    target = "_blank"
+       id='twitterLink'>Share to Twitter!</a></button>
+       </div>
+                  
+        {/* <div className = "whatnext">
                     What next? 2 things: <br/><br/>
 1) Add your plan's details to your personal calendar 🗓 right now <br/><br/>
 2) Spread the word 🗣!  Take a screenshot of your plan and post it to your <br/> social platforms and/or share a link to votingplan.org on 
    <a target="_blank"
     href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvotingplan.org%2F&amp;src=sdkpreparse"
-     class="fb-xfbml-parse-ignore red" target = "_blank"> Facebook</a>, 
+     class="fb-xfbml-parse-ignore red"> Facebook</a>, 
      <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org" className = "red" target = "_blank"> Twitter</a>,
       <a className = "red" href="https://www.linkedin.com/sharing/share-offsite/?url=https://votingplan.org" target = "_blank"> LinkedIn,</a> or <a className = "red" href = "https://instagram.com" target = "_blank"> Instagram </a> <br/> so others know how awesome it is to #MakeAPlan
 (we'll also email you a copy of your plan)
-                    </div>
+                    </div> */}
                </div> : null
 
                 }
@@ -1477,11 +1749,11 @@ function MainPlan() {
                                   
                                     // onClick={onPersonElection2}
                                  
-                                    onClick={e => { setWhatTimeElection("on my way to work");
+                                    onClick={e => { setWhatTimeElection("before work");
                                     showPersonElection2(true);
                                     showPersonElection(false); }}
                                 >
-                                on my way to work
+                                before work
                         </button>
                         </div>
                         <div className="form-check">
@@ -1503,11 +1775,11 @@ function MainPlan() {
                                    
                                     // onClick={onPersonElection2}
                                 
-                                    onClick={e => { setWhatTimeElection("on my way home from work");
+                                    onClick={e => { setWhatTimeElection("after work");
                                     showPersonElection2(true);
                                     showPersonElection(false); }}
                                 >
-                                on my way home from work
+                                after work
                         </button>
                         </div>
                         <div className="form-check">
@@ -1847,6 +2119,7 @@ function MainPlan() {
                                         }
                                     
                                         setElectionIsOpen(true);
+                                        
                                     }
                                 }
                                 >
@@ -1865,12 +2138,19 @@ function MainPlan() {
                 <div>
                     {electionModal ?
                     <div>
-                        <h4 style={{ marginBottom: "30px" }}>
+                        {/* <h4 style={{ marginBottom: "30px" }}>
                             Awesome! You're almost done!
                             <div style={{ marginTop: "3px" }}>
                                 We just need your name and <br/>email address so we can send over your plan
                             </div>
-                        </h4>
+                        </h4> */}
+                        <h4 style={{ marginBottom: "30px" }}>
+                            Awesome! You're Almost Done!
+                                <div style={{ marginTop: "3px" }}>
+                                Want a reminder to vote?<br></br> If so enter your email address below. Otherwise just click "i'm done" to see your plan!
+                                    {/* We just need your name and <br/>email address so we can send over your plan */}
+                                </div>
+                            </h4>
                         <form style={{ textAlign: 'center'}}>
                               
                                     <input style = {{marginRight: '15px'}}
@@ -1895,13 +2175,24 @@ function MainPlan() {
                                 <br/>
                             
                             <button className = "next" style = {{marginTop:'30px', backgroundColor: '#EF3D55', color: 'white', paddingTop:'6px',paddingBottom:'6px', paddingLeft:'8px', paddingRight: '8px'}} 
-                            onClick={()=>
+                            onClick={(e)=>
                                 {showElectionModal(false);
-                                showEmailElectionFriends(true)
+                                    e.preventDefault();
+                                               
+                                    {handleElectionSubmit()};
+                                
+                                setTimeout( 
+                                setElectionIsOpen(false),
+                                showCompleteElection(true),
+                                showConfetti(true),
+                                showPersonElection4(false),
+                                showFinishButtonElection(false),
+                                console.log('confetti'), 10);
+                                // showEmailElectionFriends(true)
                             }}
                             
                             >
-                                next
+                                i'm done
                             </button>
 
                         </form>
@@ -1998,9 +2289,20 @@ function MainPlan() {
                 </h1>
              
                 <button className = "planElection" style = {{border: '#EF3D55 2px solid',borderRadius:'20px', textAlign: 'center',marginBottom: "20px", marginTop: "20px", paddingLeft: '10px', paddingRight: '10px', width: '300px', height: '300px', color: '#004789'}}>
-                <h4 className="phoneElection" style = {{ fontWeight:'bolder'}}>
+                {/* <h4 className="phoneElection" style = {{ fontWeight:'bolder'}}>
             {nameElection}'s Voting Plan
-            </h4>
+            </h4> */}
+            {nameElection ?
+            <h4 className="phoneElection" 
+            // className="verbiage"
+             style = {{ fontWeight:'bolder'}}>
+{nameElection.charAt(0).toUpperCase()}{nameElection.substring(1)}'s Voting Plan
+</h4> : <h4 className="phoneElection" 
+// className="verbiage"
+ style = {{ fontWeight:'bolder'}}>
+My Voting Plan
+</h4> 
+            }
             <div className = 'verbiageElection'>
     I will cast my ballot in person, on election day on November 3rd! 
     <br/>
@@ -2018,19 +2320,50 @@ function MainPlan() {
     </div>
                 </button>    
                 <div className = "whatnext">
+    
+        <button  className='shareButton' id='fbButton'>
+            <a target="_blank"
+        id='fbLink'
+        // style = {{marginTop:'30px', backgroundColor: '#EF3D55', color: 'white', padding:'8px'}} 
+    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvotingplan.org%2F&amp;src=sdkpreparse"
+    >Share to Facebook!</a></button> 
+     <button  class='shareButton' 
+      id='twitterButton' >
+    <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org"
+    target = "_blank"
+       id='twitterLink'>Share to Twitter!</a></button>
+
+
+            </div>
+                {/* <div className = "whatnext">
                     What next? 2 things: <br/><br/>
 1) Add your plan's details to your personal calendar 🗓 right now <br/><br/>
 2) Spread the word 🗣!  Take a screenshot of your plan and post it to your <br/> social platforms and/or share a link to votingplan.org on 
    <a target="_blank"
     href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvotingplan.org%2F&amp;src=sdkpreparse"
-     class="fb-xfbml-parse-ignore red" target = "_blank"> Facebook</a>, 
+     class="fb-xfbml-parse-ignore red"> Facebook</a>, 
      <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org" className = "red" target = "_blank"> Twitter</a>,
       <a className = "red" href="https://www.linkedin.com/sharing/share-offsite/?url=https://votingplan.org" target = "_blank"> LinkedIn,</a> or <a className = "red" href = "https://instagram.com" target = "_blank"> Instagram </a> <br/> so others know how awesome it is to #MakeAPlan
 (we'll also email you a copy of your plan)
-                    </div>
+                    </div> */}
            </div> : null
 
             }
+
+
+<InstagramEmbed
+  url='https://instagram.com'
+  clientAccessToken='457880942873076 | 3b1cf9340228cf04d077c6b5bd77394e'
+  maxWidth={320}
+  hideCaption={false}
+  containerTagName='div'
+  protocol=''
+  injectScript
+  onLoading={() => {}}
+  onSuccess={() => {}}
+  onAfterRender={() => {}}
+  onFailure={() => {}}
+/>
                 {/* <Modal
                     isOpen={modalElectionIsOpen}
                     // onAfterOpen={afterOpenModal}
