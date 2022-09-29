@@ -1445,7 +1445,7 @@ My Voting Plan
                                 }}
                                 
                                 >
-                                    next
+                                    i'm done!
                                 </button>
 
                             </form>

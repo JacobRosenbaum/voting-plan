@@ -81,7 +81,7 @@ function App() {
                 id = "about"
             
                 >
-                About Us
+                Why make a voting plan?
                     </a>
                 <Modal
                         isOpen={ModalIsOpen}
