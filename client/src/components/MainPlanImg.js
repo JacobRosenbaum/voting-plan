@@ -461,8 +461,8 @@ function MainPlan() {
                     How do you plan to cast your ballot?
                         </h1>
                         {/* <img id = "castBallotImage" src = {castBallotImage} /> */}
-                        <div style = {{textAlign: 'center', marginBottom: '30px'}}>
-                       <a className = "clickHere" href = "https://www.rockthevote.org/how-to-vote/" target = "_blank">
+                        <div  style = {{textAlign: 'center', marginBottom: '30px'}}>
+                       <a id='planCastText' className = "clickHere" href = "https://www.rockthevote.org/how-to-vote/" target = "_blank">
                        Not sure yet? Don’t worry! <span className = "underline">Click here</span> for more info on the options in your state.
                            </a>
                        </div>
@@ -856,7 +856,7 @@ function MainPlan() {
                 {nameMail.charAt(0).toUpperCase()}{nameMail.substring(1)}'s Voting Plan
 {/* {nameMail}'s Voting Plan */}
 </h4> : <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
-My Voting Plan
+My '22 Voting Plan
 </h4> 
             }
             
@@ -868,8 +868,9 @@ My Voting Plan
         </div>
         </button>
         <div className = "whatnext">
+        What next? Take a screenshot of your plan and text it to 3 friends! Then ask them to make a plan too :)
     
-        <button  className='shareButton' id='fbButton'>
+        {/* <button  className='shareButton' id='fbButton'>
             <a target="_blank"
         id='fbLink'
         // style = {{marginTop:'30px', backgroundColor: '#EF3D55', color: 'white', padding:'8px'}} 
@@ -879,7 +880,7 @@ My Voting Plan
       id='twitterButton' >
     <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org"
     target = "_blank"
-       id='twitterLink'>Share to Twitter!</a></button>
+       id='twitterLink'>Share to Twitter!</a></button> */}
 
 
             </div>
@@ -1576,7 +1577,7 @@ My Voting Plan
                 {nameEarly.charAt(0).toUpperCase()}{nameEarly.substring(1)}'s Voting Plan
 {/* {nameEarly}'s Voting Plan */}
 </h4> : <h4 className="verbiage" style = {{ fontWeight:'bolder'}}>
-My Voting Plan
+My '22 Voting Plan
 </h4> 
             }
             <br/>
@@ -1603,7 +1604,7 @@ My Voting Plan
         {/* </div> */}
         </button>
         <div className = "whatnext">
-        <button  className='shareButton' id='fbButton'>
+        {/* <button  className='shareButton' id='fbButton'>
             <a target="_blank"
         id='fbLink'
         // style = {{marginTop:'30px', backgroundColor: '#EF3D55', color: 'white', padding:'8px'}} 
@@ -1613,7 +1614,9 @@ My Voting Plan
       id='twitterButton' >
     <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org"
     target = "_blank"
-       id='twitterLink'>Share to Twitter!</a></button>
+       id='twitterLink'>Share to Twitter!</a></button> */}
+               What next? Take a screenshot of your plan and text it to 3 friends! Then ask them to make a plan too :)
+
        </div>
                   
         {/* <div className = "whatnext">
@@ -2300,7 +2303,7 @@ My Voting Plan
 </h4> : <h4 className="phoneElection" 
 // className="verbiage"
  style = {{ fontWeight:'bolder'}}>
-My Voting Plan
+My '22 Voting Plan
 </h4> 
             }
             <div className = 'verbiageElection'>
@@ -2321,7 +2324,7 @@ My Voting Plan
                 </button>    
                 <div className = "whatnext">
     
-        <button  className='shareButton' id='fbButton'>
+        {/* <button  className='shareButton' id='fbButton'>
             <a target="_blank"
         id='fbLink'
         // style = {{marginTop:'30px', backgroundColor: '#EF3D55', color: 'white', padding:'8px'}} 
@@ -2331,7 +2334,9 @@ My Voting Plan
       id='twitterButton' >
     <a href="http://twitter.com/share?text=Check%20out%20this%20voting%20plan%20tool%20%23VotingPlan%20%23MakeAPlan%20%23letsDOsomething&url=https://votingplan.org"
     target = "_blank"
-       id='twitterLink'>Share to Twitter!</a></button>
+       id='twitterLink'>Share to Twitter!</a></button> */}
+               What next? Take a screenshot of your plan and text it to 3 friends! Then ask them to make a plan too :)
+
 
 
             </div>

@@ -76,10 +76,10 @@ function App() {
    data-layout="button" 
    data-size="large"
    > */}
-   <a style = {{marginRight: '20px'}}
+   <a style = {{marginRight: '20px', textDecoration:'underline', fontSize: '18px'}}
                 onClick={openModal}
                 id = "about"
-            
+                
                 >
                 Why make a voting plan?
                     </a>
@@ -102,6 +102,7 @@ function App() {
                     <a target="_blank"
                     href="https://www.instagram.com/ldsomething/"
                     class="fa fa-instagram foot red"
+                    style={{fontSize: '18px'}}
                     >
 
                     </a>
