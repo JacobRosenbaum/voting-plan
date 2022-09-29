@@ -332,7 +332,9 @@ height: 350px !important
   .confetti{
       /* position: absolute !important;
      top: 0px !important; */
-     display: none !important
+     /* display: none !important */
+     position: relative;
+    right: 300px
     
   }
     .jumbotronX {
