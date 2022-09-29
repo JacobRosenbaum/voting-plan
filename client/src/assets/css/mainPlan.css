@@ -299,6 +299,11 @@ cursor: default;
 color: #004789 !important;
 background-color: white
 }
+
+
+.planEarly{
+height: 350px !important
+}
 .planEarly:hover{
     cursor: default;
     color: #004789 !important;

@@ -1587,7 +1587,7 @@ My Voting Plan
             </h1> */}
             
            
-            <div className = "inPersonEarly">
+            {/* <div className = "inPersonEarly"> */}
         
         I will cast my ballot in person, early! 
         <br/>
@@ -1600,7 +1600,7 @@ My Voting Plan
         <br />
         {bringWithFriendEarly}
         </div>
-        </div>
+        {/* </div> */}
         </button>
         <div className = "whatnext">
         <button  className='shareButton' id='fbButton'>
