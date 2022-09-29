@@ -882,8 +882,12 @@ My '22 Voting Plan
     target = "_blank"
        id='twitterLink'>Share to Twitter!</a></button> */}
 
-
+<br/>
+            <br/>
+            <br/>
             </div>
+           
+           
                     {/* <div className = "whatnext">
                     What next? 2 things: <br/><br/>
 1) Add your plan's details to your personal calendar 🗓 right now <br/><br/>
