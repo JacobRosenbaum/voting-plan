@@ -524,7 +524,7 @@ function MainPlan() {
                                 }
                                 }
                             >
-                            in person, on election day (november 3rd!)
+                            in person, on election day (november 8th!)
                             </button>
                     </div>
                     <i id = "arrowPerson1" onClick = {() => {
@@ -2304,7 +2304,7 @@ My Voting Plan
 </h4> 
             }
             <div className = 'verbiageElection'>
-    I will cast my ballot in person, on election day on November 3rd! 
+    I will cast my ballot in person, on election day on November 8th! 
     <br/>
     <br/>
     I plan to vote {whatTimeElection}!
