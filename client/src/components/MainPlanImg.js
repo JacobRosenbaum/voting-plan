@@ -1364,6 +1364,7 @@ My '22 Voting Plan
                                     onClick= { ()=> {if (bringWith){
                                         
                                         setBringWithFriendEarly(`I will bring ${bringWith} with me!`)
+                                        // setBringWithFriendEarly({bringWith})
                                         }
                                         else {
                                             setBringWithFriendEarly("")
@@ -1601,7 +1602,7 @@ My '22 Voting Plan
         I will {getToPolls.toLowerCase()} to the polls! 
         <br />
         <br />
-        {bringWithFriendEarly}
+       {bringWithFriendEarly}
         </div>
         {/* </div> */}
         </button>
@@ -2118,6 +2119,8 @@ My '22 Voting Plan
                                     onClick= { ()=> {if (bringWithElection){
                                         
                                         setBringWithFriendElection(`I will bring ${bringWithElection} with me!`)
+                                        // setBringWithFriendElection(JSON.stringify(bringWithElection))
+
                                         }
                                         else {
                                             setBringWithFriendElection("")
@@ -2321,7 +2324,7 @@ My '22 Voting Plan
     I will {getToPollsElection} to the polls! 
     <br/>
     <br/> 
-    {bringWithFriendElection}
+   {bringWithFriendElection}
     </div>
                 </button>    
                 <div className = "whatnext">

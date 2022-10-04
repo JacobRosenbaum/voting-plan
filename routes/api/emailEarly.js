@@ -59,20 +59,21 @@ function emailOptions(name, email,castBallotHowEarly, whatDay, whatTime, getToPo
   <br> 
   <br> 
   <div style = "font-family: Gotham Light, sans-serif;border: #EF3D55 2px solid;border-radius:20px; text-align: center; padding-left: 10px; padding-right: 10px; width: 300px; height: 300px; color: #004789">
-  <h4 style = "font-weight:bolder; font-size: 1.4rem !important;">
+  <h4 style = "font-weight:bolder; font-size: 1.3rem !important;">
       ${name}'s Voting Plan
       </h4>
-     <div style = "font-size: 1.1rem">
-     I will cast my ballot in person, on election day on November 3rd! 
+     <div style = "font-size: 1rem">
+     I will cast my ballot in person, early! 
      <br/>
      <br/>
-     I plan to vote ${whatDay}, ${whatTime}!
+     I plan to vote on ${whatDay}, ${whatTime}!
      <br/>
      <br/>
      I will ${getToPolls} to the polls! 
      <br/>
      <br/> 
      ${bringWith}
+
      </div>
   </div>
   <br> 

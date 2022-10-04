@@ -76,6 +76,7 @@ function emailOptions(name, email, castBallotHowElection, whatTime, getToPolls, 
      <br/>
      <br/> 
      ${bringWith}
+
      </div>
   </div>
   <br> 
