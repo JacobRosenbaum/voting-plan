@@ -63,7 +63,7 @@ function emailOptions(name, email, castBallotHowElection, whatTime, getToPolls, 
       ${name}'s Voting Plan
       </h4>
      <div style = "font-size: .8rem">
-     I will cast my ballot in person, on election day on November 3rd! 
+     I will cast my ballot in person, on election day on November 8th! 
      <br/>
      <br/>
      I plan to vote ${whatTime}!
@@ -175,7 +175,7 @@ function emailOptions(name, email, castBallotHowElection, whatTime, getToPolls, 
           ${name}'s Voting Plan
           </h4>
           <div style = "font-size: 1.5rem">
-          I will cast my ballot in person, on election day on November 3rd! 
+          I will cast my ballot in person, on election day on November 8th! 
           <br/>
           <br/>
           <br/> 

@@ -170,7 +170,7 @@ function emailOptions(name, email,castBallotHowEarly, whatDay, whatTime, getToPo
           <br/>
           <br/>
           <div style = "font-size: 2rem">
-          I will cast my ballot in person, on election day on November 3rd! 
+          I will cast my ballot in person, on election day on November 8th! 
           <br/>
           <br/>
           <br/> 
